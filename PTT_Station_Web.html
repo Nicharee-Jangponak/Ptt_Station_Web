@@ -1360,7 +1360,7 @@ if(id===‘v-profile’)renderCars();
 if(id===‘v-home’)renderHomeHistory();
 if(id===‘v-map’)setTimeout(()=>{initMap();APP.map&&APP.map.invalidateSize();},100);
 // close inline sheet when leaving map
-if(id!==‘v-map’)closeInlineSBS();
+if(id!==‘v-map’){try{closeInlineSBS();}catch(e){}}
 }
 function closeOL(id){document.getElementById(id).classList.remove(‘show’);}
 function closeByOL(e,id){if(e.target===document.getElementById(id))closeOL(id);}
@@ -1618,6 +1618,7 @@ return h;
 }
 function openSBS(id){
 const s=APP.stations.find(x=>x.id===id);if(!s)return;
+if(!document.getElementById(‘inline-sbs’))return;
 APP._sbsStation=id;
 const isOpen=s.status===‘open’;
 const statusTxt=isOpen?(LANG===‘th’?‘เปิดอยู่’:‘Open’):(LANG===‘th’?‘คิวรอ’:‘Queue’);
@@ -1674,12 +1675,18 @@ setTimeout(()=>{if(APP.map)APP.map.invalidateSize();},380);
 }
 
 function closeInlineSBS(){
+try{
 const sheet=document.getElementById(‘inline-sbs’);
 const listZone=document.getElementById(‘map-list-zone’);
-if(!sheet)return;
+if(!sheet||!listZone)return;
 sheet.style.maxHeight=‘0’;
 listZone.style.maxHeight=‘200px’;
 listZone.style.overflow=‘auto’;
 APP._sbsStation=null;
 setTimeout(()=>{if(APP.map)APP.map.invalidateSize();},380);
-}o
+}catch(e){}
+}
+</script>
+
+</body>
+</html>
