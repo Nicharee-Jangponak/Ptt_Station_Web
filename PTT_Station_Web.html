@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="th" data-theme="light" data-lang="th">
 <head>
 <meta charset="UTF-8">
@@ -18,7 +19,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 [data-theme="dark"] .phone{box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 8px rgba(255,255,255,.08);}
 .sb{background:#001B4B;padding:14px 22px 10px;display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:12px;font-weight:600;}
 .sb .time{font-family:'Prompt',sans-serif;font-size:15px;font-weight:700;}
-.view{display:none;animation:fadeUp .25s ease;}
+.view{display:none;animation:fadeUp .25s ease;}#v-map.active{height:100%;overflow:hidden;}
 .view.active{display:block;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .ah{background:var(--header-bg);padding:16px 20px 22px;position:relative;overflow:hidden;}
@@ -33,155 +34,155 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 
 /* ─── LANGUAGE TOGGLE ─── */
 .lang-toggle-global{display:flex;background:rgba(255,255,255,.15);border-radius:20px;padding:3px;gap:2px;border:1px solid rgba(255,255,255,.2);}
-.lang-btn-global{border:none;background:transparent;border-radius:16px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer;color:rgba(255,255,255,.65);transition:all .2s;font-family:'Sarabun',sans-serif;letter-spacing:.3px;}
-.lang-btn-global.on{background:#fff;color:var(--d800);}
+.lang-btn-global{border:none;background:transparent;border-radius:16px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer;color:rgba(255,255,255,.65);transition:all .2s;font-family:‘Sarabun’,sans-serif;letter-spacing:.3px;}
+.lang-btn-global.on{background:#fff;color:var(–d800);}
 
 .wallet{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 18px;backdrop-filter:blur(12px);position:relative;z-index:1;}
 .wallet-lbl{font-size:10px;color:rgba(214,235,238,.8);letter-spacing:.5px;margin-bottom:5px;font-weight:500;}
 .wallet-bal-row{display:flex;justify-content:space-between;align-items:flex-end;}
-.wallet-bal{font-family:'Prompt',sans-serif;font-size:30px;font-weight:800;color:#fff;letter-spacing:-1px;}
+.wallet-bal{font-family:‘Prompt’,sans-serif;font-size:30px;font-weight:800;color:#fff;letter-spacing:-1px;}
 .wallet-bal sup{font-size:14px;opacity:.7;margin-right:2px;}
-.topup-pill{background:#fff;color:var(--d800);border:none;border-radius:18px;padding:7px 14px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:4px;transition:transform .15s;}
+.topup-pill{background:#fff;color:var(–d800);border:none;border-radius:18px;padding:7px 14px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:4px;transition:transform .15s;}
 .topup-pill:hover{transform:scale(1.04);}
 .wallet-sub{display:flex;justify-content:space-between;margin-top:8px;}
 .wallet-sub-item{font-size:10px;color:rgba(151,202,219,.9);}
 .wallet-sub-item span{color:#fff;font-weight:600;}
 .qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px;margin-top:-16px;position:relative;z-index:5;}
-.qa-item{background:var(--surface);border-radius:16px;padding:12px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:5px;box-shadow:var(--card-sh);cursor:pointer;transition:transform .18s,box-shadow .18s;}
-.qa-item:hover{transform:translateY(-3px);box-shadow:var(--card-sh-lg);}
+.qa-item{background:var(–surface);border-radius:16px;padding:12px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:5px;box-shadow:var(–card-sh);cursor:pointer;transition:transform .18s,box-shadow .18s;}
+.qa-item:hover{transform:translateY(-3px);box-shadow:var(–card-sh-lg);}
 .qa-icon{font-size:22px;line-height:1;}
-.qa-lbl{font-size:9px;font-weight:600;color:var(--text);text-align:center;line-height:1.3;}
+.qa-lbl{font-size:9px;font-weight:600;color:var(–text);text-align:center;line-height:1.3;}
 .sec{padding:14px 16px 0;}
 .sec-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
-.sec-t{font-family:'Prompt',sans-serif;font-size:14px;font-weight:700;color:var(--text);}
-.sec-l{font-size:11px;color:var(--p500);font-weight:600;cursor:pointer;}
-.card{background:var(--surface);border-radius:var(--r);padding:14px;box-shadow:var(--card-sh);}
-.sos-banner{margin:14px 16px 0;border-radius:var(--r);padding:14px 16px;cursor:pointer;}
-.sos-banner.sos-active{background:linear-gradient(135deg,#B71C1C,var(--red));box-shadow:0 6px 24px rgba(229,57,53,.28);animation:sosPulse 2.5s ease-in-out infinite;}
-.sos-banner.sos-dispatched{background:linear-gradient(135deg,var(--d800),var(--p500));}
+.sec-t{font-family:‘Prompt’,sans-serif;font-size:14px;font-weight:700;color:var(–text);}
+.sec-l{font-size:11px;color:var(–p500);font-weight:600;cursor:pointer;}
+.card{background:var(–surface);border-radius:var(–r);padding:14px;box-shadow:var(–card-sh);}
+.sos-banner{margin:14px 16px 0;border-radius:var(–r);padding:14px 16px;cursor:pointer;}
+.sos-banner.sos-active{background:linear-gradient(135deg,#B71C1C,var(–red));box-shadow:0 6px 24px rgba(229,57,53,.28);animation:sosPulse 2.5s ease-in-out infinite;}
+.sos-banner.sos-dispatched{background:linear-gradient(135deg,var(–d800),var(–p500));}
 @keyframes sosPulse{0%,100%{box-shadow:0 6px 24px rgba(229,57,53,.28)}50%{box-shadow:0 8px 32px rgba(229,57,53,.5)}}
 .sos-inner{display:flex;align-items:center;gap:12px;}
 .sos-ring{width:48px;height:48px;flex-shrink:0;border-radius:50%;border:2px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-size:22px;background:rgba(255,255,255,.12);}
 .sos-feats{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
 .sos-feat{background:rgba(255,255,255,.15);border-radius:18px;padding:3px 8px;font-size:9px;font-weight:600;color:#fff;}
-.hist-card{background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:var(--card-sh);}
-.hist-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
-.hist-item:hover{background:var(--surface2);}
+.hist-card{background:var(–surface);border-radius:var(–r);overflow:hidden;box-shadow:var(–card-sh);}
+.hist-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(–border);cursor:pointer;transition:background .1s;}
+.hist-item:hover{background:var(–surface2);}
 .hist-item:last-child{border-bottom:none;}
 .hi-icon{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .hi-info{flex:1;min-width:0;}
-.hi-name{font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.hi-meta{font-size:10px;color:var(--text2);margin-top:2px;}
-.hi-amt{font-family:'Prompt',sans-serif;font-size:13px;font-weight:800;white-space:nowrap;}
-.hi-amt.m{color:var(--red);}.hi-amt.p{color:var(--green);}
+.hi-name{font-size:12px;font-weight:700;color:var(–text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hi-meta{font-size:10px;color:var(–text2);margin-top:2px;}
+.hi-amt{font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:800;white-space:nowrap;}
+.hi-amt.m{color:var(–red);}.hi-amt.p{color:var(–green);}
 .fc-row{display:flex;gap:5px;overflow-x:auto;padding-bottom:2px;margin-bottom:10px;}
 .fc-row::-webkit-scrollbar{display:none;}
-.fc{background:var(--surface2);color:var(--text2);border:1.5px solid var(--border);border-radius:18px;padding:4px 12px;font-size:10px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s;}
-.fc.on{background:var(--p500);color:#fff;border-color:var(--p500);}
-.type-tog{display:flex;background:var(--surface2);border-radius:12px;padding:3px;gap:3px;margin-bottom:12px;}
-.type-btn{flex:1;border:none;border-radius:10px;padding:8px 6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(--text2);transition:all .2s;}
-.type-btn.on{background:var(--surface);color:var(--text);box-shadow:var(--card-sh);}
+.fc{background:var(–surface2);color:var(–text2);border:1.5px solid var(–border);border-radius:18px;padding:4px 12px;font-size:10px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s;}
+.fc.on{background:var(–p500);color:#fff;border-color:var(–p500);}
+.type-tog{display:flex;background:var(–surface2);border-radius:12px;padding:3px;gap:3px;margin-bottom:12px;}
+.type-btn{flex:1;border:none;border-radius:10px;padding:8px 6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(–text2);transition:all .2s;}
+.type-btn.on{background:var(–surface);color:var(–text);box-shadow:var(–card-sh);}
 .fuel-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}
-.fuel-chip{border:2px solid var(--border);border-radius:var(--r-sm);padding:10px;cursor:pointer;transition:all .15s;background:var(--surface);}
-.fuel-chip.on{border-color:var(--p500);background:rgba(60,118,241,.07);}
-.fuel-chip .fn{font-size:12px;font-weight:700;color:var(--text);}
-.fuel-chip .fp{font-size:11px;color:var(--p500);font-weight:600;}
-.fuel-chip .fb{font-size:9px;font-weight:700;color:var(--p500);background:rgba(60,118,241,.1);border-radius:18px;padding:1px 6px;display:inline-block;margin-top:2px;}
-.litre-box{background:linear-gradient(135deg,var(--d900),var(--d800));border-radius:var(--r-sm);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
-.litre-box .lbl{font-size:10px;color:var(--d300);font-weight:500;}
-.litre-box .val{font-family:'Prompt',sans-serif;font-size:20px;font-weight:800;color:#fff;}
-.litre-box .unit{font-size:11px;color:var(--d300);margin-top:2px;}
-.bud-wrap{flex:1;background:var(--surface2);border-radius:var(--r-sm);display:flex;align-items:center;padding:0 10px;gap:5px;border:2px solid var(--border);transition:border-color .2s;}
-.bud-wrap:focus-within{border-color:var(--p500);}
-.bud-wrap span{font-family:'Prompt',sans-serif;font-size:15px;font-weight:700;color:var(--d800);}
-[data-theme="dark"] .bud-wrap span{color:var(--d300);}
-.bud-input{flex:1;border:none;background:transparent;outline:none;font-family:'Prompt',sans-serif;font-size:18px;font-weight:700;color:var(--text);padding:10px 0;width:0;}
+.fuel-chip{border:2px solid var(–border);border-radius:var(–r-sm);padding:10px;cursor:pointer;transition:all .15s;background:var(–surface);}
+.fuel-chip.on{border-color:var(–p500);background:rgba(60,118,241,.07);}
+.fuel-chip .fn{font-size:12px;font-weight:700;color:var(–text);}
+.fuel-chip .fp{font-size:11px;color:var(–p500);font-weight:600;}
+.fuel-chip .fb{font-size:9px;font-weight:700;color:var(–p500);background:rgba(60,118,241,.1);border-radius:18px;padding:1px 6px;display:inline-block;margin-top:2px;}
+.litre-box{background:linear-gradient(135deg,var(–d900),var(–d800));border-radius:var(–r-sm);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.litre-box .lbl{font-size:10px;color:var(–d300);font-weight:500;}
+.litre-box .val{font-family:‘Prompt’,sans-serif;font-size:20px;font-weight:800;color:#fff;}
+.litre-box .unit{font-size:11px;color:var(–d300);margin-top:2px;}
+.bud-wrap{flex:1;background:var(–surface2);border-radius:var(–r-sm);display:flex;align-items:center;padding:0 10px;gap:5px;border:2px solid var(–border);transition:border-color .2s;}
+.bud-wrap:focus-within{border-color:var(–p500);}
+.bud-wrap span{font-family:‘Prompt’,sans-serif;font-size:15px;font-weight:700;color:var(–d800);}
+[data-theme=“dark”] .bud-wrap span{color:var(–d300);}
+.bud-input{flex:1;border:none;background:transparent;outline:none;font-family:‘Prompt’,sans-serif;font-size:18px;font-weight:700;color:var(–text);padding:10px 0;width:0;}
 .st-chip-row{display:flex;gap:8px;}
-.st-chip{flex:1;border-radius:var(--r-sm);padding:9px;border:2px solid var(--border);cursor:pointer;text-align:center;background:var(--surface);}
-.st-chip.ok{border-color:var(--green);background:var(--green-light);}
-.st-chip.busy{border-color:var(--orange);background:var(--orange-light);}
-.st-chip .sn{font-size:10px;font-weight:700;color:var(--text);}
+.st-chip{flex:1;border-radius:var(–r-sm);padding:9px;border:2px solid var(–border);cursor:pointer;text-align:center;background:var(–surface);}
+.st-chip.ok{border-color:var(–green);background:var(–green-light);}
+.st-chip.busy{border-color:var(–orange);background:var(–orange-light);}
+.st-chip .sn{font-size:10px;font-weight:700;color:var(–text);}
 .st-chip .ss{font-size:9px;font-weight:600;margin-top:2px;}
-.st-chip.ok .ss{color:var(--green);}.st-chip.busy .ss{color:var(--orange);}
-.ldot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:3px;animation:blink 1.2s ease-in-out infinite;}
+.st-chip.ok .ss{color:var(–green);}.st-chip.busy .ss{color:var(–orange);}
+.ldot{width:6px;height:6px;border-radius:50%;background:var(–green);display:inline-block;margin-right:3px;animation:blink 1.2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-.pri-btn{width:100%;background:linear-gradient(135deg,var(--p500),var(--d800));color:#fff;border:none;border-radius:var(--r-sm);padding:12px;font-family:'Prompt',sans-serif;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--card-sh-lg);transition:transform .15s;margin-top:10px;}
+.pri-btn{width:100%;background:linear-gradient(135deg,var(–p500),var(–d800));color:#fff;border:none;border-radius:var(–r-sm);padding:12px;font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(–card-sh-lg);transition:transform .15s;margin-top:10px;}
 .pri-btn:hover{transform:scale(1.02);}
-.sec-btn{width:100%;background:var(--surface2);border:none;border-radius:var(--r-sm);padding:10px;font-size:12px;color:var(--text2);cursor:pointer;margin-top:6px;}
-.nav{background:var(--surface);border-top:1.5px solid var(--border);padding:8px 0 22px;display:flex;justify-content:space-around;align-items:center;position:sticky;bottom:0;z-index:50;}
+.sec-btn{width:100%;background:var(–surface2);border:none;border-radius:var(–r-sm);padding:10px;font-size:12px;color:var(–text2);cursor:pointer;margin-top:6px;}
+.nav{background:var(–surface);border-top:1.5px solid var(–border);padding:8px 0 22px;display:flex;justify-content:space-around;align-items:center;position:sticky;bottom:0;z-index:50;}
 .ni{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:5px 12px;border-radius:14px;transition:background .15s;}
-.ni:hover{background:var(--surface2);}
-.ni .nicon{font-size:20px;}.ni .nlbl{font-size:9px;font-weight:600;color:var(--text2);}
-.ni.on .nlbl{color:var(--p500);font-weight:800;}
+.ni:hover{background:var(–surface2);}
+.ni .nicon{font-size:20px;}.ni .nlbl{font-size:9px;font-weight:600;color:var(–text2);}
+.ni.on .nlbl{color:var(–p500);font-weight:800;}
 .nav-sos-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:-16px;cursor:pointer;}
-.nav-sos-btn{width:52px;height:52px;background:linear-gradient(135deg,var(--red),#B71C1C);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 20px rgba(229,57,53,.4);transition:transform .15s;}
+.nav-sos-btn{width:52px;height:52px;background:linear-gradient(135deg,var(–red),#B71C1C);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 20px rgba(229,57,53,.4);transition:transform .15s;}
 .nav-sos-btn:hover{transform:scale(1.07);}
-#leaflet-map{height:300px;border-bottom:2px solid var(--border);}
-.map-search-bar{position:absolute;top:10px;left:10px;right:10px;background:var(--surface);border-radius:12px;padding:9px 13px;display:flex;align-items:center;gap:7px;box-shadow:var(--card-sh-lg);z-index:1000;}
-.map-search-bar input{flex:1;border:none;outline:none;font-family:'Sarabun',sans-serif;font-size:12px;color:var(--text);background:transparent;}
-.map-search-bar input::placeholder{color:var(--text3);}
-.map-container{position:relative;}
-.nav-toast-map{position:absolute;top:60px;left:10px;right:10px;background:linear-gradient(135deg,var(--green),#1B5E20);color:#fff;border-radius:12px;padding:9px 12px;z-index:1000;display:flex;align-items:center;gap:8px;box-shadow:var(--card-sh-lg);}
+#leaflet-map{height:100%;border-bottom:2px solid var(–border);min-height:160px;}
+.map-search-bar{position:absolute;top:10px;left:10px;right:10px;background:var(–surface);border-radius:12px;padding:9px 13px;display:flex;align-items:center;gap:7px;box-shadow:var(–card-sh-lg);z-index:1000;}
+.map-search-bar input{flex:1;border:none;outline:none;font-family:‘Sarabun’,sans-serif;font-size:12px;color:var(–text);background:transparent;}
+.map-search-bar input::placeholder{color:var(–text3);}
+.map-container{position:relative;display:flex;flex-direction:column;height:100%;}
+.nav-toast-map{position:absolute;top:60px;left:10px;right:10px;background:linear-gradient(135deg,var(–green),#1B5E20);color:#fff;border-radius:12px;padding:9px 12px;z-index:1000;display:flex;align-items:center;gap:8px;box-shadow:var(–card-sh-lg);}
 .station-list-wrap{padding:10px 16px 12px;}
-.station-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
-.station-item:hover{background:var(--surface2);}
+.station-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(–border);cursor:pointer;transition:background .1s;}
+.station-item:hover{background:var(–surface2);}
 .station-item:last-child{border-bottom:none;}
-.station-item.navigating{background:var(--green-light);}
-[data-theme="dark"] .station-item.navigating{background:rgba(46,125,50,.18);}
-.st-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--surface2);}
+.station-item.navigating{background:var(–green-light);}
+[data-theme=“dark”] .station-item.navigating{background:rgba(46,125,50,.18);}
+.st-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(–surface2);}
 .st-info{flex:1;}
-.st-name{font-size:12px;font-weight:700;color:var(--text);}
-.st-dist{font-size:10px;color:var(--text2);margin-top:2px;}
+.st-name{font-size:12px;font-weight:700;color:var(–text);}
+.st-dist{font-size:10px;color:var(–text2);margin-top:2px;}
 .st-tags{display:flex;gap:3px;margin-top:4px;flex-wrap:wrap;}
 .st-tag{font-size:9px;font-weight:700;border-radius:18px;padding:2px 6px;}
-.st-tag.fuel{background:rgba(60,118,241,.1);color:var(--p600);}.st-tag.ev{background:var(--green-light);color:var(--green);}
-.st-tag.open{background:var(--green-light);color:var(--green);}.st-tag.busy{background:var(--orange-light);color:var(--orange);}
-.nav-go-btn{font-size:10px;font-weight:700;color:var(--p500);white-space:nowrap;}
-.nav-go-btn.active{color:var(--green);}
+.st-tag.fuel{background:rgba(60,118,241,.1);color:var(–p600);}.st-tag.ev{background:var(–green-light);color:var(–green);}
+.st-tag.open{background:var(–green-light);color:var(–green);}.st-tag.busy{background:var(–orange-light);color:var(–orange);}
+.nav-go-btn{font-size:10px;font-weight:700;color:var(–p500);white-space:nowrap;}
+.nav-go-btn.active{color:var(–green);}
 .leaflet-popup-content-wrapper{border-radius:14px!important;box-shadow:0 8px 24px rgba(0,0,0,.18)!important;padding:0!important;}
 .leaflet-popup-content{margin:0!important;width:260px!important;}
 .popup-inner{padding:14px;}
 .popup-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-.popup-name{font-family:'Prompt',sans-serif;font-size:13px;font-weight:700;color:#0D1B3E;}
+.popup-name{font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:700;color:#0D1B3E;}
 .popup-dist{font-size:10px;color:#5A6E9B;}
 .shop-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;}
 .shop-tag{font-size:9px;font-weight:600;border-radius:18px;padding:3px 8px;background:#F0F3FA;color:#305EC1;border:1px solid #D8E4FC;}
-.popup-nav-btn{width:100%;background:linear-gradient(135deg,#3C76F1,#02457A);color:#fff;border:none;border-radius:10px;padding:9px;font-family:'Prompt',sans-serif;font-size:12px;font-weight:700;cursor:pointer;}
-.pump-lang{display:flex;background:var(--surface2);border-radius:9px;padding:2px;gap:2px;}
-.lang-btn{border:none;background:transparent;border-radius:7px;padding:4px 10px;font-size:10px;font-weight:700;cursor:pointer;color:var(--text2);}
-.lang-btn.on{background:var(--p500);color:#fff;}
-.pump-display{background:linear-gradient(135deg,#001B4B,#02457A);border-radius:var(--r);padding:16px;margin-bottom:12px;}
+.popup-nav-btn{width:100%;background:linear-gradient(135deg,#3C76F1,#02457A);color:#fff;border:none;border-radius:10px;padding:9px;font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:700;cursor:pointer;}
+.pump-lang{display:flex;background:var(–surface2);border-radius:9px;padding:2px;gap:2px;}
+.lang-btn{border:none;background:transparent;border-radius:7px;padding:4px 10px;font-size:10px;font-weight:700;cursor:pointer;color:var(–text2);}
+.lang-btn.on{background:var(–p500);color:#fff;}
+.pump-display{background:linear-gradient(135deg,#001B4B,#02457A);border-radius:var(–r);padding:16px;margin-bottom:12px;}
 .pump-screen{background:#060F22;border-radius:10px;padding:12px;border:1.5px solid rgba(60,118,241,.25);margin-bottom:10px;}
-.pump-screen-lbl{font-size:9px;color:var(--d300);letter-spacing:.8px;margin-bottom:3px;}
-.pump-screen-val{font-family:'Prompt',sans-serif;font-size:20px;font-weight:800;color:#4FC3F7;}
+.pump-screen-lbl{font-size:9px;color:var(–d300);letter-spacing:.8px;margin-bottom:3px;}
+.pump-screen-val{font-family:‘Prompt’,sans-serif;font-size:20px;font-weight:800;color:#4FC3F7;}
 .pump-screen-sub{font-size:10px;color:rgba(151,202,219,.6);margin-top:3px;}
 .pump-status-row{display:flex;gap:6px;}
 .pump-status-item{flex:1;background:rgba(255,255,255,.07);border-radius:9px;padding:7px;text-align:center;}
-.pump-status-item .psv{font-family:'Prompt',sans-serif;font-size:14px;font-weight:700;color:#fff;}
-.pump-status-item .psl{font-size:8px;color:var(--d300);margin-top:2px;}
-.pump-num-badge{background:var(--p500);color:#fff;border-radius:10px;padding:5px 12px;font-family:'Prompt',sans-serif;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:5px;}
+.pump-status-item .psv{font-family:‘Prompt’,sans-serif;font-size:14px;font-weight:700;color:#fff;}
+.pump-status-item .psl{font-size:8px;color:var(–d300);margin-top:2px;}
+.pump-num-badge{background:var(–p500);color:#fff;border-radius:10px;padding:5px 12px;font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:5px;}
 .pump-steps{display:flex;justify-content:space-between;margin-bottom:14px;}
 .pump-step{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;}
 .ps-circle{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;}
-.ps-circle.done{background:var(--green);color:#fff;}.ps-circle.cur{background:var(--p500);color:#fff;box-shadow:0 0 0 4px rgba(60,118,241,.2);}
-.ps-circle.pend{background:var(--surface2);color:var(--text3);}
-.ps-line{flex:1;height:2px;background:var(--border);margin-top:12px;margin-left:-6px;margin-right:-6px;}
-.ps-line.done{background:var(--green);}
-.ps-lbl{font-size:8px;font-weight:600;color:var(--text3);text-align:center;}.ps-lbl.cur{color:var(--p500);}
-.parking-visual{background:var(--surface2);border-radius:var(--r);padding:14px;margin-bottom:12px;}
-.parking-visual-title{font-family:'Prompt',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;}
-.parking-visual-sub{font-size:10px;color:var(--text2);margin-bottom:12px;}
+.ps-circle.done{background:var(–green);color:#fff;}.ps-circle.cur{background:var(–p500);color:#fff;box-shadow:0 0 0 4px rgba(60,118,241,.2);}
+.ps-circle.pend{background:var(–surface2);color:var(–text3);}
+.ps-line{flex:1;height:2px;background:var(–border);margin-top:12px;margin-left:-6px;margin-right:-6px;}
+.ps-line.done{background:var(–green);}
+.ps-lbl{font-size:8px;font-weight:600;color:var(–text3);text-align:center;}.ps-lbl.cur{color:var(–p500);}
+.parking-visual{background:var(–surface2);border-radius:var(–r);padding:14px;margin-bottom:12px;}
+.parking-visual-title{font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:700;color:var(–text);margin-bottom:4px;}
+.parking-visual-sub{font-size:10px;color:var(–text2);margin-bottom:12px;}
 .parking-road{background:linear-gradient(135deg,#2A3655,#1A2440);border-radius:10px;padding:10px 8px;}
 .parking-lane-label{text-align:center;font-size:8px;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:1px;margin-bottom:8px;}
 .parking-slots-row{display:flex;gap:6px;justify-content:center;margin-bottom:6px;}
 .p-slot{flex:1;max-width:90px;border-radius:8px;padding:7px 4px 5px;border:2px solid transparent;cursor:pointer;text-align:center;transition:all .2s;min-height:115px;display:flex;flex-direction:column;align-items:center;gap:3px;}
-.p-slot.walkin-countdown{background:rgba(46,125,50,.2);border-color:var(--green);}
-.p-slot.reserved-free{background:rgba(60,118,241,.18);border-color:var(--p400);}
-.p-slot.reserved-mine{background:rgba(60,118,241,.3);border-color:var(--p500);animation:slotPulse 1.5s ease-in-out infinite;}
+.p-slot.walkin-countdown{background:rgba(46,125,50,.2);border-color:var(–green);}
+.p-slot.reserved-free{background:rgba(60,118,241,.18);border-color:var(–p400);}
+.p-slot.reserved-mine{background:rgba(60,118,241,.3);border-color:var(–p500);animation:slotPulse 1.5s ease-in-out infinite;}
 @keyframes slotPulse{0%,100%{box-shadow:0 0 0 0 rgba(60,118,241,.35)}50%{box-shadow:0 0 0 5px rgba(60,118,241,.1)}}
-.slot-num-lbl{font-family:'Prompt',sans-serif;font-size:11px;font-weight:800;color:#fff;line-height:1;}
+.slot-num-lbl{font-family:‘Prompt’,sans-serif;font-size:11px;font-weight:800;color:#fff;line-height:1;}
 .slot-car-svg{width:44px;height:22px;display:block;margin:0 auto;}
-.slot-time{font-family:'Prompt',sans-serif;font-size:12px;font-weight:800;color:#fff;line-height:1.1;}
+.slot-time{font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:800;color:#fff;line-height:1.1;}
 .slot-time-sub{font-size:7px;color:rgba(255,255,255,.7);}
 .slot-label-sm{font-size:8px;font-weight:700;color:rgba(255,255,255,.85);line-height:1.3;text-align:center;}
 .slot-badge{font-size:7px;font-weight:700;border-radius:4px;padding:2px 5px;margin-top:auto;}
@@ -190,183 +191,185 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 .lane-div{height:14px;display:flex;align-items:center;margin:4px 0;}
 .lane-div-line{width:100%;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.3) 0,rgba(255,255,255,.3) 8px,transparent 8px,transparent 16px);}
 .road-mark{font-size:7px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,.3);text-align:center;margin-top:4px;}
-.my-booking-bar{background:rgba(60,118,241,.08);border:1.5px solid var(--p400);border-radius:var(--r-sm);padding:11px 13px;display:flex;align-items:center;gap:11px;margin-bottom:10px;cursor:pointer;}
-.mb-slot-badge{background:var(--p500);color:#fff;border-radius:9px;padding:5px 11px;font-family:'Prompt',sans-serif;font-size:15px;font-weight:800;flex-shrink:0;}
-.mb-info{flex:1;}.mb-title{font-size:12px;font-weight:700;color:var(--text);}
-.mb-sub{font-size:10px;color:var(--text2);margin-top:2px;}
-.mb-status{font-size:9px;font-weight:700;color:var(--p500);margin-top:3px;}
-.otp-box{background:linear-gradient(135deg,var(--d900),var(--d800));border-radius:var(--r);padding:16px;margin-bottom:12px;}
-.otp-lbl{font-size:10px;color:var(--d300);font-weight:500;margin-bottom:7px;}
+.my-booking-bar{background:rgba(60,118,241,.08);border:1.5px solid var(–p400);border-radius:var(–r-sm);padding:11px 13px;display:flex;align-items:center;gap:11px;margin-bottom:10px;cursor:pointer;}
+.mb-slot-badge{background:var(–p500);color:#fff;border-radius:9px;padding:5px 11px;font-family:‘Prompt’,sans-serif;font-size:15px;font-weight:800;flex-shrink:0;}
+.mb-info{flex:1;}.mb-title{font-size:12px;font-weight:700;color:var(–text);}
+.mb-sub{font-size:10px;color:var(–text2);margin-top:2px;}
+.mb-status{font-size:9px;font-weight:700;color:var(–p500);margin-top:3px;}
+.otp-box{background:linear-gradient(135deg,var(–d900),var(–d800));border-radius:var(–r);padding:16px;margin-bottom:12px;}
+.otp-lbl{font-size:10px;color:var(–d300);font-weight:500;margin-bottom:7px;}
 .otp-digits{display:flex;gap:6px;justify-content:center;}
-.otp-d{width:40px;height:48px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Prompt',sans-serif;font-size:20px;font-weight:800;color:#fff;}
-.otp-d.filled{border-color:var(--p400);background:rgba(99,145,244,.2);}
-.profile-banner{background:var(--header-bg);padding:20px 20px 26px;}
-.profile-avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--p400),var(--p600));border:3px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:28px;}
-.profile-name{font-family:'Prompt',sans-serif;font-size:18px;font-weight:800;color:#fff;}
-.profile-email{font-size:11px;color:var(--d300);margin-top:2px;}
-.blue-card{background:linear-gradient(135deg,#1A237E,var(--p600));border-radius:var(--r);padding:14px;margin:14px 16px 0;box-shadow:var(--card-sh-lg);position:relative;overflow:hidden;}
-.blue-card::before{content:'';position:absolute;top:-30px;right:-30px;width:110px;height:110px;background:rgba(255,255,255,.05);border-radius:50%;}
-.bc-pts{font-family:'Prompt',sans-serif;font-size:26px;font-weight:800;color:#fff;}
+.otp-d{width:40px;height:48px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:‘Prompt’,sans-serif;font-size:20px;font-weight:800;color:#fff;}
+.otp-d.filled{border-color:var(–p400);background:rgba(99,145,244,.2);}
+.profile-banner{background:var(–header-bg);padding:20px 20px 26px;}
+.profile-avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(–p400),var(–p600));border:3px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:28px;}
+.profile-name{font-family:‘Prompt’,sans-serif;font-size:18px;font-weight:800;color:#fff;}
+.profile-email{font-size:11px;color:var(–d300);margin-top:2px;}
+.blue-card{background:linear-gradient(135deg,#1A237E,var(–p600));border-radius:var(–r);padding:14px;margin:14px 16px 0;box-shadow:var(–card-sh-lg);position:relative;overflow:hidden;}
+.blue-card::before{content:’’;position:absolute;top:-30px;right:-30px;width:110px;height:110px;background:rgba(255,255,255,.05);border-radius:50%;}
+.bc-pts{font-family:‘Prompt’,sans-serif;font-size:26px;font-weight:800;color:#fff;}
 .bc-badge{background:rgba(255,215,0,.18);border:1px solid rgba(255,215,0,.35);border-radius:7px;padding:3px 9px;font-size:9px;font-weight:700;color:#FFD600;}
 .bc-num{font-size:10px;color:rgba(151,202,219,.75);letter-spacing:1.5px;margin-top:8px;}
-.bc-lbl{font-size:9px;color:var(--d300);margin-top:3px;}
-.profile-info-card{background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:var(--card-sh);margin:0 16px;}
-.pi-row{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);}
+.bc-lbl{font-size:9px;color:var(–d300);margin-top:3px;}
+.profile-info-card{background:var(–surface);border-radius:var(–r);overflow:hidden;box-shadow:var(–card-sh);margin:0 16px;}
+.pi-row{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(–border);}
 .pi-row:last-child{border-bottom:none;}
 .pi-icon{font-size:16px;width:28px;text-align:center;flex-shrink:0;}
-.pi-label{font-size:10px;color:var(--text2);margin-bottom:1px;}
-.pi-value{font-size:12px;font-weight:700;color:var(--text);}
-.pi-edit{margin-left:auto;font-size:14px;cursor:pointer;color:var(--text3);}
+.pi-label{font-size:10px;color:var(–text2);margin-bottom:1px;}
+.pi-value{font-size:12px;font-weight:700;color:var(–text);}
+.pi-edit{margin-left:auto;font-size:14px;cursor:pointer;color:var(–text3);}
 .car-cards-row{display:flex;gap:8px;overflow-x:auto;padding:0 16px 4px;}
 .car-cards-row::-webkit-scrollbar{display:none;}
-.car-card{background:var(--surface);border-radius:var(--r);padding:12px;box-shadow:var(--card-sh);min-width:140px;cursor:pointer;transition:transform .15s;flex-shrink:0;position:relative;border:2px solid var(--border);}
+.car-card{background:var(–surface);border-radius:var(–r);padding:12px;box-shadow:var(–card-sh);min-width:140px;cursor:pointer;transition:transform .15s;flex-shrink:0;position:relative;border:2px solid var(–border);}
 .car-card:hover{transform:translateY(-2px);}
-.car-card.active-car{border-color:var(--p500);}
-.car-model{font-size:11px;font-weight:700;color:var(--text);}
-.car-plate{font-family:'Prompt',sans-serif;font-size:12px;font-weight:700;color:var(--p500);margin-top:1px;}
+.car-card.active-car{border-color:var(–p500);}
+.car-model{font-size:11px;font-weight:700;color:var(–text);}
+.car-plate{font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:700;color:var(–p500);margin-top:1px;}
 .car-fuel-badge{font-size:9px;font-weight:700;border-radius:18px;padding:2px 7px;display:inline-block;margin-top:4px;}
-.car-add{background:var(--surface2);border:2px dashed var(--border);border-radius:var(--r);padding:12px;min-width:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;gap:5px;}
-.car-add-icon{font-size:22px;color:var(--p500);}
-.car-add-lbl{font-size:10px;font-weight:600;color:var(--p500);}
-.theme-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border-radius:var(--r-sm);margin:0 16px 8px;cursor:pointer;}
-.theme-toggle-lbl{font-size:12px;font-weight:600;color:var(--text);}
-.toggle-switch{width:42px;height:24px;background:var(--border);border-radius:12px;position:relative;transition:background .2s;}
-.toggle-switch.on{background:var(--p500);}
-.toggle-switch::after{content:'';position:absolute;width:18px;height:18px;background:#fff;border-radius:50%;top:3px;left:3px;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.car-add{background:var(–surface2);border:2px dashed var(–border);border-radius:var(–r);padding:12px;min-width:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;gap:5px;}
+.car-add-icon{font-size:22px;color:var(–p500);}
+.car-add-lbl{font-size:10px;font-weight:600;color:var(–p500);}
+.theme-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(–surface2);border-radius:var(–r-sm);margin:0 16px 8px;cursor:pointer;}
+.theme-toggle-lbl{font-size:12px;font-weight:600;color:var(–text);}
+.toggle-switch{width:42px;height:24px;background:var(–border);border-radius:12px;position:relative;transition:background .2s;}
+.toggle-switch.on{background:var(–p500);}
+.toggle-switch::after{content:’’;position:absolute;width:18px;height:18px;background:#fff;border-radius:50%;top:3px;left:3px;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2);}
 .toggle-switch.on::after{transform:translateX(18px);}
 /* Language toggle row in profile */
-.lang-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border-radius:var(--r-sm);margin:0 16px 16px;cursor:pointer;}
-.lang-btns-row{display:flex;background:var(--border);border-radius:10px;padding:2px;gap:2px;}
-.lang-pill{border:none;background:transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:700;cursor:pointer;color:var(--text2);transition:all .2s;}
-.lang-pill.on{background:var(--p500);color:#fff;}
+.lang-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(–surface2);border-radius:var(–r-sm);margin:0 16px 16px;cursor:pointer;}
+.lang-btns-row{display:flex;background:var(–border);border-radius:10px;padding:2px;gap:2px;}
+.lang-pill{border:none;background:transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:700;cursor:pointer;color:var(–text2);transition:all .2s;}
+.lang-pill.on{background:var(–p500);color:#fff;}
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,10,30,.55);backdrop-filter:blur(5px);z-index:200;justify-content:center;align-items:flex-end;}
 .overlay.show{display:flex;}
-.sheet{background:var(--surface);border-radius:28px 28px 0 0;padding:20px 20px 38px;width:390px;animation:sheetUp .3s cubic-bezier(.34,1.2,.64,1);max-height:90vh;overflow-y:auto;}
+.sheet{background:var(–surface);border-radius:28px 28px 0 0;padding:20px 20px 38px;width:390px;animation:sheetUp .3s cubic-bezier(.34,1.2,.64,1);max-height:90vh;overflow-y:auto;}
 @keyframes sheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.m-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 18px;}
-.m-title{font-family:'Prompt',sans-serif;font-size:17px;font-weight:800;color:var(--text);margin-bottom:3px;}
-.m-sub{font-size:12px;color:var(--text2);margin-bottom:16px;}
+.m-handle{width:36px;height:4px;background:var(–border);border-radius:2px;margin:0 auto 18px;}
+.m-title{font-family:‘Prompt’,sans-serif;font-size:17px;font-weight:800;color:var(–text);margin-bottom:3px;}
+.m-sub{font-size:12px;color:var(–text2);margin-bottom:16px;}
 .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}
-.tg-opt{background:var(--surface2);border:2px solid var(--border);border-radius:var(--r-sm);padding:11px 6px;text-align:center;cursor:pointer;transition:all .15s;}
-.tg-opt.on{background:var(--p500);border-color:var(--p500);}
-.tg-opt .ta{font-family:'Prompt',sans-serif;font-size:17px;font-weight:800;color:var(--text);}
+.tg-opt{background:var(–surface2);border:2px solid var(–border);border-radius:var(–r-sm);padding:11px 6px;text-align:center;cursor:pointer;transition:all .15s;}
+.tg-opt.on{background:var(–p500);border-color:var(–p500);}
+.tg-opt .ta{font-family:‘Prompt’,sans-serif;font-size:17px;font-weight:800;color:var(–text);}
 .tg-opt.on .ta{color:#fff;}
-.tg-opt .tu{font-size:9px;color:var(--text2);margin-top:1px;}
+.tg-opt .tu{font-size:9px;color:var(–text2);margin-top:1px;}
 .tg-opt.on .tu{color:rgba(255,255,255,.7);}
-.tg-opt .tb{font-size:9px;color:var(--green);font-weight:700;margin-top:2px;}
+.tg-opt .tb{font-size:9px;color:var(–green);font-weight:700;margin-top:2px;}
 .tg-opt.on .tb{color:#A5D6A7;}
 .pm-row{display:flex;gap:6px;margin-bottom:12px;}
-.pm-chip{flex:1;border:2px solid var(--border);border-radius:var(--r-sm);padding:9px 6px;text-align:center;cursor:pointer;transition:all .15s;background:var(--surface);}
-.pm-chip.on{border-color:var(--p500);background:rgba(60,118,241,.07);}
+.pm-chip{flex:1;border:2px solid var(–border);border-radius:var(–r-sm);padding:9px 6px;text-align:center;cursor:pointer;transition:all .15s;background:var(–surface);}
+.pm-chip.on{border-color:var(–p500);background:rgba(60,118,241,.07);}
 .pm-chip .pmi{font-size:18px;margin-bottom:3px;}
-.pm-chip .pmn{font-size:9px;font-weight:600;color:var(--text);}
-.confirm-btn{width:100%;background:linear-gradient(135deg,var(--p500),var(--d800));color:#fff;border:none;border-radius:14px;padding:13px;font-family:'Prompt',sans-serif;font-size:14px;font-weight:700;cursor:pointer;box-shadow:var(--card-sh-lg);transition:transform .15s;}
+.pm-chip .pmn{font-size:9px;font-weight:600;color:var(–text);}
+.confirm-btn{width:100%;background:linear-gradient(135deg,var(–p500),var(–d800));color:#fff;border:none;border-radius:14px;padding:13px;font-family:‘Prompt’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;box-shadow:var(–card-sh-lg);transition:transform .15s;}
 .confirm-btn:hover{transform:scale(1.02);}
-.cancel-btn{width:100%;background:var(--surface2);border:none;border-radius:var(--r-sm);padding:11px;font-size:12px;color:var(--text2);cursor:pointer;margin-top:7px;}
-.map-box{background:linear-gradient(145deg,var(--surface2),var(--surface));border-radius:var(--r);height:140px;position:relative;overflow:hidden;margin-bottom:12px;border:1.5px solid var(--border);}
-.map-grid-inner{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:28px 28px;opacity:.6;}
-.map-route{position:absolute;width:65%;height:2px;background:linear-gradient(90deg,var(--p500),var(--d500));border-radius:2px;left:12%;top:50%;}
+.cancel-btn{width:100%;background:var(–surface2);border:none;border-radius:var(–r-sm);padding:11px;font-size:12px;color:var(–text2);cursor:pointer;margin-top:7px;}
+.map-box{background:linear-gradient(145deg,var(–surface2),var(–surface));border-radius:var(–r);height:140px;position:relative;overflow:hidden;margin-bottom:12px;border:1.5px solid var(–border);}
+.map-grid-inner{position:absolute;inset:0;background-image:linear-gradient(var(–border) 1px,transparent 1px),linear-gradient(90deg,var(–border) 1px,transparent 1px);background-size:28px 28px;opacity:.6;}
+.map-route{position:absolute;width:65%;height:2px;background:linear-gradient(90deg,var(–p500),var(–d500));border-radius:2px;left:12%;top:50%;}
 .map-user-pin{position:absolute;left:15%;top:calc(50% - 13px);font-size:22px;}
 .map-truck-pin{position:absolute;right:15%;top:calc(50% - 13px);font-size:22px;animation:truckMove 3s linear infinite alternate;}
 @keyframes truckMove{from{right:40%}to{right:15%}}
-.map-eta-badge{position:absolute;top:10px;right:10px;background:var(--surface);border-radius:10px;padding:5px 10px;box-shadow:var(--card-sh);font-family:'Prompt',sans-serif;font-size:12px;font-weight:800;color:var(--d800);}
+.map-eta-badge{position:absolute;top:10px;right:10px;background:var(–surface);border-radius:10px;padding:5px 10px;box-shadow:var(–card-sh);font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:800;color:var(–d800);}
 .sos-info-row{display:flex;gap:8px;margin-bottom:12px;}
-.sos-ib{flex:1;background:var(--surface2);border-radius:var(--r-sm);padding:10px;text-align:center;}
-.sos-ib .sv{font-family:'Prompt',sans-serif;font-size:18px;font-weight:800;color:var(--text);}
-.sos-ib .sl{font-size:9px;color:var(--text2);margin-top:2px;}
-.sos-fuel-chip{flex:1;border:2px solid var(--border);border-radius:var(--r-sm);padding:9px 7px;text-align:center;cursor:pointer;transition:all .15s;background:var(--surface);}
-.sos-fuel-chip.on{border-color:var(--red);background:var(--red-light);}
-[data-theme="dark"] .sos-fuel-chip.on{background:rgba(229,57,53,.15);}
-.sos-fuel-chip .sfn{font-size:11px;font-weight:700;color:var(--text);}
-.sos-fuel-chip.on .sfn{color:var(--red);}
-.sos-fuel-chip .sfp{font-size:9px;color:var(--text2);margin-top:2px;}
-.sos-dispatched-card{background:linear-gradient(135deg,var(--d800),var(--p500));border-radius:var(--r);padding:14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.sos-ib{flex:1;background:var(–surface2);border-radius:var(–r-sm);padding:10px;text-align:center;}
+.sos-ib .sv{font-family:‘Prompt’,sans-serif;font-size:18px;font-weight:800;color:var(–text);}
+.sos-ib .sl{font-size:9px;color:var(–text2);margin-top:2px;}
+.sos-fuel-chip{flex:1;border:2px solid var(–border);border-radius:var(–r-sm);padding:9px 7px;text-align:center;cursor:pointer;transition:all .15s;background:var(–surface);}
+.sos-fuel-chip.on{border-color:var(–red);background:var(–red-light);}
+[data-theme=“dark”] .sos-fuel-chip.on{background:rgba(229,57,53,.15);}
+.sos-fuel-chip .sfn{font-size:11px;font-weight:700;color:var(–text);}
+.sos-fuel-chip.on .sfn{color:var(–red);}
+.sos-fuel-chip .sfp{font-size:9px;color:var(–text2);margin-top:2px;}
+.sos-dispatched-card{background:linear-gradient(135deg,var(–d800),var(–p500));border-radius:var(–r);padding:14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .sdc-icon{width:44px;height:44px;background:rgba(255,255,255,.13);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .sdc-text{flex:1;}
-.sdc-title{font-family:'Prompt',sans-serif;font-size:13px;font-weight:800;color:#fff;}
+.sdc-title{font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:800;color:#fff;}
 .sdc-sub{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;}
-.cancel-sos-btn{width:100%;background:var(--red-light);border:none;border-radius:var(--r-sm);padding:11px;font-size:12px;color:var(--red);cursor:pointer;font-weight:600;margin-top:7px;}
+.cancel-sos-btn{width:100%;background:var(–red-light);border:none;border-radius:var(–r-sm);padding:11px;font-size:12px;color:var(–red);cursor:pointer;font-weight:600;margin-top:7px;}
 .brand-search-wrap{position:relative;margin-bottom:6px;}
-.brand-search-input{width:100%;border:2px solid var(--border);border-radius:var(--r-sm);padding:10px 12px 10px 34px;font-size:12px;color:var(--text);background:var(--surface2);outline:none;font-family:'Sarabun',sans-serif;}
-.brand-search-input:focus{border-color:var(--p500);}
-.bsi-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);}
-.brand-dropdown{max-height:150px;overflow-y:auto;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--surface);margin-bottom:9px;}
-.brand-option{padding:9px 12px;font-size:12px;cursor:pointer;color:var(--text);border-bottom:1px solid var(--border);transition:background .1s;}
-.brand-option:hover{background:var(--surface2);}
+.brand-search-input{width:100%;border:2px solid var(–border);border-radius:var(–r-sm);padding:10px 12px 10px 34px;font-size:12px;color:var(–text);background:var(–surface2);outline:none;font-family:‘Sarabun’,sans-serif;}
+.brand-search-input:focus{border-color:var(–p500);}
+.bsi-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(–text3);}
+.brand-dropdown{max-height:150px;overflow-y:auto;border:1.5px solid var(–border);border-radius:var(–r-sm);background:var(–surface);margin-bottom:9px;}
+.brand-option{padding:9px 12px;font-size:12px;cursor:pointer;color:var(–text);border-bottom:1px solid var(–border);transition:background .1s;}
+.brand-option:hover{background:var(–surface2);}
 .brand-option:last-child{border-bottom:none;}
 .brand-option.hidden{display:none;}
-.brand-selected{background:var(--surface2);border:2px solid var(--p500);border-radius:var(--r-sm);padding:9px 12px;font-size:12px;color:var(--text);margin-bottom:9px;display:flex;align-items:center;justify-content:space-between;}
-.input-field{width:100%;border:2px solid var(--border);border-radius:var(--r-sm);padding:10px 12px;font-size:13px;color:var(--text);background:var(--surface2);outline:none;margin-bottom:9px;font-family:'Sarabun',sans-serif;}
-.input-field:focus{border-color:var(--p500);}
+.brand-selected{background:var(–surface2);border:2px solid var(–p500);border-radius:var(–r-sm);padding:9px 12px;font-size:12px;color:var(–text);margin-bottom:9px;display:flex;align-items:center;justify-content:space-between;}
+.input-field{width:100%;border:2px solid var(–border);border-radius:var(–r-sm);padding:10px 12px;font-size:13px;color:var(–text);background:var(–surface2);outline:none;margin-bottom:9px;font-family:‘Sarabun’,sans-serif;}
+.input-field:focus{border-color:var(–p500);}
 .color-row{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;}
 .color-btn{width:32px;height:32px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:transform .15s;}
-.color-btn.on{border-color:var(--p500);transform:scale(1.15);}
-.info-banner{background:rgba(60,118,241,.07);border:1.5px solid rgba(60,118,241,.2);border-radius:var(--r-sm);padding:10px 12px;margin-bottom:10px;font-size:11px;color:var(--text2);line-height:1.5;}
-.info-banner strong{color:var(--text);}
+.color-btn.on{border-color:var(–p500);transform:scale(1.15);}
+.info-banner{background:rgba(60,118,241,.07);border:1.5px solid rgba(60,118,241,.2);border-radius:var(–r-sm);padding:10px 12px;margin-bottom:10px;font-size:11px;color:var(–text2);line-height:1.5;}
+.info-banner strong{color:var(–text);}
 .pb-nav{padding-bottom:6px;}
-.ev-info-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.ev-info-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(–border);}
 .ev-info-row:last-child{border-bottom:none;}
-.ev-r-icon{width:38px;height:38px;border-radius:11px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ev-r-icon{width:38px;height:38px;border-radius:11px;background:var(–surface2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
 .ev-r-info{flex:1;}
-.ev-r-name{font-size:12px;font-weight:700;color:var(--text);}
-.ev-r-sub{font-size:10px;color:var(--text2);margin-top:2px;}
-.ev-avail{font-size:9px;font-weight:600;color:var(--green);margin-top:3px;display:flex;align-items:center;}
+.ev-r-name{font-size:12px;font-weight:700;color:var(–text);}
+.ev-r-sub{font-size:10px;color:var(–text2);margin-top:2px;}
+.ev-avail{font-size:9px;font-weight:600;color:var(–green);margin-top:3px;display:flex;align-items:center;}
 .time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px;}
-.time-slot{background:var(--surface2);border:1.5px solid var(--border);border-radius:9px;padding:8px 4px;text-align:center;cursor:pointer;transition:all .15s;font-size:11px;font-weight:600;color:var(--text);}
-.time-slot.on{background:var(--p500);color:#fff;border-color:var(--p500);}
+.time-slot{background:var(–surface2);border:1.5px solid var(–border);border-radius:9px;padding:8px 4px;text-align:center;cursor:pointer;transition:all .15s;font-size:11px;font-weight:600;color:var(–text);}
+.time-slot.on{background:var(–p500);color:#fff;border-color:var(–p500);}
 .time-slot.taken{opacity:.45;cursor:not-allowed;text-decoration:line-through;}
 
 /* ─── STATION BOTTOM SHEET ─── */
 .sbs-overlay{display:none;position:fixed;inset:0;background:rgba(0,10,30,.45);backdrop-filter:blur(3px);z-index:300;justify-content:flex-end;flex-direction:column;align-items:center;}
 .sbs-overlay.show{display:flex;}
-.sbs{background:var(--surface);border-radius:28px 28px 0 0;width:390px;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;animation:sheetUp .32s cubic-bezier(.34,1.1,.64,1);}
+.sbs{background:var(–surface);border-radius:28px 28px 0 0;width:390px;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;animation:sheetUp .32s cubic-bezier(.34,1.1,.64,1);}
 .sbs-photos{display:flex;gap:3px;height:150px;flex-shrink:0;position:relative;}
-.sbs-photo{flex:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;position:relative;overflow:hidden;}
+.sbs-photo{flex:1;background:var(–surface2);display:flex;align-items:center;justify-content:center;font-size:32px;position:relative;overflow:hidden;}
 .sbs-photo:first-child{border-radius:0;}
 .sbs-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.5) 100%);}
 .sbs-close-btn{position:absolute;top:10px;right:12px;width:30px;height:30px;background:rgba(0,0,0,.45);border:none;border-radius:50%;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;backdrop-filter:blur(4px);}
 .sbs-body{overflow-y:auto;padding:16px 16px 32px;flex:1;}
 .sbs-body::-webkit-scrollbar{display:none;}
-.sbs-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:10px auto 0;flex-shrink:0;}
-.sbs-name{font-family:'Prompt',sans-serif;font-size:17px;font-weight:800;color:var(--text);margin-bottom:3px;line-height:1.3;}
-.sbs-addr{font-size:11px;color:var(--text2);margin-bottom:8px;}
+.sbs-handle{width:36px;height:4px;background:var(–border);border-radius:2px;margin:10px auto 0;flex-shrink:0;}
+.sbs-name{font-family:‘Prompt’,sans-serif;font-size:17px;font-weight:800;color:var(–text);margin-bottom:3px;line-height:1.3;}
+.sbs-addr{font-size:11px;color:var(–text2);margin-bottom:8px;}
 .sbs-meta-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
 .sbs-rating-stars{color:#F9A825;font-size:12px;letter-spacing:1px;}
-.sbs-rating-num{font-family:'Prompt',sans-serif;font-size:13px;font-weight:800;color:var(--text);}
-.sbs-review-cnt{font-size:10px;color:var(--text2);}
-.sbs-status-open{background:var(--green-light);color:var(--green);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;}
-.sbs-status-busy{background:var(--orange-light);color:var(--orange);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;}
-.sbs-hours{font-size:11px;color:var(--text2);}
-.sbs-divider{height:1px;background:var(--border);margin:10px 0;}
-.sbs-section-title{font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px;}
-.sbs-queue-box{background:linear-gradient(135deg,var(--d900),var(--d800));border-radius:12px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.sbs-queue-lbl{font-size:10px;color:var(--d300);}
-.sbs-queue-val{font-family:'Prompt',sans-serif;font-size:18px;font-weight:800;color:#fff;}
-.sbs-queue-unit{font-size:9px;color:var(--d300);}
-.sbs-ev-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);}
+.sbs-rating-num{font-family:‘Prompt’,sans-serif;font-size:13px;font-weight:800;color:var(–text);}
+.sbs-review-cnt{font-size:10px;color:var(–text2);}
+.sbs-status-open{background:var(–green-light);color:var(–green);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;}
+.sbs-status-busy{background:var(–orange-light);color:var(–orange);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;}
+.sbs-hours{font-size:11px;color:var(–text2);}
+.sbs-divider{height:1px;background:var(–border);margin:10px 0;}
+.sbs-section-title{font-size:10px;font-weight:700;color:var(–text3);letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px;}
+.sbs-queue-box{background:linear-gradient(135deg,var(–d900),var(–d800));border-radius:12px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.sbs-queue-lbl{font-size:10px;color:var(–d300);}
+.sbs-queue-val{font-family:‘Prompt’,sans-serif;font-size:18px;font-weight:800;color:#fff;}
+.sbs-queue-unit{font-size:9px;color:var(–d300);}
+.sbs-ev-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(–border);}
 .sbs-ev-row:last-child{border-bottom:none;}
-.sbs-ev-icon{width:34px;height:34px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sbs-ev-icon{width:34px;height:34px;background:var(–green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
 .sbs-ev-info{flex:1;}
-.sbs-ev-name{font-size:12px;font-weight:700;color:var(--text);}
-.sbs-ev-sub{font-size:10px;color:var(--text2);margin-top:1px;}
-.sbs-ev-avail{font-size:9px;font-weight:700;color:var(--green);}
-.sbs-ev-avail.full{color:var(--orange);}
+.sbs-ev-name{font-size:12px;font-weight:700;color:var(–text);}
+.sbs-ev-sub{font-size:10px;color:var(–text2);margin-top:1px;}
+.sbs-ev-avail{font-size:9px;font-weight:700;color:var(–green);}
+.sbs-ev-avail.full{color:var(–orange);}
 .sbs-fuel-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:2px;}
-.sbs-fuel-pill{background:rgba(60,118,241,.08);color:var(--p600);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;border:1px solid rgba(60,118,241,.15);}
+.sbs-fuel-pill{background:rgba(60,118,241,.08);color:var(–p600);border-radius:18px;padding:3px 10px;font-size:10px;font-weight:700;border:1px solid rgba(60,118,241,.15);}
 .sbs-shop-row{display:flex;flex-wrap:wrap;gap:5px;}
-.sbs-shop-pill{background:var(--surface2);border-radius:18px;padding:4px 10px;font-size:11px;color:var(--text);border:1px solid var(--border);}
+.sbs-shop-pill{background:var(–surface2);border-radius:18px;padding:4px 10px;font-size:11px;color:var(–text);border:1px solid var(–border);}
 .sbs-action-row{display:flex;gap:8px;margin-top:14px;}
-.sbs-nav-btn{flex:1;background:linear-gradient(135deg,var(--p500),var(--d800));color:#fff;border:none;border-radius:12px;padding:12px;font-family:'Prompt',sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
-.sbs-book-btn{flex:1;background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:12px;font-family:'Prompt',sans-serif;font-size:12px;font-weight:700;cursor:pointer;color:var(--text);display:flex;align-items:center;justify-content:center;gap:6px;}
+.sbs-nav-btn{flex:1;background:linear-gradient(135deg,var(–p500),var(–d800));color:#fff;border:none;border-radius:12px;padding:12px;font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
+.sbs-book-btn{flex:1;background:var(–surface2);border:1.5px solid var(–border);border-radius:12px;padding:12px;font-family:‘Prompt’,sans-serif;font-size:12px;font-weight:700;cursor:pointer;color:var(–text);display:flex;align-items:center;justify-content:center;gap:6px;}
 .sbs-dist-badge{background:rgba(255,255,255,.15);border-radius:8px;padding:2px 8px;font-size:10px;color:#fff;font-weight:600;position:absolute;bottom:10px;left:10px;z-index:2;backdrop-filter:blur(4px);}
-.star-filled{color:#F9A825;}.star-half{color:#F9A825;opacity:.5;}.star-empty{color:var(--border);}
+.star-filled{color:#F9A825;}.star-half{color:#F9A825;opacity:.5;}.star-empty{color:var(–border);}
 </style>
+
 </head>
 <body>
 <div class="phone">
 <div class="sb"><span class="time" id="clock">9:41</span><div style="display:flex;gap:5px;font-size:13px;">📶🔋</div></div>
 
 <!-- ═══ HOME ═══ -->
+
 <div class="view active" id="v-home">
   <div class="ah">
     <div class="ah-top">
@@ -454,8 +457,10 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ MAP ═══ -->
-<div class="view" id="v-map">
-  <div class="ah" style="padding-bottom:16px;">
+
+<div class="view" id="v-map" style="display:none;flex-direction:column;height:100%;overflow:hidden;">
+  <!-- Map Header -->
+  <div class="ah" style="padding-bottom:16px;flex-shrink:0;">
     <div class="ah-top">
       <div style="display:flex;align-items:center;gap:9px;">
         <button class="back-btn" onclick="goTo('v-home')">‹</button>
@@ -464,8 +469,16 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
       <div style="background:rgba(255,255,255,.13);border-radius:18px;padding:4px 10px;font-size:10px;font-weight:600;color:#fff;display:flex;align-items:center;gap:3px;"><span class="ldot"></span>Live</div>
     </div>
   </div>
-  <div class="map-container">
-    <div class="map-search-bar">
+
+  <!-- Map + Sheet split container -->
+
+  <div id="map-split" style="flex:1;display:flex;flex-direction:column;overflow:hidden;position:relative;">
+
+```
+<!-- MAP ZONE — shrinks when sheet opens -->
+<div id="map-zone" style="flex:1;position:relative;transition:flex .35s cubic-bezier(.4,0,.2,1);min-height:120px;">
+  <div class="map-container" style="height:100%;display:flex;flex-direction:column;">
+    <div class="map-search-bar" style="flex-shrink:0;">
       <span style="font-size:16px;">🔍</span>
       <input type="text" id="map-search-input" data-i18n-ph="searchStation">
       <span style="font-size:16px;cursor:pointer;">📍</span>
@@ -475,12 +488,30 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
       <div style="flex:1;"><div style="font-family:'Prompt',sans-serif;font-size:11px;font-weight:700;" id="nav-toast-title"></div><div style="font-size:9px;opacity:.8;margin-top:1px;" id="nav-toast-sub"></div></div>
       <div style="cursor:pointer;font-size:12px;opacity:.7;" onclick="cancelNav()">✕</div>
     </div>
-    <div id="leaflet-map"></div>
+    <div id="leaflet-map" style="flex:1;min-height:0;"></div>
   </div>
-  <div class="station-list-wrap">
-    <div class="sec-t" style="margin-bottom:8px;" data-i18n="bkkBranches">📍 สาขา PTT ในกรุงเทพฯ</div>
-    <div class="hist-card" id="station-list"></div>
+</div>
+
+<!-- INLINE BOTTOM SHEET — sits below map in same flow -->
+<div id="inline-sbs" style="background:var(--surface);flex-shrink:0;max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1);border-radius:20px 20px 0 0;box-shadow:0 -4px 20px rgba(0,0,0,.12);">
+  <div style="width:36px;height:4px;background:var(--border);border-radius:2px;margin:10px auto 6px;"></div>
+  <div id="isbs-photos" style="display:flex;gap:3px;height:130px;flex-shrink:0;position:relative;"></div>
+  <div id="isbs-body" style="overflow-y:auto;padding:14px 16px 16px;max-height:320px;"></div>
+  <div id="isbs-actions" style="padding:0 16px 20px;display:flex;gap:8px;"></div>
+</div>
+```
+
   </div>
+
+  <!-- Station list (hidden when sheet is open) -->
+
+  <div id="map-list-zone" style="flex-shrink:0;max-height:200px;overflow-y:auto;transition:max-height .35s;">
+    <div class="station-list-wrap" style="padding-bottom:0;">
+      <div class="sec-t" style="margin-bottom:8px;" data-i18n="bkkBranches">📍 สาขา PTT ในกรุงเทพฯ</div>
+      <div class="hist-card" id="station-list"></div>
+    </div>
+  </div>
+
   <div class="nav">
     <div class="ni" onclick="goTo('v-home')"><div class="nicon">🏠</div><div class="nlbl" data-i18n="home">หน้าหลัก</div></div>
     <div class="ni on"><div class="nicon">🗺️</div><div class="nlbl" style="color:var(--p500);" data-i18n="map">แผนที่</div></div>
@@ -491,6 +522,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ ENERGY ═══ -->
+
 <div class="view" id="v-energy">
   <div class="ah" style="padding-bottom:18px;">
     <div class="ah-top">
@@ -542,6 +574,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ PUMP ═══ -->
+
 <div class="view" id="v-pump">
   <div class="ah" style="padding-bottom:16px;">
     <div class="ah-top">
@@ -610,6 +643,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ EV ═══ -->
+
 <div class="view" id="v-ev">
   <div class="ah" style="padding-bottom:16px;">
     <div class="ah-top">
@@ -694,6 +728,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ HISTORY ═══ -->
+
 <div class="view" id="v-history">
   <div class="ah" style="padding-bottom:16px;">
     <div class="ah-top">
@@ -725,6 +760,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ PROFILE ═══ -->
+
 <div class="view" id="v-profile">
   <div class="profile-banner">
     <div class="ah-top" style="margin-bottom:14px;">
@@ -737,7 +773,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
       <div class="profile-avatar">👤</div>
       <div>
         <div class="profile-name">สมชาย รักสะอาด</div>
-        <div class="profile-email">somchai@email.com · 081-234-5678</div>
+        <div class="profile-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11627e7c7279707851747c70787d3f727e7c">[email&#160;protected]</a> · 081-234-5678</div>
         <div style="margin-top:5px;"><div style="background:rgba(255,215,0,.18);border:1px solid rgba(255,215,0,.35);border-radius:7px;padding:2px 9px;font-size:9px;font-weight:700;color:#FFD600;display:inline-block;">BlueCard Gold</div></div>
       </div>
     </div>
@@ -776,7 +812,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
   <div style="padding:10px 16px 0;"><div class="sec-t" style="margin-bottom:8px;" data-i18n="personalInfo">👤 ข้อมูลส่วนตัว</div></div>
   <div class="profile-info-card">
     <div class="pi-row"><div class="pi-icon">📛</div><div><div class="pi-label" data-i18n="fullName">ชื่อ-นามสกุล</div><div class="pi-value">สมชาย รักสะอาด</div></div><div class="pi-edit">›</div></div>
-    <div class="pi-row"><div class="pi-icon">📧</div><div><div class="pi-label" data-i18n="email">อีเมล</div><div class="pi-value">somchai@email.com</div></div><div class="pi-edit">›</div></div>
+    <div class="pi-row"><div class="pi-icon">📧</div><div><div class="pi-label" data-i18n="email">อีเมล</div><div class="pi-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e2d31333d363f371e3b333f3732703d3133">[email&#160;protected]</a></div></div><div class="pi-edit">›</div></div>
     <div class="pi-row"><div class="pi-icon">📱</div><div><div class="pi-label" data-i18n="phone">เบอร์โทรศัพท์</div><div class="pi-value">081-234-5678</div></div><div class="pi-edit">›</div></div>
     <div class="pi-row"><div class="pi-icon">🆔</div><div><div class="pi-label" data-i18n="memberId">รหัสสมาชิก</div><div class="pi-value">PTT-2020-78210</div></div></div>
   </div>
@@ -799,6 +835,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div><!-- /phone -->
 
 <!-- ═══ SOS MODAL ═══ -->
+
 <div class="overlay" id="sos-overlay" onclick="closeByOL(event,'sos-overlay')">
   <div class="sheet">
     <div class="m-handle"></div>
@@ -852,6 +889,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ OTP MODAL ═══ -->
+
 <div class="overlay" id="otp-overlay" onclick="closeByOL(event,'otp-overlay')">
   <div class="sheet">
     <div class="m-handle"></div>
@@ -887,6 +925,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ EV BOOK B3 MODAL ═══ -->
+
 <div class="overlay" id="evbook-overlay" onclick="closeByOL(event,'evbook-overlay')">
   <div class="sheet">
     <div class="m-handle"></div>
@@ -909,6 +948,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ TOPUP MODAL ═══ -->
+
 <div class="overlay" id="topup-overlay" onclick="closeByOL(event,'topup-overlay')">
   <div class="sheet">
     <div class="m-handle"></div>
@@ -935,6 +975,7 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ ADD CAR MODAL ═══ -->
+
 <div class="overlay" id="addcar-overlay" onclick="closeByOL(event,'addcar-overlay')">
   <div class="sheet">
     <div class="m-handle"></div>
@@ -984,11 +1025,13 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
 </div>
 
 <!-- ═══ SLOT DETAIL MODAL ═══ -->
+
 <div class="overlay" id="slot-overlay" onclick="closeByOL(event,'slot-overlay')">
   <div class="sheet"><div class="m-handle"></div><div id="slot-detail-content"></div></div>
 </div>
 
 <!-- ═══ STATION BOTTOM SHEET ═══ -->
+
 <div class="sbs-overlay" id="sbs-overlay" onclick="closeSBS(event)">
   <div class="sbs" id="sbs-panel">
     <div class="sbs-handle"></div>
@@ -999,727 +1042,644 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);min-height:100vh;disp
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
 // ══════════════════════════════════════════
 // i18n TRANSLATIONS
 // ══════════════════════════════════════════
 const STRINGS = {
-  th: {
-    tagline:'Smart Energy Platform', topup:'เติมเงิน', thisMonth:'เดือนนี้',
-    booking:'จองพลังงาน', stationMap:'แผนที่ปั๊ม', history:'ประวัติ',
-    sosTitle:'SOS Energy Assistance', sosSub:'น้ำมัน/แบตหมดกลางทาง กดด่วน!',
-    feat1:'📍 GPS ติดตาม', feat2:'⏱ ETA Real-time', feat3:'⚡ Mobile EV',
-    newServices:'🆕 บริการใหม่', bookingTitle:'📅 จองพลังงาน',
-    bookingDesc:'จองล่วงหน้า ไม่ต้องรอคิว', pumpDesc:'ชำระ Wallet หักทันที เข้าเติมได้เลย',
-    bookingCardDesc:'จองล่วงหน้า เลือกน้ำมัน+สาขา', noDeduct:'ไม่หักเงินทันที',
-    pumpCardDesc:'ชำระ Wallet เติมได้ทันที', instantDeduct:'หักเงินทันที',
-    evCardDesc:'จองช่อง OTP ปลดล็อก',
-    recentTx:'📋 รายการล่าสุด', viewAll:'ดูทั้งหมด ›',
-    home:'หน้าหลัก', map:'แผนที่', profile:'โปรไฟล์', bookNav:'จอง', pump:'ปั๊ม',
-    mapTitle:'แผนที่ปั๊ม PTT', bkkBranches:'📍 สาขา PTT ในกรุงเทพฯ',
-    searchStation:'ค้นหาสาขา PTT...',
-    bookingTagline:'Smart Reservation · ไม่หักเงินทันที',
-    bookingInfo:'📋 เลือกน้ำมัน + วงเงิน + สาขา กดจอง ระบบ hold คิว 30 นาที หักเงินเมื่อเติมจริงที่ปั๊ม',
-    fuel:'เชื้อเพลิง', evCharge:'EV ชาร์จ', selectFuelType:'เลือกประเภทน้ำมัน',
-    budget:'วงเงิน (฿)', approxVol:'ปริมาณโดยประมาณ', litre:'ลิตร',
-    approxDist:'ระยะทางโดยประมาณ', km:'กม.', selectBranch:'เลือกสาขา',
-    available2min:'✓ ว่าง ~2 นาที', wait18min:'⏳ รอ ~18 นาที',
-    evAvail:'ว่าง 2/4 หัว · 8.5฿/kWh', confirmBooking:'ยืนยันจอง (ไม่หักเงินทันที)',
-    pumpTagline:'ชำระ Wallet → เติมได้ทันที',
-    pumpInfo:'💳 เลือกน้ำมัน + กำหนดวงเงิน กดจ่ายผ่าน Wallet แล้วรับรหัสหัวเติม ไม่ต้องรอคิว',
-    selectFuelStep:'เลือกน้ำมัน', setBudgetStep:'ระบุวงเงิน', payStep:'จ่ายเงิน', fillStep:'เติมน้ำมัน',
-    nozzleAssigned:'หัวเติมที่ได้รับ', nozzleA3:'หัว A3', status:'สถานะ', ready:'พร้อมใช้งาน',
-    fuelBudget:'น้ำมันที่เลือก / วงเงิน', amtPaid:'ยอดชำระ', budgetBaht:'วงเงิน (฿)',
-    payWallet:'ชำระเงินผ่าน PTT Wallet',
-    myBooking:'การจองของฉัน — พหลโยธิน', today:'วันนี้', slotB2Floor1:'ช่อง B2 · ชั้น 1',
-    parkingMap:'🅿️ แผนผังช่องจอด EV — พหลโยธิน', tapSlot:'กดช่องเพื่อดูรายละเอียด / จอง',
-    entrance:'⬆ ทางเข้า / ENTRANCE', minLeft:'นาทีเหลือ', driveLane:'🚗 DRIVE LANE 🚗',
-    mine:'⭐ ของฉัน', booked:'จองแล้ว', available:'ว่าง', bookable:'จองได้', book:'จอง',
-    reserved:'จองล่วงหน้า', mySlot:'ของฉัน ⭐', exit:'⬇ ทางออก / EXIT',
-    walkinVsBook:'ℹ️ Walk-in vs จองล่วงหน้า',
-    walkinDesc:'มาเติมได้เลย ดูเวลาที่เหลือด้านบน', bookAhead:'จองล่วงหน้า',
-    bookAheadDesc:'จองผ่านแอป ใช้ OTP ปลดล็อก', checkinOTP:'เช็คอิน — ป้อน OTP ปลดล็อก B2',
-    historyTitle:'ประวัติการใช้งาน', all:'ทั้งหมด', topupFilter:'💰 เติมเงิน',
-    pointsRate:'฿1 = 1 pt · ต่ออายุ: 31 ธ.ค. 2568',
-    darkMode:'🌙 โหมดมืด', adjustScreen:'ปรับสีหน้าจอ',
-    language:'🌐 ภาษา / Language', langSub:'เลือกภาษาของแอป',
-    personalInfo:'👤 ข้อมูลส่วนตัว', fullName:'ชื่อ-นามสกุล', email:'อีเมล',
-    phone:'เบอร์โทรศัพท์', memberId:'รหัสสมาชิก',
-    registeredCars:'🚗 รถที่ลงทะเบียน', addCar:'+ เพิ่มรถ', logout:'🔒 ออกจากระบบ',
-    sosModalSub:'ระบบพบตำแหน่งคุณแล้ว — เลือกบริการ',
-    serviceType:'🚚 ประเภทบริการ', oilFuel:'น้ำมัน', charge:'ชาร์จ',
-    fuelType:'⛽ ชนิดน้ำมัน', connector:'🔌 หัวชาร์จ',
-    callSOS:'📞 ยืนยัน — เรียกรถช่วยเหลือ', cancel:'ยกเลิก',
-    helpOnWay:'รถช่วยเหลือกำลังมา!', min:'นาที', helpETA:'รถช่วย ETA',
-    minETA:'นาที ETA', serviceFee:'ค่าบริการ', cancelIn:'⏱ ยกเลิกได้ภายใน',
-    second:'วินาที', cancelTruck:'✕ ยกเลิกการเรียกรถ', closeStillComing:'ปิด (รถยังมาอยู่)',
-    otpTitle:'🔓 เช็คอิน EV Smart Station', otpSub:'กรอก OTP 6 หลักที่ส่งไปยัง 081-234-5678',
-    otpLabel:'OTP (ตัวอย่าง: 472839)',
-    bookB3:'📅 จองช่อง B3', otpWillSend:'📱 ระบบส่ง OTP ให้ 15 นาทีก่อนถึงเวลาจอง',
-    selectDate:'📅 เลือกวันที่', selectTime:'เลือกเวลา', strikeOutFull:'(ขีดฆ่า = เต็มแล้ว)',
-    confirmB3:'📅 ยืนยันจองช่อง B3',
-    topupTitle:'💳 เติมเงิน PTT Wallet', currentBalance:'ยอดปัจจุบัน',
-    paymentChannel:'ช่องทางชำระเงิน', creditCard:'บัตรเครดิต', selectAmount:'เลือกจำนวนเงิน',
-    baht:'บาท', bonus:'โบนัส', confirmTopup300:'✅ ยืนยันเติมเงิน 300 บาท',
-    addCarTitle:'🚗 เพิ่มรถยนต์', addCarSub:'กรอกข้อมูลรถของคุณ',
-    carBrand:'ยี่ห้อรถ', searchBrand:'ค้นหายี่ห้อรถ เช่น Toyota, BYD...',
-    carModel:'รุ่นรถ', carModelPh:'เช่น Yaris Cross, Atto 3, Model Y...',
-    plateNo:'ป้ายทะเบียน', platePh:'เช่น กข-1234 กทม.', carColor:'สีรถ',
-    energyType:'ประเภทพลังงาน', saveCar:'🚗 บันทึกข้อมูลรถ',
-    // Dynamic strings
-    bookSuccess:'📅 จองสำเร็จ! คิวถูก Hold 30 นาที',
-    logoutMsg:'ออกจากระบบ',
-    savedPref:'⭐ บันทึกการตั้งค่าแล้ว',
-    insufficientBal:'❌ ยอด Wallet ไม่เพียงพอ',
-    enterBudget:'❌ กรุณาระบุวงเงิน',
-    pumpSuccess:'✅ ชำระแล้ว! เดินไปหัวเติม A3 ได้เลย',
-    otpFill:'กรุณากรอก OTP ให้ครบ 6 หลัก',
-    fillAll:'⚠️ กรุณากรอกข้อมูลให้ครบ',
-    selectTime2:'⚠️ กรุณาเลือกเวลา',
-    cancelExpired:'❌ หมดเวลายกเลิก',
-    cancelledSOS:'✅ ยกเลิกการเรียกรถแล้ว',
-    topupSuccess:'✅ เติมเงินสำเร็จ! ยอดใหม่',
-    navTo:'🗺️ นำทาง',
-    // EV date labels
-    todayDate:'วันนี้',
-    navBtn:'› นำทาง',
-    navActiveBtn:'✅ นำทาง',
-    openStatus:'● เปิด',
-    busyStatus:'⏳ คิวรอ',
-    spent:'ใช้ไป',
-    income:'เติมเงิน',
-    etaMin:'นาที',
-    mobileFuelETA:'Mobile Fuel — ETA ~8 นาที',
-    mobileEVETA:'Mobile EV — ETA ~8 นาที',
-    walkinTitle:'ช่อง {id} — Walk-in EV',
-    walkinCharging:'กำลังชาร์จอยู่ คาดว่าว่างใน',
-    walkinNote:'⚡ ช่องนี้เป็น Walk-in — ไม่ต้องจองล่วงหน้า รอว่างแล้วมาเติมได้เลย',
-    closeBtn:'ปิด',
-    slotAvail:'ช่อง {id} — ว่าง จองได้',
-    slotReady:'พร้อมรับการจอง',
-    bookNow:'📅 จองช่อง {id} เลย',
-    alreadyBooked:'ช่อง {id} — จองแล้ว ✅',
-    bookingConfirmed:'การจองของคุณได้รับการยืนยันแล้ว',
-    bookSuccessMsg:'จองช่อง {id} สำเร็จ',
-    checkinOTPBtn:'🔓 เช็คอิน / ป้อน OTP',
-    otpUnlocked:'🔓 ปลดล็อกช่อง {id} สำเร็จ! เชื่อมต่อหัวชาร์จได้เลย ⚡',
-    b3BookedMsg:'✅ จองช่อง B3 สำเร็จ!',
-    popupNav:'🗺️ นำทาง',
-    myLocation:'📍 ตำแหน่งของฉัน',
-    carAdded:'✅ เพิ่ม {brand} {model} แล้ว',
-  },
-  en: {
-    tagline:'Smart Energy Platform', topup:'Top Up', thisMonth:'This Month',
-    booking:'Book Energy', stationMap:'Station Map', history:'History',
-    sosTitle:'SOS Energy Assistance', sosSub:'Out of fuel/battery? Call now!',
-    feat1:'📍 GPS Tracking', feat2:'⏱ ETA Real-time', feat3:'⚡ Mobile EV',
-    newServices:'🆕 New Services', bookingTitle:'📅 Book Energy',
-    bookingDesc:'Reserve ahead, skip the queue', pumpDesc:'Pay via Wallet, fill up instantly',
-    bookingCardDesc:'Pre-book fuel + choose branch', noDeduct:'No instant charge',
-    pumpCardDesc:'Pay Wallet, fill instantly', instantDeduct:'Instant payment',
-    evCardDesc:'Reserve slot, OTP unlock',
-    recentTx:'📋 Recent Transactions', viewAll:'View All ›',
-    home:'Home', map:'Map', profile:'Profile', bookNav:'Book', pump:'Pump',
-    mapTitle:'PTT Station Map', bkkBranches:'📍 PTT Branches in Bangkok',
-    searchStation:'Search PTT stations...',
-    bookingTagline:'Smart Reservation · No Instant Charge',
-    bookingInfo:'📋 Select fuel + budget + branch, confirm booking. System holds queue 30 min. Charged when you actually fill up.',
-    fuel:'Fuel', evCharge:'EV Charge', selectFuelType:'Select Fuel Type',
-    budget:'Budget (฿)', approxVol:'Approximate Volume', litre:'L',
-    approxDist:'Estimated Range', km:'km', selectBranch:'Select Branch',
-    available2min:'✓ Available ~2 min', wait18min:'⏳ Wait ~18 min',
-    evAvail:'2/4 ports free · ฿8.5/kWh', confirmBooking:'Confirm Booking (No instant charge)',
-    pumpTagline:'Pay Wallet → Fill Up Instantly',
-    pumpInfo:'💳 Select fuel + set budget, pay via Wallet, receive nozzle code. No waiting.',
-    selectFuelStep:'Select Fuel', setBudgetStep:'Set Budget', payStep:'Pay', fillStep:'Fill Up',
-    nozzleAssigned:'Assigned Nozzle', nozzleA3:'Nozzle A3', status:'Status', ready:'Ready',
-    fuelBudget:'Selected Fuel / Budget', amtPaid:'Amount Paid', budgetBaht:'Budget (฿)',
-    payWallet:'Pay via PTT Wallet',
-    myBooking:'My Booking — Phahon Yothin', today:'Today', slotB2Floor1:'Slot B2 · Floor 1',
-    parkingMap:'🅿️ EV Parking Map — Phahon Yothin', tapSlot:'Tap slot for details / booking',
-    entrance:'⬆ ENTRANCE', minLeft:'min left', driveLane:'🚗 DRIVE LANE 🚗',
-    mine:'⭐ Mine', booked:'Booked', available:'Free', bookable:'Book Now', book:'Book',
-    reserved:'Pre-booked', mySlot:'Mine ⭐', exit:'⬇ EXIT',
-    walkinVsBook:'ℹ️ Walk-in vs Pre-book',
-    walkinDesc:'Just come and charge, see time remaining above', bookAhead:'Pre-book',
-    bookAheadDesc:'Book via app, unlock with OTP', checkinOTP:'Check-in — Enter OTP to unlock B2',
-    historyTitle:'Transaction History', all:'All', topupFilter:'💰 Top Up',
-    pointsRate:'฿1 = 1 pt · Expires: 31 Dec 2025',
-    darkMode:'🌙 Dark Mode', adjustScreen:'Adjust screen colour',
-    language:'🌐 Language', langSub:'Select app language',
-    personalInfo:'👤 Personal Info', fullName:'Full Name', email:'Email',
-    phone:'Phone Number', memberId:'Member ID',
-    registeredCars:'🚗 Registered Cars', addCar:'+ Add Car', logout:'🔒 Log Out',
-    sosModalSub:'Location found — Select service type',
-    serviceType:'🚚 Service Type', oilFuel:'Fuel', charge:'Charge',
-    fuelType:'⛽ Fuel Type', connector:'🔌 Connector',
-    callSOS:'📞 Confirm — Call Rescue Vehicle', cancel:'Cancel',
-    helpOnWay:'Help is on the way!', min:'min', helpETA:'Rescue ETA',
-    minETA:'min ETA', serviceFee:'Service Fee', cancelIn:'⏱ Cancel within',
-    second:'seconds', cancelTruck:'✕ Cancel Rescue', closeStillComing:'Close (vehicle still coming)',
-    otpTitle:'🔓 EV Station Check-In', otpSub:'Enter 6-digit OTP sent to 081-234-5678',
-    otpLabel:'OTP (example: 472839)',
-    bookB3:'📅 Book Slot B3', otpWillSend:'📱 OTP will be sent 15 minutes before your booking',
-    selectDate:'📅 Select Date', selectTime:'Select Time', strikeOutFull:'(strikethrough = full)',
-    confirmB3:'📅 Confirm Slot B3 Booking',
-    topupTitle:'💳 Top Up PTT Wallet', currentBalance:'Current Balance',
-    paymentChannel:'Payment Method', creditCard:'Credit Card', selectAmount:'Select Amount',
-    baht:'THB', bonus:'Bonus', confirmTopup300:'✅ Confirm Top Up 300 THB',
-    addCarTitle:'🚗 Add Vehicle', addCarSub:'Enter your vehicle information',
-    carBrand:'Brand', searchBrand:'Search brand e.g. Toyota, BYD...',
-    carModel:'Model', carModelPh:'e.g. Yaris Cross, Atto 3, Model Y...',
-    plateNo:'License Plate', platePh:'e.g. ABC-1234 Bangkok', carColor:'Colour',
-    energyType:'Energy Type', saveCar:'🚗 Save Vehicle',
-    // Dynamic strings
-    bookSuccess:'📅 Booking confirmed! Queue held for 30 min',
-    logoutMsg:'Log out',
-    savedPref:'⭐ Preference saved',
-    insufficientBal:'❌ Insufficient Wallet balance',
-    enterBudget:'❌ Please enter budget',
-    pumpSuccess:'✅ Paid! Proceed to nozzle A3',
-    otpFill:'Please enter all 6 OTP digits',
-    fillAll:'⚠️ Please fill in all fields',
-    selectTime2:'⚠️ Please select a time',
-    cancelExpired:'❌ Cancel time expired',
-    cancelledSOS:'✅ Rescue cancelled',
-    topupSuccess:'✅ Top up successful! New balance',
-    navTo:'🗺️ Navigate to',
-    todayDate:'Today',
-    navBtn:'› Navigate',
-    navActiveBtn:'✅ Navigating',
-    openStatus:'● Open',
-    busyStatus:'⏳ Queue',
-    spent:'Spent',
-    income:'Topped Up',
-    etaMin:'min',
-    mobileFuelETA:'Mobile Fuel — ETA ~8 min',
-    mobileEVETA:'Mobile EV — ETA ~8 min',
-    walkinTitle:'Slot {id} — Walk-in EV',
-    walkinCharging:'Currently charging, estimated free in',
-    walkinNote:'⚡ Walk-in slot — No booking needed. Come when free.',
-    closeBtn:'Close',
-    slotAvail:'Slot {id} — Available',
-    slotReady:'Ready to Book',
-    bookNow:'📅 Book Slot {id} Now',
-    alreadyBooked:'Slot {id} — Booked ✅',
-    bookingConfirmed:'Your booking has been confirmed',
-    bookSuccessMsg:'Slot {id} booked',
-    checkinOTPBtn:'🔓 Check-in / Enter OTP',
-    otpUnlocked:'🔓 Slot {id} unlocked! Connect charger ⚡',
-    b3BookedMsg:'✅ Slot B3 booked!',
-    popupNav:'🗺️ Navigate',
-    myLocation:'📍 My Location',
-    carAdded:'✅ Added {brand} {model}',
-  }
+th: {
+tagline:‘Smart Energy Platform’, topup:‘เติมเงิน’, thisMonth:‘เดือนนี้’,
+booking:‘จองพลังงาน’, stationMap:‘แผนที่ปั๊ม’, history:‘ประวัติ’,
+sosTitle:‘SOS Energy Assistance’, sosSub:‘น้ำมัน/แบตหมดกลางทาง กดด่วน!’,
+feat1:‘📍 GPS ติดตาม’, feat2:‘⏱ ETA Real-time’, feat3:‘⚡ Mobile EV’,
+newServices:‘🆕 บริการใหม่’, bookingTitle:‘📅 จองพลังงาน’,
+bookingDesc:‘จองล่วงหน้า ไม่ต้องรอคิว’, pumpDesc:‘ชำระ Wallet หักทันที เข้าเติมได้เลย’,
+bookingCardDesc:‘จองล่วงหน้า เลือกน้ำมัน+สาขา’, noDeduct:‘ไม่หักเงินทันที’,
+pumpCardDesc:‘ชำระ Wallet เติมได้ทันที’, instantDeduct:‘หักเงินทันที’,
+evCardDesc:‘จองช่อง OTP ปลดล็อก’,
+recentTx:‘📋 รายการล่าสุด’, viewAll:‘ดูทั้งหมด ›’,
+home:‘หน้าหลัก’, map:‘แผนที่’, profile:‘โปรไฟล์’, bookNav:‘จอง’, pump:‘ปั๊ม’,
+mapTitle:‘แผนที่ปั๊ม PTT’, bkkBranches:‘📍 สาขา PTT ในกรุงเทพฯ’,
+searchStation:‘ค้นหาสาขา PTT…’,
+bookingTagline:‘Smart Reservation · ไม่หักเงินทันที’,
+bookingInfo:‘📋 เลือกน้ำมัน + วงเงิน + สาขา กดจอง ระบบ hold คิว 30 นาที หักเงินเมื่อเติมจริงที่ปั๊ม’,
+fuel:‘เชื้อเพลิง’, evCharge:‘EV ชาร์จ’, selectFuelType:‘เลือกประเภทน้ำมัน’,
+budget:‘วงเงิน (฿)’, approxVol:‘ปริมาณโดยประมาณ’, litre:‘ลิตร’,
+approxDist:‘ระยะทางโดยประมาณ’, km:‘กม.’, selectBranch:‘เลือกสาขา’,
+available2min:‘✓ ว่าง ~2 นาที’, wait18min:‘⏳ รอ ~18 นาที’,
+evAvail:‘ว่าง 2/4 หัว · 8.5฿/kWh’, confirmBooking:‘ยืนยันจอง (ไม่หักเงินทันที)’,
+pumpTagline:‘ชำระ Wallet → เติมได้ทันที’,
+pumpInfo:‘💳 เลือกน้ำมัน + กำหนดวงเงิน กดจ่ายผ่าน Wallet แล้วรับรหัสหัวเติม ไม่ต้องรอคิว’,
+selectFuelStep:‘เลือกน้ำมัน’, setBudgetStep:‘ระบุวงเงิน’, payStep:‘จ่ายเงิน’, fillStep:‘เติมน้ำมัน’,
+nozzleAssigned:‘หัวเติมที่ได้รับ’, nozzleA3:‘หัว A3’, status:‘สถานะ’, ready:‘พร้อมใช้งาน’,
+fuelBudget:‘น้ำมันที่เลือก / วงเงิน’, amtPaid:‘ยอดชำระ’, budgetBaht:‘วงเงิน (฿)’,
+payWallet:‘ชำระเงินผ่าน PTT Wallet’,
+myBooking:‘การจองของฉัน — พหลโยธิน’, today:‘วันนี้’, slotB2Floor1:‘ช่อง B2 · ชั้น 1’,
+parkingMap:‘🅿️ แผนผังช่องจอด EV — พหลโยธิน’, tapSlot:‘กดช่องเพื่อดูรายละเอียด / จอง’,
+entrance:‘⬆ ทางเข้า / ENTRANCE’, minLeft:‘นาทีเหลือ’, driveLane:‘🚗 DRIVE LANE 🚗’,
+mine:‘⭐ ของฉัน’, booked:‘จองแล้ว’, available:‘ว่าง’, bookable:‘จองได้’, book:‘จอง’,
+reserved:‘จองล่วงหน้า’, mySlot:‘ของฉัน ⭐’, exit:‘⬇ ทางออก / EXIT’,
+walkinVsBook:‘ℹ️ Walk-in vs จองล่วงหน้า’,
+walkinDesc:‘มาเติมได้เลย ดูเวลาที่เหลือด้านบน’, bookAhead:‘จองล่วงหน้า’,
+bookAheadDesc:‘จองผ่านแอป ใช้ OTP ปลดล็อก’, checkinOTP:‘เช็คอิน — ป้อน OTP ปลดล็อก B2’,
+historyTitle:‘ประวัติการใช้งาน’, all:‘ทั้งหมด’, topupFilter:‘💰 เติมเงิน’,
+pointsRate:‘฿1 = 1 pt · ต่ออายุ: 31 ธ.ค. 2568’,
+darkMode:‘🌙 โหมดมืด’, adjustScreen:‘ปรับสีหน้าจอ’,
+language:‘🌐 ภาษา / Language’, langSub:‘เลือกภาษาของแอป’,
+personalInfo:‘👤 ข้อมูลส่วนตัว’, fullName:‘ชื่อ-นามสกุล’, email:‘อีเมล’,
+phone:‘เบอร์โทรศัพท์’, memberId:‘รหัสสมาชิก’,
+registeredCars:‘🚗 รถที่ลงทะเบียน’, addCar:’+ เพิ่มรถ’, logout:‘🔒 ออกจากระบบ’,
+sosModalSub:‘ระบบพบตำแหน่งคุณแล้ว — เลือกบริการ’,
+serviceType:‘🚚 ประเภทบริการ’, oilFuel:‘น้ำมัน’, charge:‘ชาร์จ’,
+fuelType:‘⛽ ชนิดน้ำมัน’, connector:‘🔌 หัวชาร์จ’,
+callSOS:‘📞 ยืนยัน — เรียกรถช่วยเหลือ’, cancel:‘ยกเลิก’,
+helpOnWay:‘รถช่วยเหลือกำลังมา!’, min:‘นาที’, helpETA:‘รถช่วย ETA’,
+minETA:‘นาที ETA’, serviceFee:‘ค่าบริการ’, cancelIn:‘⏱ ยกเลิกได้ภายใน’,
+second:‘วินาที’, cancelTruck:‘✕ ยกเลิกการเรียกรถ’, closeStillComing:‘ปิด (รถยังมาอยู่)’,
+otpTitle:‘🔓 เช็คอิน EV Smart Station’, otpSub:‘กรอก OTP 6 หลักที่ส่งไปยัง 081-234-5678’,
+otpLabel:‘OTP (ตัวอย่าง: 472839)’,
+bookB3:‘📅 จองช่อง B3’, otpWillSend:‘📱 ระบบส่ง OTP ให้ 15 นาทีก่อนถึงเวลาจอง’,
+selectDate:‘📅 เลือกวันที่’, selectTime:‘เลือกเวลา’, strikeOutFull:’(ขีดฆ่า = เต็มแล้ว)’,
+confirmB3:‘📅 ยืนยันจองช่อง B3’,
+topupTitle:‘💳 เติมเงิน PTT Wallet’, currentBalance:‘ยอดปัจจุบัน’,
+paymentChannel:‘ช่องทางชำระเงิน’, creditCard:‘บัตรเครดิต’, selectAmount:‘เลือกจำนวนเงิน’,
+baht:‘บาท’, bonus:‘โบนัส’, confirmTopup300:‘✅ ยืนยันเติมเงิน 300 บาท’,
+addCarTitle:‘🚗 เพิ่มรถยนต์’, addCarSub:‘กรอกข้อมูลรถของคุณ’,
+carBrand:‘ยี่ห้อรถ’, searchBrand:‘ค้นหายี่ห้อรถ เช่น Toyota, BYD…’,
+carModel:‘รุ่นรถ’, carModelPh:‘เช่น Yaris Cross, Atto 3, Model Y…’,
+plateNo:‘ป้ายทะเบียน’, platePh:‘เช่น กข-1234 กทม.’, carColor:‘สีรถ’,
+energyType:‘ประเภทพลังงาน’, saveCar:‘🚗 บันทึกข้อมูลรถ’,
+// Dynamic strings
+bookSuccess:‘📅 จองสำเร็จ! คิวถูก Hold 30 นาที’,
+logoutMsg:‘ออกจากระบบ’,
+savedPref:‘⭐ บันทึกการตั้งค่าแล้ว’,
+insufficientBal:‘❌ ยอด Wallet ไม่เพียงพอ’,
+enterBudget:‘❌ กรุณาระบุวงเงิน’,
+pumpSuccess:‘✅ ชำระแล้ว! เดินไปหัวเติม A3 ได้เลย’,
+otpFill:‘กรุณากรอก OTP ให้ครบ 6 หลัก’,
+fillAll:‘⚠️ กรุณากรอกข้อมูลให้ครบ’,
+selectTime2:‘⚠️ กรุณาเลือกเวลา’,
+cancelExpired:‘❌ หมดเวลายกเลิก’,
+cancelledSOS:‘✅ ยกเลิกการเรียกรถแล้ว’,
+topupSuccess:‘✅ เติมเงินสำเร็จ! ยอดใหม่’,
+navTo:‘🗺️ นำทาง’,
+// EV date labels
+todayDate:‘วันนี้’,
+navBtn:’› นำทาง’,
+navActiveBtn:‘✅ นำทาง’,
+openStatus:‘● เปิด’,
+busyStatus:‘⏳ คิวรอ’,
+spent:‘ใช้ไป’,
+income:‘เติมเงิน’,
+etaMin:‘นาที’,
+mobileFuelETA:‘Mobile Fuel — ETA ~8 นาที’,
+mobileEVETA:‘Mobile EV — ETA ~8 นาที’,
+walkinTitle:‘ช่อง {id} — Walk-in EV’,
+walkinCharging:‘กำลังชาร์จอยู่ คาดว่าว่างใน’,
+walkinNote:‘⚡ ช่องนี้เป็น Walk-in — ไม่ต้องจองล่วงหน้า รอว่างแล้วมาเติมได้เลย’,
+closeBtn:‘ปิด’,
+slotAvail:‘ช่อง {id} — ว่าง จองได้’,
+slotReady:‘พร้อมรับการจอง’,
+bookNow:‘📅 จองช่อง {id} เลย’,
+alreadyBooked:‘ช่อง {id} — จองแล้ว ✅’,
+bookingConfirmed:‘การจองของคุณได้รับการยืนยันแล้ว’,
+bookSuccessMsg:‘จองช่อง {id} สำเร็จ’,
+checkinOTPBtn:‘🔓 เช็คอิน / ป้อน OTP’,
+otpUnlocked:‘🔓 ปลดล็อกช่อง {id} สำเร็จ! เชื่อมต่อหัวชาร์จได้เลย ⚡’,
+b3BookedMsg:‘✅ จองช่อง B3 สำเร็จ!’,
+popupNav:‘🗺️ นำทาง’,
+myLocation:‘📍 ตำแหน่งของฉัน’,
+carAdded:‘✅ เพิ่ม {brand} {model} แล้ว’,
+},
+en: {
+tagline:‘Smart Energy Platform’, topup:‘Top Up’, thisMonth:‘This Month’,
+booking:‘Book Energy’, stationMap:‘Station Map’, history:‘History’,
+sosTitle:‘SOS Energy Assistance’, sosSub:‘Out of fuel/battery? Call now!’,
+feat1:‘📍 GPS Tracking’, feat2:‘⏱ ETA Real-time’, feat3:‘⚡ Mobile EV’,
+newServices:‘🆕 New Services’, bookingTitle:‘📅 Book Energy’,
+bookingDesc:‘Reserve ahead, skip the queue’, pumpDesc:‘Pay via Wallet, fill up instantly’,
+bookingCardDesc:‘Pre-book fuel + choose branch’, noDeduct:‘No instant charge’,
+pumpCardDesc:‘Pay Wallet, fill instantly’, instantDeduct:‘Instant payment’,
+evCardDesc:‘Reserve slot, OTP unlock’,
+recentTx:‘📋 Recent Transactions’, viewAll:‘View All ›’,
+home:‘Home’, map:‘Map’, profile:‘Profile’, bookNav:‘Book’, pump:‘Pump’,
+mapTitle:‘PTT Station Map’, bkkBranches:‘📍 PTT Branches in Bangkok’,
+searchStation:‘Search PTT stations…’,
+bookingTagline:‘Smart Reservation · No Instant Charge’,
+bookingInfo:‘📋 Select fuel + budget + branch, confirm booking. System holds queue 30 min. Charged when you actually fill up.’,
+fuel:‘Fuel’, evCharge:‘EV Charge’, selectFuelType:‘Select Fuel Type’,
+budget:‘Budget (฿)’, approxVol:‘Approximate Volume’, litre:‘L’,
+approxDist:‘Estimated Range’, km:‘km’, selectBranch:‘Select Branch’,
+available2min:‘✓ Available ~2 min’, wait18min:‘⏳ Wait ~18 min’,
+evAvail:‘2/4 ports free · ฿8.5/kWh’, confirmBooking:‘Confirm Booking (No instant charge)’,
+pumpTagline:‘Pay Wallet → Fill Up Instantly’,
+pumpInfo:‘💳 Select fuel + set budget, pay via Wallet, receive nozzle code. No waiting.’,
+selectFuelStep:‘Select Fuel’, setBudgetStep:‘Set Budget’, payStep:‘Pay’, fillStep:‘Fill Up’,
+nozzleAssigned:‘Assigned Nozzle’, nozzleA3:‘Nozzle A3’, status:‘Status’, ready:‘Ready’,
+fuelBudget:‘Selected Fuel / Budget’, amtPaid:‘Amount Paid’, budgetBaht:‘Budget (฿)’,
+payWallet:‘Pay via PTT Wallet’,
+myBooking:‘My Booking — Phahon Yothin’, today:‘Today’, slotB2Floor1:‘Slot B2 · Floor 1’,
+parkingMap:‘🅿️ EV Parking Map — Phahon Yothin’, tapSlot:‘Tap slot for details / booking’,
+entrance:‘⬆ ENTRANCE’, minLeft:‘min left’, driveLane:‘🚗 DRIVE LANE 🚗’,
+mine:‘⭐ Mine’, booked:‘Booked’, available:‘Free’, bookable:‘Book Now’, book:‘Book’,
+reserved:‘Pre-booked’, mySlot:‘Mine ⭐’, exit:‘⬇ EXIT’,
+walkinVsBook:‘ℹ️ Walk-in vs Pre-book’,
+walkinDesc:‘Just come and charge, see time remaining above’, bookAhead:‘Pre-book’,
+bookAheadDesc:‘Book via app, unlock with OTP’, checkinOTP:‘Check-in — Enter OTP to unlock B2’,
+historyTitle:‘Transaction History’, all:‘All’, topupFilter:‘💰 Top Up’,
+pointsRate:‘฿1 = 1 pt · Expires: 31 Dec 2025’,
+darkMode:‘🌙 Dark Mode’, adjustScreen:‘Adjust screen colour’,
+language:‘🌐 Language’, langSub:‘Select app language’,
+personalInfo:‘👤 Personal Info’, fullName:‘Full Name’, email:‘Email’,
+phone:‘Phone Number’, memberId:‘Member ID’,
+registeredCars:‘🚗 Registered Cars’, addCar:’+ Add Car’, logout:‘🔒 Log Out’,
+sosModalSub:‘Location found — Select service type’,
+serviceType:‘🚚 Service Type’, oilFuel:‘Fuel’, charge:‘Charge’,
+fuelType:‘⛽ Fuel Type’, connector:‘🔌 Connector’,
+callSOS:‘📞 Confirm — Call Rescue Vehicle’, cancel:‘Cancel’,
+helpOnWay:‘Help is on the way!’, min:‘min’, helpETA:‘Rescue ETA’,
+minETA:‘min ETA’, serviceFee:‘Service Fee’, cancelIn:‘⏱ Cancel within’,
+second:‘seconds’, cancelTruck:‘✕ Cancel Rescue’, closeStillComing:‘Close (vehicle still coming)’,
+otpTitle:‘🔓 EV Station Check-In’, otpSub:‘Enter 6-digit OTP sent to 081-234-5678’,
+otpLabel:‘OTP (example: 472839)’,
+bookB3:‘📅 Book Slot B3’, otpWillSend:‘📱 OTP will be sent 15 minutes before your booking’,
+selectDate:‘📅 Select Date’, selectTime:‘Select Time’, strikeOutFull:’(strikethrough = full)’,
+confirmB3:‘📅 Confirm Slot B3 Booking’,
+topupTitle:‘💳 Top Up PTT Wallet’, currentBalance:‘Current Balance’,
+paymentChannel:‘Payment Method’, creditCard:‘Credit Card’, selectAmount:‘Select Amount’,
+baht:‘THB’, bonus:‘Bonus’, confirmTopup300:‘✅ Confirm Top Up 300 THB’,
+addCarTitle:‘🚗 Add Vehicle’, addCarSub:‘Enter your vehicle information’,
+carBrand:‘Brand’, searchBrand:‘Search brand e.g. Toyota, BYD…’,
+carModel:‘Model’, carModelPh:‘e.g. Yaris Cross, Atto 3, Model Y…’,
+plateNo:‘License Plate’, platePh:‘e.g. ABC-1234 Bangkok’, carColor:‘Colour’,
+energyType:‘Energy Type’, saveCar:‘🚗 Save Vehicle’,
+// Dynamic strings
+bookSuccess:‘📅 Booking confirmed! Queue held for 30 min’,
+logoutMsg:‘Log out’,
+savedPref:‘⭐ Preference saved’,
+insufficientBal:‘❌ Insufficient Wallet balance’,
+enterBudget:‘❌ Please enter budget’,
+pumpSuccess:‘✅ Paid! Proceed to nozzle A3’,
+otpFill:‘Please enter all 6 OTP digits’,
+fillAll:‘⚠️ Please fill in all fields’,
+selectTime2:‘⚠️ Please select a time’,
+cancelExpired:‘❌ Cancel time expired’,
+cancelledSOS:‘✅ Rescue cancelled’,
+topupSuccess:‘✅ Top up successful! New balance’,
+navTo:‘🗺️ Navigate to’,
+todayDate:‘Today’,
+navBtn:’› Navigate’,
+navActiveBtn:‘✅ Navigating’,
+openStatus:‘● Open’,
+busyStatus:‘⏳ Queue’,
+spent:‘Spent’,
+income:‘Topped Up’,
+etaMin:‘min’,
+mobileFuelETA:‘Mobile Fuel — ETA ~8 min’,
+mobileEVETA:‘Mobile EV — ETA ~8 min’,
+walkinTitle:‘Slot {id} — Walk-in EV’,
+walkinCharging:‘Currently charging, estimated free in’,
+walkinNote:‘⚡ Walk-in slot — No booking needed. Come when free.’,
+closeBtn:‘Close’,
+slotAvail:‘Slot {id} — Available’,
+slotReady:‘Ready to Book’,
+bookNow:‘📅 Book Slot {id} Now’,
+alreadyBooked:‘Slot {id} — Booked ✅’,
+bookingConfirmed:‘Your booking has been confirmed’,
+bookSuccessMsg:‘Slot {id} booked’,
+checkinOTPBtn:‘🔓 Check-in / Enter OTP’,
+otpUnlocked:‘🔓 Slot {id} unlocked! Connect charger ⚡’,
+b3BookedMsg:‘✅ Slot B3 booked!’,
+popupNav:‘🗺️ Navigate’,
+myLocation:‘📍 My Location’,
+carAdded:‘✅ Added {brand} {model}’,
+}
 };
 
-let LANG = 'th';
+let LANG = ‘th’;
 function T(key){ return STRINGS[LANG][key] || STRINGS.th[key] || key; }
-function Tf(key,vars){let s=T(key);Object.entries(vars).forEach(([k,v])=>s=s.replace('{'+k+'}',v));return s;}
+function Tf(key,vars){let s=T(key);Object.entries(vars).forEach(([k,v])=>s=s.replace(’{’+k+’}’,v));return s;}
 
 function setLang(lang){
-  LANG = lang;
-  // Update global toggle buttons
-  document.getElementById('glb-th').classList.toggle('on', lang==='th');
-  document.getElementById('glb-en').classList.toggle('on', lang==='en');
-  document.getElementById('prof-th').classList.toggle('on', lang==='th');
-  document.getElementById('prof-en').classList.toggle('on', lang==='en');
-  // Apply all data-i18n elements
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key=el.getAttribute('data-i18n');
-    if(key && STRINGS[lang][key]!==undefined) el.textContent=STRINGS[lang][key];
-  });
-  // Apply placeholders
-  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
-    const key=el.getAttribute('data-i18n-ph');
-    if(key && STRINGS[lang][key]!==undefined) el.placeholder=STRINGS[lang][key];
-  });
-  // Re-render dynamic content
-  renderHomeHistory();
-  renderStationList();
-  if(document.getElementById('hist-list').children.length>0) renderHistory('all');
+LANG = lang;
+// Update global toggle buttons
+document.getElementById(‘glb-th’).classList.toggle(‘on’, lang===‘th’);
+document.getElementById(‘glb-en’).classList.toggle(‘on’, lang===‘en’);
+document.getElementById(‘prof-th’).classList.toggle(‘on’, lang===‘th’);
+document.getElementById(‘prof-en’).classList.toggle(‘on’, lang===‘en’);
+// Apply all data-i18n elements
+document.querySelectorAll(’[data-i18n]’).forEach(el=>{
+const key=el.getAttribute(‘data-i18n’);
+if(key && STRINGS[lang][key]!==undefined) el.textContent=STRINGS[lang][key];
+});
+// Apply placeholders
+document.querySelectorAll(’[data-i18n-ph]’).forEach(el=>{
+const key=el.getAttribute(‘data-i18n-ph’);
+if(key && STRINGS[lang][key]!==undefined) el.placeholder=STRINGS[lang][key];
+});
+// Re-render dynamic content
+renderHomeHistory();
+renderStationList();
+if(document.getElementById(‘hist-list’).children.length>0) renderHistory(‘all’);
 }
 
 // ══════════════════════════════════════════
 // FUEL TYPES
 // ══════════════════════════════════════════
 const FUEL_TYPES = [
-  {name:'Gasohol 91',price:33.25,badge:'E10',km:14},
-  {name:'Gasohol 95',price:34.35,badge:'E10',km:14},
-  {name:'E20',price:35.49,badge:'Ethanol',km:13},
-  {name:'E85',price:22.04,badge:'Flex',km:10},
-  {name:'Diesel B7',price:29.94,badge:'B7',km:16},
-  {name:'Diesel B10',price:30.44,badge:'B10',km:16},
-  {name:'Diesel B20',price:31.04,badge:'B20',km:15},
-  {name:'Premium 97',price:47.95,badge:'Hi-Oct',km:15},
-  {name:'NGV',price:15.59,badge:'Gas',km:12},
+{name:‘Gasohol 91’,price:33.25,badge:‘E10’,km:14},
+{name:‘Gasohol 95’,price:34.35,badge:‘E10’,km:14},
+{name:‘E20’,price:35.49,badge:‘Ethanol’,km:13},
+{name:‘E85’,price:22.04,badge:‘Flex’,km:10},
+{name:‘Diesel B7’,price:29.94,badge:‘B7’,km:16},
+{name:‘Diesel B10’,price:30.44,badge:‘B10’,km:16},
+{name:‘Diesel B20’,price:31.04,badge:‘B20’,km:15},
+{name:‘Premium 97’,price:47.95,badge:‘Hi-Oct’,km:15},
+{name:‘NGV’,price:15.59,badge:‘Gas’,km:12},
 ];
 
-const ALL_BRANDS = ['Toyota','Honda','Nissan','Mazda','Mitsubishi','Subaru','Suzuki','Isuzu','Daihatsu','Lexus','Infiniti','Acura','Hyundai','Kia','Genesis','SsangYong','BYD','MG (SAIC)','GWM / Haval','Chery','Geely','GAC Aion','ORA','NETA','Zeekr','NIO','Xpeng','Li Auto','Leapmotor','Voyah','Wuling','JAC','Foton','DFSK','Mercedes-Benz','BMW','Audi','Volkswagen','Porsche','MINI','Smart','Volvo','Peugeot','Renault','Citroën','Fiat','Alfa Romeo','Ferrari','Lamborghini','Bentley','Rolls-Royce','Maserati','Aston Martin','McLaren','Bugatti','Land Rover','Jaguar','Lotus','Ford','Chevrolet','Jeep','Dodge','Ram','GMC','Cadillac','Lincoln','Tesla','Rivian','Lucid','Tata','Mahindra','Proton','Perodua'].sort();
+const ALL_BRANDS = [‘Toyota’,‘Honda’,‘Nissan’,‘Mazda’,‘Mitsubishi’,‘Subaru’,‘Suzuki’,‘Isuzu’,‘Daihatsu’,‘Lexus’,‘Infiniti’,‘Acura’,‘Hyundai’,‘Kia’,‘Genesis’,‘SsangYong’,‘BYD’,‘MG (SAIC)’,‘GWM / Haval’,‘Chery’,‘Geely’,‘GAC Aion’,‘ORA’,‘NETA’,‘Zeekr’,‘NIO’,‘Xpeng’,‘Li Auto’,‘Leapmotor’,‘Voyah’,‘Wuling’,‘JAC’,‘Foton’,‘DFSK’,‘Mercedes-Benz’,‘BMW’,‘Audi’,‘Volkswagen’,‘Porsche’,‘MINI’,‘Smart’,‘Volvo’,‘Peugeot’,‘Renault’,‘Citroën’,‘Fiat’,‘Alfa Romeo’,‘Ferrari’,‘Lamborghini’,‘Bentley’,‘Rolls-Royce’,‘Maserati’,‘Aston Martin’,‘McLaren’,‘Bugatti’,‘Land Rover’,‘Jaguar’,‘Lotus’,‘Ford’,‘Chevrolet’,‘Jeep’,‘Dodge’,‘Ram’,‘GMC’,‘Cadillac’,‘Lincoln’,‘Tesla’,‘Rivian’,‘Lucid’,‘Tata’,‘Mahindra’,‘Proton’,‘Perodua’].sort();
 
 const APP = {
-  balance:2450, pts:1240,
-  sosDispatched:false, sosTimer:null, sosCancelSec:60, sosCancelTimer:null,
-  navStation:null,
-  selectedTopupAmt:300, selectedTopupBonus:0,
-  theme:'light',
-  map:null, mapInitialized:false,
-  selectedBrand:'',
-  b3Booked:false, b3BookingTime:'', b3BookingDate:'',
-  selEvDate:'', selEvTime:'',
-  cars:[
-    {brand:'Toyota',model:'Yaris Cross',plate:'กข-1234 กทม.',color:'ขาว',colorHex:'#E8E8E8',energy:'g95',fuelLabel:'Gasohol 95',year:'2022'},
-    {brand:'BYD',model:'Atto 3',plate:'คค-5678 กทม.',color:'น้ำเงิน',colorHex:'#1565C0',energy:'ev',fuelLabel:'EV · CCS2',year:'2023',evPlug:'CCS2'}
-  ],
-  transactions:[
-    {type:'fuel',icon:'⛽',bg:'rgba(60,118,241,.1)',name_th:'เติม Gasohol 95',name_en:'Fill Gasohol 95',meta_th:'5 ม.ค. 68 · 10:32 · พหลโยธิน · 9.08L',meta_en:'5 Jan 25 · 10:32 · Phahon Yothin · 9.08L',amt:-312},
-    {type:'topup',icon:'💰',bg:'rgba(30,120,200,.12)',name_th:'เติม PTT Wallet',name_en:'PTT Wallet Top Up',meta_th:'4 ม.ค. 68 · 08:15 · PromptPay',meta_en:'4 Jan 25 · 08:15 · PromptPay',amt:1000},
-    {type:'ev',icon:'🔌',bg:'rgba(46,125,50,.1)',name_th:'ชาร์จ EV DC Fast 50kW',name_en:'EV DC Fast 50kW Charge',meta_th:'2 ม.ค. 68 · 14:20 · พระราม 9 · 38.5kWh',meta_en:'2 Jan 25 · 14:20 · Rama 9 · 38.5kWh',amt:-327},
-    {type:'fuel',icon:'⛽',bg:'rgba(60,118,241,.1)',name_th:'เติม Diesel B7',name_en:'Fill Diesel B7',meta_th:'28 ธ.ค. 67 · 07:45 · ลาดพร้าว · 20.04L',meta_en:'28 Dec 24 · 07:45 · Lad Phrao · 20.04L',amt:-600},
-    {type:'sos',icon:'🆘',bg:'rgba(229,57,53,.1)',name_th:'SOS Mobile Fuel',name_en:'SOS Mobile Fuel',meta_th:'20 ธ.ค. 67 · 18:30 · วิภาวดี · 5L Gasohol 95',meta_en:'20 Dec 24 · 18:30 · Vibhavadi · 5L Gasohol 95',amt:-285}
-  ],
-  stations:[
-    {id:'A',lat:13.8147,lng:100.5583,name:'PTT พหลโยธิน-วังหิน',name_en:'PTT Phahon Yothin-Wang Hin',addr:'ถ.พหลโยธิน แขวงลาดยาว',addr_en:'Phahon Yothin Rd, Lad Yao',dist:'0.8 km',status:'open',type:'both',shops:['☕ Café Amazon','🧋 Pearly Tea','🏪 Jiffy','🍕 The Pizza Company'],tagLabels:['⛽ Fuel','⚡ EV 50kW'],ev:'DC 50kW · CCS2',rating:4.3,reviews:412,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','E20','E85','Diesel B7','NGV'],photos:['⛽','🔋','☕'],colors:['#0D47A1','#1565C0','#388E3C'],queueTime:2,evFree:2,evTotal:4,evPower:'DC 50kW'},
-    {id:'B',lat:13.7566,lng:100.5677,name:'PTT สุขุมวิท 62',name_en:'PTT Sukhumvit 62',addr:'ถ.สุขุมวิท แขวงบางจาก',addr_en:'Sukhumvit Rd, Bang Chak',dist:'1.2 km',status:'open',type:'both',shops:['☕ Café Amazon','🏪 7-Eleven','🍗 KFC'],tagLabels:['⛽ Fuel','⚡ EV 22kW'],ev:'AC 22kW · Type2',rating:4.1,reviews:289,hours:'05:00 – 24:00',hours_en:'05:00 – 24:00',fuels:['Gasohol 91','Gasohol 95','Diesel B7','NGV'],photos:['⛽','🏪','🍗'],colors:['#0277BD','#01579B','#006064'],queueTime:5,evFree:1,evTotal:2,evPower:'AC 22kW'},
-    {id:'C',lat:13.7464,lng:100.5437,name:'PTT EV Hub พระราม 9',name_en:'PTT EV Hub Rama 9',addr:'ถ.พระราม 9 แขวงห้วยขวาง',addr_en:'Rama 9 Rd, Huai Khwang',dist:'2.1 km',status:'open',type:'ev',shops:['☕ Black Canyon','🏪 7-Eleven','🍔 Burger King'],tagLabels:['⚡ DC 150kW','⚡ AC 22kW'],ev:'DC 150kW · CCS2/CHAdeMO',rating:4.6,reviews:633,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:[],photos:['⚡','🔌','🏪'],colors:['#1B5E20','#2E7D32','#1565C0'],queueTime:0,evFree:3,evTotal:6,evPower:'DC 150kW'},
-    {id:'D',lat:13.7920,lng:100.4994,name:'PTT พหลโยธิน 32',name_en:'PTT Phahon Yothin 32',addr:'ถ.พหลโยธิน แขวงจตุจักร',addr_en:'Phahon Yothin Rd, Chatuchak',dist:'3.0 km',status:'busy',type:'fuel',shops:['☕ Café Amazon','🏪 Jiffy'],tagLabels:['⛽ 91/95/E20/B7/NGV'],rating:3.8,reviews:156,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','E20','Diesel B7','NGV'],photos:['⛽','🏪','☕'],colors:['#37474F','#455A64','#01579B'],queueTime:18,evFree:0,evTotal:0,evPower:''},
-    {id:'E',lat:13.7281,lng:100.5794,name:'PTT สาทร-นราธิวาส',name_en:'PTT Sathon-Narathiwas',addr:'ถ.นราธิวาส แขวงทุ่งมหาเมฆ',addr_en:'Narathiwas Rd, Thung Maha Mek',dist:'3.8 km',status:'open',type:'both',shops:['☕ Café Amazon','🏪 7-Eleven','🥪 S&P','🌮 Subway'],tagLabels:['⛽ Fuel','⚡ EV 50kW'],ev:'DC 50kW · CCS2',rating:4.4,reviews:521,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','E20','Diesel B7','Diesel B10'],photos:['⛽','⚡','🥪'],colors:['#4A148C','#1565C0','#1B5E20'],queueTime:3,evFree:1,evTotal:2,evPower:'DC 50kW'},
-    {id:'F',lat:13.7601,lng:100.4984,name:'PTT พระราม 3',name_en:'PTT Rama 3',addr:'ถ.พระราม 3 แขวงช่องนนทรี',addr_en:'Rama 3 Rd, Chong Nonsi',dist:'4.5 km',status:'open',type:'both',shops:['☕ Café Amazon','🍗 Chester Grill','🏪 7-Eleven'],tagLabels:['⛽ Fuel','⚡ EV 22kW'],ev:'AC 22kW · Type2',rating:4.0,reviews:198,hours:'06:00 – 23:00',hours_en:'06:00 – 23:00',fuels:['Gasohol 91','Gasohol 95','Diesel B7'],photos:['⛽','🍗','🏪'],colors:['#BF360C','#0277BD','#2E7D32'],queueTime:7,evFree:0,evTotal:2,evPower:'AC 22kW'},
-    {id:'G',lat:13.8010,lng:100.5498,name:'PTT ประดิษฐ์มนูธรรม',name_en:'PTT Pradit Manutham',addr:'ถ.ประดิษฐ์มนูธรรม แขวงลาดพร้าว',addr_en:'Pradit Manutham Rd, Lad Phrao',dist:'4.2 km',status:'open',type:'fuel',shops:['☕ Café Amazon','🏪 Jiffy','🌮 A&W'],tagLabels:['⛽ 91/95/E20/B7/NGV'],rating:4.2,reviews:334,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','E20','Diesel B7','NGV'],photos:['⛽','☕','🌮'],colors:['#004D40','#0D47A1','#37474F'],queueTime:4,evFree:0,evTotal:0,evPower:''},
-    {id:'H',lat:13.7221,lng:100.5234,name:'PTT บางนา กม.5',name_en:'PTT Bang Na km.5',addr:'ถ.บางนา-ตราด กม.5',addr_en:'Bang Na-Trat Rd km.5',dist:'5.1 km',status:'open',type:'both',shops:['☕ Café Amazon','🏪 7-Eleven','🍗 KFC','🍕 The Pizza Co.'],tagLabels:['⛽ Fuel','⚡ EV 50kW'],ev:'DC 50kW · CCS2',rating:4.5,reviews:778,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','E20','E85','Diesel B7','Diesel B10','NGV'],photos:['⛽','⚡','🍗'],colors:['#1A237E','#283593','#1B5E20'],queueTime:1,evFree:4,evTotal:4,evPower:'DC 50kW'},
-    {id:'I',lat:13.8120,lng:100.6200,name:'PTT ลาดกระบัง',name_en:'PTT Lad Krabang',addr:'ถ.ลาดกระบัง แขวงลาดกระบัง',addr_en:'Lad Krabang Rd',dist:'6.2 km',status:'busy',type:'both',shops:['☕ Café Amazon','🏪 Jiffy','🍗 ไก่ย่างห้าดาว'],tagLabels:['⛽ Fuel','⚡ EV 22kW'],ev:'AC 22kW · Type2',rating:3.9,reviews:142,hours:'เปิด 24 ชั่วโมง',hours_en:'Open 24 hours',fuels:['Gasohol 91','Gasohol 95','Diesel B7'],photos:['⛽','🍗','🏪'],colors:['#3E2723','#01579B','#1B5E20'],queueTime:22,evFree:0,evTotal:2,evPower:'AC 22kW'},
-    {id:'J',lat:13.7394,lng:100.4480,name:'PTT ตลิ่งชัน',name_en:'PTT Taling Chan',addr:'ถ.บรมราชชนนี แขวงตลิ่งชัน',addr_en:'Borommaratchachonnani Rd, Taling Chan',dist:'7.8 km',status:'open',type:'fuel',shops:['☕ Café Amazon','🏪 Jiffy'],tagLabels:['⛽ 91/95/B7/NGV'],rating:4.1,reviews:97,hours:'05:00 – 24:00',hours_en:'05:00 – 24:00',fuels:['Gasohol 91','Gasohol 95','Diesel B7','NGV'],photos:['⛽','☕','🏪'],colors:['#006064','#0D47A1','#2E7D32'],queueTime:6,evFree:0,evTotal:0,evPower:''},
-  ]
+balance:2450, pts:1240,
+sosDispatched:false, sosTimer:null, sosCancelSec:60, sosCancelTimer:null,
+navStation:null,
+selectedTopupAmt:300, selectedTopupBonus:0,
+theme:‘light’,
+map:null, mapInitialized:false,
+selectedBrand:’’,
+b3Booked:false, b3BookingTime:’’, b3BookingDate:’’,
+selEvDate:’’, selEvTime:’’,
+cars:[
+{brand:‘Toyota’,model:‘Yaris Cross’,plate:‘กข-1234 กทม.’,color:‘ขาว’,colorHex:’#E8E8E8’,energy:‘g95’,fuelLabel:‘Gasohol 95’,year:‘2022’},
+{brand:‘BYD’,model:‘Atto 3’,plate:‘คค-5678 กทม.’,color:‘น้ำเงิน’,colorHex:’#1565C0’,energy:‘ev’,fuelLabel:‘EV · CCS2’,year:‘2023’,evPlug:‘CCS2’}
+],
+transactions:[
+{type:‘fuel’,icon:‘⛽’,bg:‘rgba(60,118,241,.1)’,name_th:‘เติม Gasohol 95’,name_en:‘Fill Gasohol 95’,meta_th:‘5 ม.ค. 68 · 10:32 · พหลโยธิน · 9.08L’,meta_en:‘5 Jan 25 · 10:32 · Phahon Yothin · 9.08L’,amt:-312},
+{type:‘topup’,icon:‘💰’,bg:‘rgba(30,120,200,.12)’,name_th:‘เติม PTT Wallet’,name_en:‘PTT Wallet Top Up’,meta_th:‘4 ม.ค. 68 · 08:15 · PromptPay’,meta_en:‘4 Jan 25 · 08:15 · PromptPay’,amt:1000},
+{type:‘ev’,icon:‘🔌’,bg:‘rgba(46,125,50,.1)’,name_th:‘ชาร์จ EV DC Fast 50kW’,name_en:‘EV DC Fast 50kW Charge’,meta_th:‘2 ม.ค. 68 · 14:20 · พระราม 9 · 38.5kWh’,meta_en:‘2 Jan 25 · 14:20 · Rama 9 · 38.5kWh’,amt:-327},
+{type:‘fuel’,icon:‘⛽’,bg:‘rgba(60,118,241,.1)’,name_th:‘เติม Diesel B7’,name_en:‘Fill Diesel B7’,meta_th:‘28 ธ.ค. 67 · 07:45 · ลาดพร้าว · 20.04L’,meta_en:‘28 Dec 24 · 07:45 · Lad Phrao · 20.04L’,amt:-600},
+{type:‘sos’,icon:‘🆘’,bg:‘rgba(229,57,53,.1)’,name_th:‘SOS Mobile Fuel’,name_en:‘SOS Mobile Fuel’,meta_th:‘20 ธ.ค. 67 · 18:30 · วิภาวดี · 5L Gasohol 95’,meta_en:‘20 Dec 24 · 18:30 · Vibhavadi · 5L Gasohol 95’,amt:-285}
+],
+stations:[
+{id:‘A’,lat:13.8147,lng:100.5583,name:‘PTT พหลโยธิน-วังหิน’,name_en:‘PTT Phahon Yothin-Wang Hin’,addr:‘ถ.พหลโยธิน แขวงลาดยาว’,addr_en:‘Phahon Yothin Rd, Lad Yao’,dist:‘0.8 km’,status:‘open’,type:‘both’,shops:[‘☕ Café Amazon’,‘🧋 Pearly Tea’,‘🏪 Jiffy’,‘🍕 The Pizza Company’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 50kW’],ev:‘DC 50kW · CCS2’,rating:4.3,reviews:412,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘E20’,‘E85’,‘Diesel B7’,‘NGV’],photos:[‘⛽’,‘🔋’,‘☕’],colors:[’#0D47A1’,’#1565C0’,’#388E3C’],queueTime:2,evFree:2,evTotal:4,evPower:‘DC 50kW’},
+{id:‘B’,lat:13.7566,lng:100.5677,name:‘PTT สุขุมวิท 62’,name_en:‘PTT Sukhumvit 62’,addr:‘ถ.สุขุมวิท แขวงบางจาก’,addr_en:‘Sukhumvit Rd, Bang Chak’,dist:‘1.2 km’,status:‘open’,type:‘both’,shops:[‘☕ Café Amazon’,‘🏪 7-Eleven’,‘🍗 KFC’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 22kW’],ev:‘AC 22kW · Type2’,rating:4.1,reviews:289,hours:‘05:00 – 24:00’,hours_en:‘05:00 – 24:00’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘Diesel B7’,‘NGV’],photos:[‘⛽’,‘🏪’,‘🍗’],colors:[’#0277BD’,’#01579B’,’#006064’],queueTime:5,evFree:1,evTotal:2,evPower:‘AC 22kW’},
+{id:‘C’,lat:13.7464,lng:100.5437,name:‘PTT EV Hub พระราม 9’,name_en:‘PTT EV Hub Rama 9’,addr:‘ถ.พระราม 9 แขวงห้วยขวาง’,addr_en:‘Rama 9 Rd, Huai Khwang’,dist:‘2.1 km’,status:‘open’,type:‘ev’,shops:[‘☕ Black Canyon’,‘🏪 7-Eleven’,‘🍔 Burger King’],tagLabels:[‘⚡ DC 150kW’,‘⚡ AC 22kW’],ev:‘DC 150kW · CCS2/CHAdeMO’,rating:4.6,reviews:633,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[],photos:[‘⚡’,‘🔌’,‘🏪’],colors:[’#1B5E20’,’#2E7D32’,’#1565C0’],queueTime:0,evFree:3,evTotal:6,evPower:‘DC 150kW’},
+{id:‘D’,lat:13.7920,lng:100.4994,name:‘PTT พหลโยธิน 32’,name_en:‘PTT Phahon Yothin 32’,addr:‘ถ.พหลโยธิน แขวงจตุจักร’,addr_en:‘Phahon Yothin Rd, Chatuchak’,dist:‘3.0 km’,status:‘busy’,type:‘fuel’,shops:[‘☕ Café Amazon’,‘🏪 Jiffy’],tagLabels:[‘⛽ 91/95/E20/B7/NGV’],rating:3.8,reviews:156,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘E20’,‘Diesel B7’,‘NGV’],photos:[‘⛽’,‘🏪’,‘☕’],colors:[’#37474F’,’#455A64’,’#01579B’],queueTime:18,evFree:0,evTotal:0,evPower:’’},
+{id:‘E’,lat:13.7281,lng:100.5794,name:‘PTT สาทร-นราธิวาส’,name_en:‘PTT Sathon-Narathiwas’,addr:‘ถ.นราธิวาส แขวงทุ่งมหาเมฆ’,addr_en:‘Narathiwas Rd, Thung Maha Mek’,dist:‘3.8 km’,status:‘open’,type:‘both’,shops:[‘☕ Café Amazon’,‘🏪 7-Eleven’,‘🥪 S&P’,‘🌮 Subway’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 50kW’],ev:‘DC 50kW · CCS2’,rating:4.4,reviews:521,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘E20’,‘Diesel B7’,‘Diesel B10’],photos:[‘⛽’,‘⚡’,‘🥪’],colors:[’#4A148C’,’#1565C0’,’#1B5E20’],queueTime:3,evFree:1,evTotal:2,evPower:‘DC 50kW’},
+{id:‘F’,lat:13.7601,lng:100.4984,name:‘PTT พระราม 3’,name_en:‘PTT Rama 3’,addr:‘ถ.พระราม 3 แขวงช่องนนทรี’,addr_en:‘Rama 3 Rd, Chong Nonsi’,dist:‘4.5 km’,status:‘open’,type:‘both’,shops:[‘☕ Café Amazon’,‘🍗 Chester Grill’,‘🏪 7-Eleven’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 22kW’],ev:‘AC 22kW · Type2’,rating:4.0,reviews:198,hours:‘06:00 – 23:00’,hours_en:‘06:00 – 23:00’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘Diesel B7’],photos:[‘⛽’,‘🍗’,‘🏪’],colors:[’#BF360C’,’#0277BD’,’#2E7D32’],queueTime:7,evFree:0,evTotal:2,evPower:‘AC 22kW’},
+{id:‘G’,lat:13.8010,lng:100.5498,name:‘PTT ประดิษฐ์มนูธรรม’,name_en:‘PTT Pradit Manutham’,addr:‘ถ.ประดิษฐ์มนูธรรม แขวงลาดพร้าว’,addr_en:‘Pradit Manutham Rd, Lad Phrao’,dist:‘4.2 km’,status:‘open’,type:‘fuel’,shops:[‘☕ Café Amazon’,‘🏪 Jiffy’,‘🌮 A&W’],tagLabels:[‘⛽ 91/95/E20/B7/NGV’],rating:4.2,reviews:334,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘E20’,‘Diesel B7’,‘NGV’],photos:[‘⛽’,‘☕’,‘🌮’],colors:[’#004D40’,’#0D47A1’,’#37474F’],queueTime:4,evFree:0,evTotal:0,evPower:’’},
+{id:‘H’,lat:13.7221,lng:100.5234,name:‘PTT บางนา กม.5’,name_en:‘PTT Bang Na km.5’,addr:‘ถ.บางนา-ตราด กม.5’,addr_en:‘Bang Na-Trat Rd km.5’,dist:‘5.1 km’,status:‘open’,type:‘both’,shops:[‘☕ Café Amazon’,‘🏪 7-Eleven’,‘🍗 KFC’,‘🍕 The Pizza Co.’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 50kW’],ev:‘DC 50kW · CCS2’,rating:4.5,reviews:778,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘E20’,‘E85’,‘Diesel B7’,‘Diesel B10’,‘NGV’],photos:[‘⛽’,‘⚡’,‘🍗’],colors:[’#1A237E’,’#283593’,’#1B5E20’],queueTime:1,evFree:4,evTotal:4,evPower:‘DC 50kW’},
+{id:‘I’,lat:13.8120,lng:100.6200,name:‘PTT ลาดกระบัง’,name_en:‘PTT Lad Krabang’,addr:‘ถ.ลาดกระบัง แขวงลาดกระบัง’,addr_en:‘Lad Krabang Rd’,dist:‘6.2 km’,status:‘busy’,type:‘both’,shops:[‘☕ Café Amazon’,‘🏪 Jiffy’,‘🍗 ไก่ย่างห้าดาว’],tagLabels:[‘⛽ Fuel’,‘⚡ EV 22kW’],ev:‘AC 22kW · Type2’,rating:3.9,reviews:142,hours:‘เปิด 24 ชั่วโมง’,hours_en:‘Open 24 hours’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘Diesel B7’],photos:[‘⛽’,‘🍗’,‘🏪’],colors:[’#3E2723’,’#01579B’,’#1B5E20’],queueTime:22,evFree:0,evTotal:2,evPower:‘AC 22kW’},
+{id:‘J’,lat:13.7394,lng:100.4480,name:‘PTT ตลิ่งชัน’,name_en:‘PTT Taling Chan’,addr:‘ถ.บรมราชชนนี แขวงตลิ่งชัน’,addr_en:‘Borommaratchachonnani Rd, Taling Chan’,dist:‘7.8 km’,status:‘open’,type:‘fuel’,shops:[‘☕ Café Amazon’,‘🏪 Jiffy’],tagLabels:[‘⛽ 91/95/B7/NGV’],rating:4.1,reviews:97,hours:‘05:00 – 24:00’,hours_en:‘05:00 – 24:00’,fuels:[‘Gasohol 91’,‘Gasohol 95’,‘Diesel B7’,‘NGV’],photos:[‘⛽’,‘☕’,‘🏪’],colors:[’#006064’,’#0D47A1’,’#2E7D32’],queueTime:6,evFree:0,evTotal:0,evPower:’’},
+]
 };
 
-function sName(s){return LANG==='en'?(s.name_en||s.name):s.name;}
-function sAddr(s){return LANG==='en'?(s.addr_en||s.addr):s.addr;}
-function txName(tx){return LANG==='en'?(tx.name_en||tx.name_th):tx.name_th;}
-function txMeta(tx){return LANG==='en'?(tx.meta_en||tx.meta_th):tx.meta_th;}
+function sName(s){return LANG===‘en’?(s.name_en||s.name):s.name;}
+function sAddr(s){return LANG===‘en’?(s.addr_en||s.addr):s.addr;}
+function txName(tx){return LANG===‘en’?(tx.name_en||tx.name_th):tx.name_th;}
+function txMeta(tx){return LANG===‘en’?(tx.meta_en||tx.meta_th):tx.meta_th;}
 
 // Clock
-function updateClock(){const n=new Date();document.getElementById('clock').textContent=n.getHours()+':'+String(n.getMinutes()).padStart(2,'0');}
+function updateClock(){const n=new Date();document.getElementById(‘clock’).textContent=n.getHours()+’:’+String(n.getMinutes()).padStart(2,‘0’);}
 setInterval(updateClock,1000);updateClock();
 
 // Theme
-function toggleTheme(){APP.theme=APP.theme==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',APP.theme);document.getElementById('theme-switch').classList.toggle('on',APP.theme==='dark');if(APP.map)APP.map.invalidateSize();}
+function toggleTheme(){APP.theme=APP.theme===‘light’?‘dark’:‘light’;document.documentElement.setAttribute(‘data-theme’,APP.theme);document.getElementById(‘theme-switch’).classList.toggle(‘on’,APP.theme===‘dark’);if(APP.map)APP.map.invalidateSize();}
 
 // Nav
 function goTo(id){
-  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-  const el=document.getElementById(id);el.classList.add('active');el.scrollTop=0;
-  if(id==='v-history')renderHistory('all');
-  if(id==='v-profile')renderCars();
-  if(id==='v-home')renderHomeHistory();
-  if(id==='v-map')setTimeout(initMap,100);
+document.querySelectorAll(’.view’).forEach(v=>{v.classList.remove(‘active’);v.style.display=‘none’;});
+const el=document.getElementById(id);
+el.classList.add(‘active’);
+el.style.display=(id===‘v-map’)?‘flex’:‘block’;
+el.scrollTop=0;
+if(id===‘v-history’)renderHistory(‘all’);
+if(id===‘v-profile’)renderCars();
+if(id===‘v-home’)renderHomeHistory();
+if(id===‘v-map’)setTimeout(()=>{initMap();APP.map&&APP.map.invalidateSize();},100);
+// close inline sheet when leaving map
+if(id!==‘v-map’)closeInlineSBS();
 }
-function closeOL(id){document.getElementById(id).classList.remove('show');}
+function closeOL(id){document.getElementById(id).classList.remove(‘show’);}
 function closeByOL(e,id){if(e.target===document.getElementById(id))closeOL(id);}
 
 // Balance
 function updateBalDisplay(){
-  const fmt=APP.balance.toLocaleString();
-  document.querySelectorAll('#bal-display').forEach(el=>el.textContent=fmt);
-  document.querySelectorAll('#pts-display').forEach(el=>el.textContent=APP.pts.toLocaleString()+' pts');
-  const p=document.getElementById('prof-pts');if(p)p.textContent=APP.pts.toLocaleString();
-  const tb=document.getElementById('topup-current-bal');if(tb)tb.textContent='฿'+fmt+'.00';
+const fmt=APP.balance.toLocaleString();
+document.querySelectorAll(’#bal-display’).forEach(el=>el.textContent=fmt);
+document.querySelectorAll(’#pts-display’).forEach(el=>el.textContent=APP.pts.toLocaleString()+’ pts’);
+const p=document.getElementById(‘prof-pts’);if(p)p.textContent=APP.pts.toLocaleString();
+const tb=document.getElementById(‘topup-current-bal’);if(tb)tb.textContent=‘฿’+fmt+’.00’;
 }
 
 // Fuel Grid
 function renderFuelGrid(cid,selIdx,fn){
-  const el=document.getElementById(cid);if(!el)return;
-  el.innerHTML=FUEL_TYPES.map((f,i)=>`<div class="fuel-chip ${i===selIdx?'on':''}" onclick="${fn}(this,'${f.price}','${f.name}',${f.km})"><div class="fn">${f.name}</div><div class="fp">${f.price} ฿/L</div><div class="fb">${f.badge}</div></div>`).join('');
+const el=document.getElementById(cid);if(!el)return;
+el.innerHTML=FUEL_TYPES.map((f,i)=>`<div class="fuel-chip ${i===selIdx?'on':''}" onclick="${fn}(this,'${f.price}','${f.name}',${f.km})"><div class="fn">${f.name}</div><div class="fp">${f.price} ฿/L</div><div class="fb">${f.badge}</div></div>`).join(’’);
 }
 
 // Map
 function initMap(){
-  if(APP.mapInitialized){APP.map.invalidateSize();return;}
-  APP.mapInitialized=true;
-  const myLat=13.7563,myLng=100.5018;
-  const map=L.map('leaflet-map',{zoomControl:true}).setView([myLat,myLng],12);
-  APP.map=map;
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:19}).addTo(map);
-  const meIcon=L.divIcon({html:`<div style="width:18px;height:18px;background:#3C76F1;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 6px rgba(60,118,241,.25);"></div>`,className:'',iconAnchor:[9,9]});
-  L.marker([myLat,myLng],{icon:meIcon}).addTo(map).bindPopup(`<div style="padding:8px;font-size:12px;font-weight:700;color:#001B4B;">${T('myLocation')}</div>`);
-  APP.stations.forEach(s=>{
-    const color=s.type==='ev'?'#2E7D32':s.type==='both'?'#098ABE':'#001B4B';
-    const emoji=s.type==='ev'?'⚡':s.type==='both'?'🔋':'⛽';
-    const sc=s.status==='open'?'#2E7D32':'#E65100';
-    const icon=L.divIcon({html:`<div style="background:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 3px 10px rgba(0,0,0,.2);border:2.5px solid ${color};">${emoji}</div><div style="width:2px;height:6px;background:${color};margin:0 auto;"></div>`,className:'',iconAnchor:[18,42]});
-    const shopsHtml=s.shops.slice(0,4).map(sh=>`<span class="shop-tag">${sh}</span>`).join('');
-    const statusTxt=s.status==='open'?T('openStatus'):T('busyStatus');
-    const popup=L.popup({maxWidth:280}).setContent(`<div class="popup-inner"><div class="popup-header"><span style="font-size:20px;">${emoji}</span><div><div class="popup-name">${sName(s)}</div><div class="popup-dist">📍 ${sAddr(s)} · ${s.dist} · <span style="color:${sc};font-weight:700;">${statusTxt}</span></div></div></div><div class="shop-tags">${shopsHtml}${s.shops.length>4?`<span class="shop-tag">+${s.shops.length-4}</span>`:''}</div>${s.ev?`<div style="font-size:10px;padding:4px 0;color:#2E7D32;font-weight:700;margin-bottom:8px;">⚡ ${s.ev}</div>`:''}<button class="popup-nav-btn" onclick="navToStation('${s.id}');document.querySelectorAll('.leaflet-popup-close-button').forEach(b=>b.click())">${T('popupNav')}</button></div>`);
-    L.marker([s.lat,s.lng],{icon}).addTo(map).on('click',function(){map.setView([s.lat,s.lng],15);openSBS(s.id);});
-  });
-  renderStationList();
+if(APP.mapInitialized){APP.map.invalidateSize();return;}
+APP.mapInitialized=true;
+const myLat=13.7563,myLng=100.5018;
+const map=L.map(‘leaflet-map’,{zoomControl:true}).setView([myLat,myLng],12);
+APP.map=map;
+L.tileLayer(‘https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’,{attribution:‘© OpenStreetMap’,maxZoom:19}).addTo(map);
+const meIcon=L.divIcon({html:`<div style="width:18px;height:18px;background:#3C76F1;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 6px rgba(60,118,241,.25);"></div>`,className:’’,iconAnchor:[9,9]});
+L.marker([myLat,myLng],{icon:meIcon}).addTo(map).bindPopup(`<div style="padding:8px;font-size:12px;font-weight:700;color:#001B4B;">${T('myLocation')}</div>`);
+APP.stations.forEach(s=>{
+const color=s.type===‘ev’?’#2E7D32’:s.type===‘both’?’#098ABE’:’#001B4B’;
+const emoji=s.type===‘ev’?‘⚡’:s.type===‘both’?‘🔋’:‘⛽’;
+const sc=s.status===‘open’?’#2E7D32’:’#E65100’;
+const icon=L.divIcon({html:`<div style="background:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 3px 10px rgba(0,0,0,.2);border:2.5px solid ${color};">${emoji}</div><div style="width:2px;height:6px;background:${color};margin:0 auto;"></div>`,className:’’,iconAnchor:[18,42]});
+const shopsHtml=s.shops.slice(0,4).map(sh=>`<span class="shop-tag">${sh}</span>`).join(’’);
+const statusTxt=s.status===‘open’?T(‘openStatus’):T(‘busyStatus’);
+const popup=L.popup({maxWidth:280}).setContent(`<div class="popup-inner"><div class="popup-header"><span style="font-size:20px;">${emoji}</span><div><div class="popup-name">${sName(s)}</div><div class="popup-dist">📍 ${sAddr(s)} · ${s.dist} · <span style="color:${sc};font-weight:700;">${statusTxt}</span></div></div></div><div class="shop-tags">${shopsHtml}${s.shops.length>4?`<span class="shop-tag">+${s.shops.length-4}</span>`:''}</div>${s.ev?`<div style="font-size:10px;padding:4px 0;color:#2E7D32;font-weight:700;margin-bottom:8px;">⚡ ${s.ev}</div>`:''}<button class="popup-nav-btn" onclick="navToStation('${s.id}');document.querySelectorAll('.leaflet-popup-close-button').forEach(b=>b.click())">${T('popupNav')}</button></div>`);
+L.marker([s.lat,s.lng],{icon}).addTo(map).on(‘click’,function(){map.setView([s.lat,s.lng],15);openSBS(s.id);});
+});
+renderStationList();
 }
 function navToStation(id){
-  APP.navStation=id;const s=APP.stations.find(x=>x.id===id);
-  const toast=document.getElementById('nav-toast-map');
-  document.getElementById('nav-toast-title').textContent=T('navTo')+' '+sName(s);
-  document.getElementById('nav-toast-sub').textContent=sAddr(s)+' · '+s.dist;
-  toast.style.display='flex';renderStationList();
+APP.navStation=id;const s=APP.stations.find(x=>x.id===id);
+const toast=document.getElementById(‘nav-toast-map’);
+document.getElementById(‘nav-toast-title’).textContent=T(‘navTo’)+’ ‘+sName(s);
+document.getElementById(‘nav-toast-sub’).textContent=sAddr(s)+’ · ‘+s.dist;
+toast.style.display=‘flex’;renderStationList();
 }
-function cancelNav(){APP.navStation=null;document.getElementById('nav-toast-map').style.display='none';renderStationList();}
+function cancelNav(){APP.navStation=null;document.getElementById(‘nav-toast-map’).style.display=‘none’;renderStationList();}
 function renderStationList(){
-  const el=document.getElementById('station-list');if(!el)return;
-  el.innerHTML=APP.stations.map(s=>{
-    const isNav=APP.navStation===s.id;
-    const emoji=s.type==='ev'?'⚡':s.type==='both'?'🔋':'⛽';
-    const statusTxt=s.status==='open'?T('openStatus'):T('busyStatus');
-    return `<div class="station-item ${isNav?'navigating':''}" onclick="navToStation('${s.id}');if(APP.map){APP.map.setView([${s.lat},${s.lng}],15);}">
-      <div class="st-icon">${emoji}</div>
-      <div class="st-info">
-        <div class="st-name">${sName(s)}</div>
-        <div class="st-dist">${sAddr(s)} · ${s.dist}</div>
-        <div class="st-tags">
-          ${s.tagLabels.map(tg=>`<span class="st-tag ${(tg.includes('EV')||tg.includes('⚡')||tg.includes('🔋'))?'ev':'fuel'}">${tg}</span>`).join('')}
-          <span class="st-tag ${s.status==='open'?'open':'busy'}">${statusTxt}</span>
-        </div>
-        <div style="font-size:9px;color:var(--text3);margin-top:3px;">🏪 ${s.shops.slice(0,2).join(' · ')}${s.shops.length>2?` +${s.shops.length-2}`:''}</div>
-      </div>
-      <div class="nav-go-btn ${isNav?'active':''}">${isNav?T('navActiveBtn'):T('navBtn')}</div>
-    </div>`;
-  }).join('');
+const el=document.getElementById(‘station-list’);if(!el)return;
+el.innerHTML=APP.stations.map(s=>{
+const isNav=APP.navStation===s.id;
+const emoji=s.type===‘ev’?‘⚡’:s.type===‘both’?‘🔋’:‘⛽’;
+const statusTxt=s.status===‘open’?T(‘openStatus’):T(‘busyStatus’);
+return `<div class="station-item ${isNav?'navigating':''}" onclick="navToStation('${s.id}');if(APP.map){APP.map.setView([${s.lat},${s.lng}],15);}"> <div class="st-icon">${emoji}</div> <div class="st-info"> <div class="st-name">${sName(s)}</div> <div class="st-dist">${sAddr(s)} · ${s.dist}</div> <div class="st-tags"> ${s.tagLabels.map(tg=>`<span class="st-tag ${(tg.includes('EV')||tg.includes('⚡')||tg.includes('🔋'))?'ev':'fuel'}">${tg}</span>`).join('')} <span class="st-tag ${s.status==='open'?'open':'busy'}">${statusTxt}</span> </div> <div style="font-size:9px;color:var(--text3);margin-top:3px;">🏪 ${s.shops.slice(0,2).join(' · ')}${s.shops.length>2?` +${s.shops.length-2}`:''}</div> </div> <div class="nav-go-btn ${isNav?'active':''}">${isNav?T('navActiveBtn'):T('navBtn')}</div> </div>`;
+}).join(’’);
 }
 
 // History
 function renderHomeHistory(){
-  const el=document.getElementById('home-hist');if(!el)return;
-  el.innerHTML=APP.transactions.slice(0,3).map(tx=>`<div class="hist-item"><div class="hi-icon" style="background:${tx.bg};">${tx.icon}</div><div class="hi-info"><div class="hi-name">${txName(tx)}</div><div class="hi-meta">${txMeta(tx)}</div></div><div class="hi-amt ${tx.amt<0?'m':'p'}">${tx.amt<0?'-':'+'}฿${Math.abs(tx.amt)}</div></div>`).join('');
+const el=document.getElementById(‘home-hist’);if(!el)return;
+el.innerHTML=APP.transactions.slice(0,3).map(tx=>`<div class="hist-item"><div class="hi-icon" style="background:${tx.bg};">${tx.icon}</div><div class="hi-info"><div class="hi-name">${txName(tx)}</div><div class="hi-meta">${txMeta(tx)}</div></div><div class="hi-amt ${tx.amt<0?'m':'p'}">${tx.amt<0?'-':'+'}฿${Math.abs(tx.amt)}</div></div>`).join(’’);
 }
 function renderHistory(cat){
-  const list=document.getElementById('hist-list');
-  const fil=cat==='all'?APP.transactions:APP.transactions.filter(t=>t.type===cat);
-  list.innerHTML=fil.length===0?`<div style="padding:18px;text-align:center;color:var(--text3);font-size:12px;">${LANG==='en'?'No transactions':'ไม่มีรายการ'}</div>`
-    :fil.map(tx=>`<div class="hist-item"><div class="hi-icon" style="background:${tx.bg};">${tx.icon}</div><div class="hi-info"><div class="hi-name">${txName(tx)}</div><div class="hi-meta">${txMeta(tx)}</div></div><div class="hi-amt ${tx.amt<0?'m':'p'}">${tx.amt<0?'-':'+'}฿${Math.abs(tx.amt)}</div></div>`).join('');
-  const spent=APP.transactions.filter(t=>t.amt<0).reduce((s,t)=>s+Math.abs(t.amt),0);
-  const income=APP.transactions.filter(t=>t.amt>0).reduce((s,t)=>s+t.amt,0);
-  document.getElementById('hist-summary').innerHTML=`
-    <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--red);">฿${spent.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">${T('spent')}</div></div>
-    <div style="width:1px;background:var(--border);"></div>
-    <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--green);">฿${income.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">${T('income')}</div></div>
-    <div style="width:1px;background:var(--border);"></div>
-    <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--p500);">${APP.pts.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">BlueCard pts</div></div>`;
+const list=document.getElementById(‘hist-list’);
+const fil=cat===‘all’?APP.transactions:APP.transactions.filter(t=>t.type===cat);
+list.innerHTML=fil.length===0?`<div style="padding:18px;text-align:center;color:var(--text3);font-size:12px;">${LANG==='en'?'No transactions':'ไม่มีรายการ'}</div>`
+:fil.map(tx=>`<div class="hist-item"><div class="hi-icon" style="background:${tx.bg};">${tx.icon}</div><div class="hi-info"><div class="hi-name">${txName(tx)}</div><div class="hi-meta">${txMeta(tx)}</div></div><div class="hi-amt ${tx.amt<0?'m':'p'}">${tx.amt<0?'-':'+'}฿${Math.abs(tx.amt)}</div></div>`).join(’’);
+const spent=APP.transactions.filter(t=>t.amt<0).reduce((s,t)=>s+Math.abs(t.amt),0);
+const income=APP.transactions.filter(t=>t.amt>0).reduce((s,t)=>s+t.amt,0);
+document.getElementById(‘hist-summary’).innerHTML=` <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--red);">฿${spent.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">${T('spent')}</div></div> <div style="width:1px;background:var(--border);"></div> <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--green);">฿${income.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">${T('income')}</div></div> <div style="width:1px;background:var(--border);"></div> <div><div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--p500);">${APP.pts.toLocaleString()}</div><div style="font-size:9px;color:var(--text2);margin-top:2px;">BlueCard pts</div></div>`;
 }
-function filt(el,cat){document.querySelectorAll('#hist-filters .fc').forEach(f=>f.classList.remove('on'));el.classList.add('on');renderHistory(cat);}
+function filt(el,cat){document.querySelectorAll(’#hist-filters .fc’).forEach(f=>f.classList.remove(‘on’));el.classList.add(‘on’);renderHistory(cat);}
 
 // Cars
 function carSVG(hex){return`<svg viewBox="0 0 80 38" width="54" height="26"><rect x="3" y="17" width="74" height="16" rx="5" fill="${hex}" stroke="#999" stroke-width="1.2"/><rect x="12" y="8" width="56" height="14" rx="5" fill="${hex}" stroke="#999" stroke-width="1.2"/><rect x="15" y="9" width="22" height="10" rx="2" fill="rgba(180,220,255,.55)"/><rect x="42" y="9" width="23" height="10" rx="2" fill="rgba(180,220,255,.55)"/><circle cx="19" cy="33" r="5" fill="#2a2a2a"/><circle cx="19" cy="33" r="2.5" fill="#888"/><circle cx="61" cy="33" r="5" fill="#2a2a2a"/><circle cx="61" cy="33" r="2.5" fill="#888"/><rect x="4" y="20" width="7" height="5" rx="1.5" fill="#FFE082"/><rect x="69" y="20" width="7" height="5" rx="1.5" fill="#EF9A9A"/></svg>`;}
 function renderCars(){
-  const c=document.getElementById('car-cards-container');if(!c)return;
-  let html=APP.cars.map((car,i)=>`<div class="car-card ${i===0?'active-car':''}" onclick="selectCar(this,${i})">${i===0?'<div style="position:absolute;top:9px;right:9px;width:7px;height:7px;background:var(--p500);border-radius:50%;"></div>':''}<div style="margin-bottom:6px;">${carSVG(car.colorHex)}</div><div class="car-model">${car.brand} ${car.model}</div><div class="car-plate">${car.plate}</div><div class="car-fuel-badge" style="${car.energy==='ev'?'background:var(--green-light);color:var(--green);':'background:rgba(60,118,241,.1);color:var(--p600);'}">${car.fuelLabel}</div><div style="font-size:9px;color:var(--text3);margin-top:3px;">${car.color} · ${car.year}</div></div>`).join('');
-  html+=`<div class="car-add" onclick="openAddCar()"><div class="car-add-icon">➕</div><div class="car-add-lbl">${T('addCar')}</div></div>`;
-  c.innerHTML=html;
+const c=document.getElementById(‘car-cards-container’);if(!c)return;
+let html=APP.cars.map((car,i)=>`<div class="car-card ${i===0?'active-car':''}" onclick="selectCar(this,${i})">${i===0?'<div style="position:absolute;top:9px;right:9px;width:7px;height:7px;background:var(--p500);border-radius:50%;"></div>':''}<div style="margin-bottom:6px;">${carSVG(car.colorHex)}</div><div class="car-model">${car.brand} ${car.model}</div><div class="car-plate">${car.plate}</div><div class="car-fuel-badge" style="${car.energy==='ev'?'background:var(--green-light);color:var(--green);':'background:rgba(60,118,241,.1);color:var(--p600);'}">${car.fuelLabel}</div><div style="font-size:9px;color:var(--text3);margin-top:3px;">${car.color} · ${car.year}</div></div>`).join(’’);
+html+=`<div class="car-add" onclick="openAddCar()"><div class="car-add-icon">➕</div><div class="car-add-lbl">${T('addCar')}</div></div>`;
+c.innerHTML=html;
 }
-function selectCar(el,idx){document.querySelectorAll('.car-card').forEach((c,i)=>c.classList.toggle('active-car',i===idx));}
+function selectCar(el,idx){document.querySelectorAll(’.car-card’).forEach((c,i)=>c.classList.toggle(‘active-car’,i===idx));}
 
 // Brand Search
 function initBrandDropdown(){
-  const dd=document.getElementById('brand-dropdown');
-  dd.innerHTML=ALL_BRANDS.map(b=>`<div class="brand-option" onclick="selectBrand('${b.replace(/'/g,"\\'")}')"><span style="font-size:14px;">🚗</span> ${b}</div>`).join('');
+const dd=document.getElementById(‘brand-dropdown’);
+dd.innerHTML=ALL_BRANDS.map(b=>`<div class="brand-option" onclick="selectBrand('${b.replace(/'/g,"\\'")}')"><span style="font-size:14px;">🚗</span> ${b}</div>`).join(’’);
 }
-function filterBrands(q){document.querySelectorAll('#brand-dropdown .brand-option').forEach(o=>{o.classList.toggle('hidden',q.length>0&&!o.textContent.toLowerCase().includes(q.toLowerCase()));});}
+function filterBrands(q){document.querySelectorAll(’#brand-dropdown .brand-option’).forEach(o=>{o.classList.toggle(‘hidden’,q.length>0&&!o.textContent.toLowerCase().includes(q.toLowerCase()));});}
 function selectBrand(brand){
-  APP.selectedBrand=brand;
-  document.getElementById('brand-search-section').style.display='none';
-  document.getElementById('brand-selected-display').style.display='block';
-  document.getElementById('brand-selected-text').textContent='🚗 '+brand;
-  const evB=['BYD','NIO','Xpeng','Tesla','Rivian','Lucid','Zeekr','NETA','ORA','Li Auto','Leapmotor','Voyah','Canoo','Fisker'];
-  if(evB.some(b=>brand.includes(b)))pickCarEnergy(document.getElementById('ce-ev'),'ev');
+APP.selectedBrand=brand;
+document.getElementById(‘brand-search-section’).style.display=‘none’;
+document.getElementById(‘brand-selected-display’).style.display=‘block’;
+document.getElementById(‘brand-selected-text’).textContent=‘🚗 ‘+brand;
+const evB=[‘BYD’,‘NIO’,‘Xpeng’,‘Tesla’,‘Rivian’,‘Lucid’,‘Zeekr’,‘NETA’,‘ORA’,‘Li Auto’,‘Leapmotor’,‘Voyah’,‘Canoo’,‘Fisker’];
+if(evB.some(b=>brand.includes(b)))pickCarEnergy(document.getElementById(‘ce-ev’),‘ev’);
 }
-function clearBrand(){APP.selectedBrand='';document.getElementById('brand-search-section').style.display='block';document.getElementById('brand-selected-display').style.display='none';document.getElementById('brand-search').value='';filterBrands('');}
+function clearBrand(){APP.selectedBrand=’’;document.getElementById(‘brand-search-section’).style.display=‘block’;document.getElementById(‘brand-selected-display’).style.display=‘none’;document.getElementById(‘brand-search’).value=’’;filterBrands(’’);}
 
 // Add Car
-const colorMap={'ขาว':'#E8E8E8','ดำ':'#1A1A1A','น้ำเงิน':'#1565C0','แดง':'#E53935','เหลือง':'#F9A825','เทา':'#78909C','ส้ม':'#FF7043'};
-let selColor={color:'ขาว',hex:'#E8E8E8'},selEnergy='g91';
+const colorMap={‘ขาว’:’#E8E8E8’,‘ดำ’:’#1A1A1A’,‘น้ำเงิน’:’#1565C0’,‘แดง’:’#E53935’,‘เหลือง’:’#F9A825’,‘เทา’:’#78909C’,‘ส้ม’:’#FF7043’};
+let selColor={color:‘ขาว’,hex:’#E8E8E8’},selEnergy=‘g91’;
 function openAddCar(){
-  ['car-model-input','car-plate-input'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
-  selColor={color:'ขาว',hex:'#E8E8E8'};selEnergy='g91';clearBrand();
-  document.querySelectorAll('.color-btn').forEach((b,i)=>b.classList.toggle('on',i===0));
-  document.querySelectorAll('#car-energy-row .sos-fuel-chip').forEach(c=>c.classList.remove('on'));
-  document.getElementById('ce-91').classList.add('on');
-  document.getElementById('ev-plug-section').style.display='none';
-  initBrandDropdown();
-  document.getElementById('addcar-overlay').classList.add('show');
+[‘car-model-input’,‘car-plate-input’].forEach(id=>{const e=document.getElementById(id);if(e)e.value=’’;});
+selColor={color:‘ขาว’,hex:’#E8E8E8’};selEnergy=‘g91’;clearBrand();
+document.querySelectorAll(’.color-btn’).forEach((b,i)=>b.classList.toggle(‘on’,i===0));
+document.querySelectorAll(’#car-energy-row .sos-fuel-chip’).forEach(c=>c.classList.remove(‘on’));
+document.getElementById(‘ce-91’).classList.add(‘on’);
+document.getElementById(‘ev-plug-section’).style.display=‘none’;
+initBrandDropdown();
+document.getElementById(‘addcar-overlay’).classList.add(‘show’);
 }
-function pickColor(el){document.querySelectorAll('.color-btn').forEach(b=>b.classList.remove('on'));el.classList.add('on');selColor={color:el.dataset.color,hex:colorMap[el.dataset.color]||'#E8E8E8'};}
-function pickCarEnergy(el,type){document.querySelectorAll('#car-energy-row .sos-fuel-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');selEnergy=type;document.getElementById('ev-plug-section').style.display=type==='ev'?'block':'none';}
+function pickColor(el){document.querySelectorAll(’.color-btn’).forEach(b=>b.classList.remove(‘on’));el.classList.add(‘on’);selColor={color:el.dataset.color,hex:colorMap[el.dataset.color]||’#E8E8E8’};}
+function pickCarEnergy(el,type){document.querySelectorAll(’#car-energy-row .sos-fuel-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);selEnergy=type;document.getElementById(‘ev-plug-section’).style.display=type===‘ev’?‘block’:‘none’;}
 function saveNewCar(){
-  const brand=APP.selectedBrand,model=document.getElementById('car-model-input').value,plate=document.getElementById('car-plate-input').value;
-  if(!brand||!model||!plate){showToast(T('fillAll'));return;}
-  const evPlug=selEnergy==='ev'?document.getElementById('ev-plug').value:'';
-  const labels={'g91':'Gasohol 91','g95':'Gasohol 95','diesel':'Diesel B7','ev':'EV · '+evPlug};
-  APP.cars.push({brand,model,plate,color:selColor.color,colorHex:selColor.hex,energy:selEnergy,fuelLabel:labels[selEnergy]||selEnergy,year:new Date().getFullYear().toString(),evPlug});
-  closeOL('addcar-overlay');renderCars();showToast(Tf('carAdded',{brand,model}));
+const brand=APP.selectedBrand,model=document.getElementById(‘car-model-input’).value,plate=document.getElementById(‘car-plate-input’).value;
+if(!brand||!model||!plate){showToast(T(‘fillAll’));return;}
+const evPlug=selEnergy===‘ev’?document.getElementById(‘ev-plug’).value:’’;
+const labels={‘g91’:‘Gasohol 91’,‘g95’:‘Gasohol 95’,‘diesel’:‘Diesel B7’,‘ev’:’EV · ’+evPlug};
+APP.cars.push({brand,model,plate,color:selColor.color,colorHex:selColor.hex,energy:selEnergy,fuelLabel:labels[selEnergy]||selEnergy,year:new Date().getFullYear().toString(),evPlug});
+closeOL(‘addcar-overlay’);renderCars();showToast(Tf(‘carAdded’,{brand,model}));
 }
 
 // Topup
-function openTopup(){updateBalDisplay();APP.selectedTopupAmt=300;APP.selectedTopupBonus=0;document.getElementById('topup-overlay').classList.add('show');}
-function pickAmt(el,amt,bonus){document.querySelectorAll('.tg-opt').forEach(o=>o.classList.remove('on'));el.classList.add('on');APP.selectedTopupAmt=amt;APP.selectedTopupBonus=bonus;const bon=bonus?` (+฿${bonus} ${T('bonus')})`:'';document.getElementById('topup-btn').textContent=`✅ ${LANG==='en'?'Confirm':'ยืนยัน'} ${amt.toLocaleString()} ${T('baht')}${bon}`;}
-function pickPM(el){document.querySelectorAll('.pm-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');}
+function openTopup(){updateBalDisplay();APP.selectedTopupAmt=300;APP.selectedTopupBonus=0;document.getElementById(‘topup-overlay’).classList.add(‘show’);}
+function pickAmt(el,amt,bonus){document.querySelectorAll(’.tg-opt’).forEach(o=>o.classList.remove(‘on’));el.classList.add(‘on’);APP.selectedTopupAmt=amt;APP.selectedTopupBonus=bonus;const bon=bonus?` (+฿${bonus} ${T('bonus')})`:’’;document.getElementById(‘topup-btn’).textContent=`✅ ${LANG==='en'?'Confirm':'ยืนยัน'} ${amt.toLocaleString()} ${T('baht')}${bon}`;}
+function pickPM(el){document.querySelectorAll(’.pm-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);}
 function doTopup(){
-  const total=APP.selectedTopupAmt+APP.selectedTopupBonus;APP.balance+=total;APP.pts+=APP.selectedTopupAmt;
-  const bonTxt=APP.selectedTopupBonus?` ${T('bonus')} ฿${APP.selectedTopupBonus}`:'';
-  APP.transactions.unshift({type:'topup',icon:'💰',bg:'rgba(30,120,200,.12)',name_th:'เติม PTT Wallet',name_en:'PTT Wallet Top Up',meta_th:`ตอนนี้ · +฿${APP.selectedTopupAmt}${bonTxt}`,meta_en:`Now · +฿${APP.selectedTopupAmt}${bonTxt}`,amt:total});
-  closeOL('topup-overlay');updateBalDisplay();renderHomeHistory();
-  setTimeout(()=>showToast(`${T('topupSuccess')} ฿${APP.balance.toLocaleString()}`),300);
+const total=APP.selectedTopupAmt+APP.selectedTopupBonus;APP.balance+=total;APP.pts+=APP.selectedTopupAmt;
+const bonTxt=APP.selectedTopupBonus?` ${T('bonus')} ฿${APP.selectedTopupBonus}`:’’;
+APP.transactions.unshift({type:‘topup’,icon:‘💰’,bg:‘rgba(30,120,200,.12)’,name_th:‘เติม PTT Wallet’,name_en:‘PTT Wallet Top Up’,meta_th:`ตอนนี้ · +฿${APP.selectedTopupAmt}${bonTxt}`,meta_en:`Now · +฿${APP.selectedTopupAmt}${bonTxt}`,amt:total});
+closeOL(‘topup-overlay’);updateBalDisplay();renderHomeHistory();
+setTimeout(()=>showToast(`${T('topupSuccess')} ฿${APP.balance.toLocaleString()}`),300);
 }
 
 // SOS
 function renderSOSOptions(){
-  const fo=document.getElementById('sos-fuel-options'),eo=document.getElementById('sos-ev-options');if(!fo)return;
-  const fC=APP.cars.filter(c=>c.energy!=='ev'),eC=APP.cars.filter(c=>c.energy==='ev');
-  fo.innerHTML=fC.length?fC.map((c,i)=>`<div class="sos-fuel-chip ${i===0?'on':''}" onclick="sosFuelPick(this)"><div class="sfn">${c.fuelLabel}</div><div class="sfp">${c.brand} ${c.model}</div></div>`).join(''):`<div class="sos-fuel-chip on"><div class="sfn">Gasohol 95</div></div>`;
-  eo.innerHTML=eC.length?eC.map((c,i)=>`<div class="sos-fuel-chip ${i===0?'on':''}" onclick="sosFuelPick(this)"><div class="sfn">${c.brand} ${c.model}</div><div class="sfp">${c.evPlug||'CCS2'}</div></div>`).join(''):`<div class="sos-fuel-chip on"><div class="sfn">🔌 CCS2</div></div>`;
+const fo=document.getElementById(‘sos-fuel-options’),eo=document.getElementById(‘sos-ev-options’);if(!fo)return;
+const fC=APP.cars.filter(c=>c.energy!==‘ev’),eC=APP.cars.filter(c=>c.energy===‘ev’);
+fo.innerHTML=fC.length?fC.map((c,i)=>`<div class="sos-fuel-chip ${i===0?'on':''}" onclick="sosFuelPick(this)"><div class="sfn">${c.fuelLabel}</div><div class="sfp">${c.brand} ${c.model}</div></div>`).join(’’):`<div class="sos-fuel-chip on"><div class="sfn">Gasohol 95</div></div>`;
+eo.innerHTML=eC.length?eC.map((c,i)=>`<div class="sos-fuel-chip ${i===0?'on':''}" onclick="sosFuelPick(this)"><div class="sfn">${c.brand} ${c.model}</div><div class="sfp">${c.evPlug||'CCS2'}</div></div>`).join(’’):`<div class="sos-fuel-chip on"><div class="sfn">🔌 CCS2</div></div>`;
 }
-function openSOS(){renderSOSOptions();document.getElementById('sos-call-view').style.display=APP.sosDispatched?'none':'block';document.getElementById('sos-dispatched-view').style.display=APP.sosDispatched?'block':'none';document.getElementById('sos-overlay').classList.add('show');}
-function sosSvc(t){document.getElementById('sos-s-fuel').classList.toggle('on',t==='fuel');document.getElementById('sos-s-ev').classList.toggle('on',t==='ev');document.getElementById('sos-fuel-section').style.display=t==='fuel'?'block':'none';document.getElementById('sos-ev-section').style.display=t==='ev'?'block':'none';}
-function sosFuelPick(el){const p=el.closest('#sos-fuel-section,#sos-ev-section');if(p)p.querySelectorAll('.sos-fuel-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');}
+function openSOS(){renderSOSOptions();document.getElementById(‘sos-call-view’).style.display=APP.sosDispatched?‘none’:‘block’;document.getElementById(‘sos-dispatched-view’).style.display=APP.sosDispatched?‘block’:‘none’;document.getElementById(‘sos-overlay’).classList.add(‘show’);}
+function sosSvc(t){document.getElementById(‘sos-s-fuel’).classList.toggle(‘on’,t===‘fuel’);document.getElementById(‘sos-s-ev’).classList.toggle(‘on’,t===‘ev’);document.getElementById(‘sos-fuel-section’).style.display=t===‘fuel’?‘block’:‘none’;document.getElementById(‘sos-ev-section’).style.display=t===‘ev’?‘block’:‘none’;}
+function sosFuelPick(el){const p=el.closest(’#sos-fuel-section,#sos-ev-section’);if(p)p.querySelectorAll(’.sos-fuel-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);}
 function callSOS(){
-  const isFuel=document.getElementById('sos-s-fuel').classList.contains('on');
-  document.getElementById('sos-dispatched-detail').textContent=isFuel?T('mobileFuelETA'):T('mobileEVETA');
-  document.getElementById('sos-call-view').style.display='none';document.getElementById('sos-dispatched-view').style.display='block';
-  APP.sosDispatched=true;updateSOSBanner(true);APP.sosCancelSec=60;
-  if(APP.sosCancelTimer)clearInterval(APP.sosCancelTimer);
-  APP.sosCancelTimer=setInterval(()=>{APP.sosCancelSec--;const cd=document.getElementById('cancel-countdown');if(cd)cd.textContent=APP.sosCancelSec;if(APP.sosCancelSec<=0){clearInterval(APP.sosCancelTimer);const b=document.getElementById('sos-cancel-btn');if(b){b.disabled=true;b.style.opacity='.5';}}},1000);
-  let eta=8;if(APP.sosTimer)clearInterval(APP.sosTimer);
-  APP.sosTimer=setInterval(()=>{if(eta>0){eta--;['sos-eta-display','sos-eta-min','sos-eta-big'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=id==='sos-eta-display'?eta+':00':eta;}); }},10000);
+const isFuel=document.getElementById(‘sos-s-fuel’).classList.contains(‘on’);
+document.getElementById(‘sos-dispatched-detail’).textContent=isFuel?T(‘mobileFuelETA’):T(‘mobileEVETA’);
+document.getElementById(‘sos-call-view’).style.display=‘none’;document.getElementById(‘sos-dispatched-view’).style.display=‘block’;
+APP.sosDispatched=true;updateSOSBanner(true);APP.sosCancelSec=60;
+if(APP.sosCancelTimer)clearInterval(APP.sosCancelTimer);
+APP.sosCancelTimer=setInterval(()=>{APP.sosCancelSec–;const cd=document.getElementById(‘cancel-countdown’);if(cd)cd.textContent=APP.sosCancelSec;if(APP.sosCancelSec<=0){clearInterval(APP.sosCancelTimer);const b=document.getElementById(‘sos-cancel-btn’);if(b){b.disabled=true;b.style.opacity=’.5’;}}},1000);
+let eta=8;if(APP.sosTimer)clearInterval(APP.sosTimer);
+APP.sosTimer=setInterval(()=>{if(eta>0){eta–;[‘sos-eta-display’,‘sos-eta-min’,‘sos-eta-big’].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=id===‘sos-eta-display’?eta+’:00’:eta;}); }},10000);
 }
-function cancelSOS(){if(APP.sosCancelSec<=0){showToast(T('cancelExpired'));return;}APP.sosDispatched=false;if(APP.sosTimer)clearInterval(APP.sosTimer);if(APP.sosCancelTimer)clearInterval(APP.sosCancelTimer);closeOL('sos-overlay');updateSOSBanner(false);showToast(T('cancelledSOS'));}
+function cancelSOS(){if(APP.sosCancelSec<=0){showToast(T(‘cancelExpired’));return;}APP.sosDispatched=false;if(APP.sosTimer)clearInterval(APP.sosTimer);if(APP.sosCancelTimer)clearInterval(APP.sosCancelTimer);closeOL(‘sos-overlay’);updateSOSBanner(false);showToast(T(‘cancelledSOS’));}
 function updateSOSBanner(d){
-  const b=document.getElementById('home-sos-banner'),title=document.getElementById('home-sos-title'),sub=document.getElementById('home-sos-sub'),feats=document.getElementById('home-sos-feats'),ring=document.getElementById('home-sos-ring');
-  if(d){b.className='sos-banner sos-dispatched';title.textContent=LANG==='en'?'🚚 Help is on the way!':'🚚 รถช่วยเหลือกำลังมา!';sub.textContent=LANG==='en'?'Tap to view status':'กดเพื่อดูสถานะ ETA';ring.textContent='🚚';feats.innerHTML=`<div class="sos-feat">✅ Dispatched</div><div class="sos-feat">📍 GPS</div><div class="sos-feat">⏱ ~8 ${T('etaMin')}</div>`;}
-  else{b.className='sos-banner sos-active';title.textContent=T('sosTitle');sub.textContent=T('sosSub');ring.textContent='🆘';feats.innerHTML=`<div class="sos-feat">${T('feat1')}</div><div class="sos-feat">${T('feat2')}</div><div class="sos-feat">${T('feat3')}</div>`;}
+const b=document.getElementById(‘home-sos-banner’),title=document.getElementById(‘home-sos-title’),sub=document.getElementById(‘home-sos-sub’),feats=document.getElementById(‘home-sos-feats’),ring=document.getElementById(‘home-sos-ring’);
+if(d){b.className=‘sos-banner sos-dispatched’;title.textContent=LANG===‘en’?‘🚚 Help is on the way!’:‘🚚 รถช่วยเหลือกำลังมา!’;sub.textContent=LANG===‘en’?‘Tap to view status’:‘กดเพื่อดูสถานะ ETA’;ring.textContent=‘🚚’;feats.innerHTML=`<div class="sos-feat">✅ Dispatched</div><div class="sos-feat">📍 GPS</div><div class="sos-feat">⏱ ~8 ${T('etaMin')}</div>`;}
+else{b.className=‘sos-banner sos-active’;title.textContent=T(‘sosTitle’);sub.textContent=T(‘sosSub’);ring.textContent=‘🆘’;feats.innerHTML=`<div class="sos-feat">${T('feat1')}</div><div class="sos-feat">${T('feat2')}</div><div class="sos-feat">${T('feat3')}</div>`;}
 }
 
 // Energy
 let mainPrice=33.25,mainKm=14;
-function switchET(typ){document.getElementById('etb-fuel').classList.toggle('on',typ==='fuel');document.getElementById('etb-ev').classList.toggle('on',typ==='ev');document.getElementById('et-fuel').style.display=typ==='fuel'?'block':'none';document.getElementById('et-ev').style.display=typ==='ev'?'block':'none';}
-function pickFuel(el,p,name,km){document.querySelectorAll('#fg-main .fuel-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');mainPrice=parseFloat(p);mainKm=km||14;calcMain();}
-function calcMain(){const b=parseFloat(document.getElementById('bi-main').value)||0,l=(b/mainPrice).toFixed(2);document.getElementById('lv-main').textContent=b>0?l:'0.00';document.getElementById('kv-main').textContent='~'+Math.round(parseFloat(l)*mainKm);}
-function savePref(){showToast(T('savedPref'));}
+function switchET(typ){document.getElementById(‘etb-fuel’).classList.toggle(‘on’,typ===‘fuel’);document.getElementById(‘etb-ev’).classList.toggle(‘on’,typ===‘ev’);document.getElementById(‘et-fuel’).style.display=typ===‘fuel’?‘block’:‘none’;document.getElementById(‘et-ev’).style.display=typ===‘ev’?‘block’:‘none’;}
+function pickFuel(el,p,name,km){document.querySelectorAll(’#fg-main .fuel-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);mainPrice=parseFloat(p);mainKm=km||14;calcMain();}
+function calcMain(){const b=parseFloat(document.getElementById(‘bi-main’).value)||0,l=(b/mainPrice).toFixed(2);document.getElementById(‘lv-main’).textContent=b>0?l:‘0.00’;document.getElementById(‘kv-main’).textContent=’~’+Math.round(parseFloat(l)*mainKm);}
+function savePref(){showToast(T(‘savedPref’));}
 
 // Pump
-let pumpPrice=33.25,pumpName='Gasohol 91',pumpKm=14;
-function pumpFuel(el,p,name,km){document.querySelectorAll('#pump-fg .fuel-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');pumpPrice=parseFloat(p);pumpName=name;pumpKm=km||14;calcPump();}
-function calcPump(){const b=parseFloat(document.getElementById('pump-budget').value)||0,l=b>0?(b/pumpPrice).toFixed(2):'0.00';document.getElementById('pump-lv').textContent=l;document.getElementById('pump-kv').textContent='~'+Math.round(parseFloat(l)*pumpKm);document.getElementById('pump-screen-val').textContent=pumpName+' — ฿'+b;document.getElementById('pump-screen-sub').textContent='≈ '+l+' '+T('litre')+' · '+pumpPrice+' ฿/'+T('litre');document.getElementById('pv3').textContent=b;}
-function savePumpPref(){showToast(T('savedPref'));}
-function pumpPay(){const b=parseFloat(document.getElementById('pump-budget').value)||0;if(b<=0){showToast(T('enterBudget'));return;}if(APP.balance<b){showToast(T('insufficientBal'));return;}APP.balance-=b;APP.transactions.unshift({type:'fuel',icon:'⛽',bg:'rgba(60,118,241,.1)',name_th:'เติม '+pumpName+' (Digital Pump)',name_en:'Fill '+pumpName+' (Digital Pump)',meta_th:'ตอนนี้ · หัว A3 · ≈'+(b/pumpPrice).toFixed(2)+'L',meta_en:'Now · Nozzle A3 · ≈'+(b/pumpPrice).toFixed(2)+'L',amt:-b});updateBalDisplay();renderHomeHistory();showToast(T('pumpSuccess'));}
+let pumpPrice=33.25,pumpName=‘Gasohol 91’,pumpKm=14;
+function pumpFuel(el,p,name,km){document.querySelectorAll(’#pump-fg .fuel-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);pumpPrice=parseFloat(p);pumpName=name;pumpKm=km||14;calcPump();}
+function calcPump(){const b=parseFloat(document.getElementById(‘pump-budget’).value)||0,l=b>0?(b/pumpPrice).toFixed(2):‘0.00’;document.getElementById(‘pump-lv’).textContent=l;document.getElementById(‘pump-kv’).textContent=’~’+Math.round(parseFloat(l)*pumpKm);document.getElementById(‘pump-screen-val’).textContent=pumpName+’ — ฿’+b;document.getElementById(‘pump-screen-sub’).textContent=‘≈ ‘+l+’ ‘+T(‘litre’)+’ · ‘+pumpPrice+’ ฿/’+T(‘litre’);document.getElementById(‘pv3’).textContent=b;}
+function savePumpPref(){showToast(T(‘savedPref’));}
+function pumpPay(){const b=parseFloat(document.getElementById(‘pump-budget’).value)||0;if(b<=0){showToast(T(‘enterBudget’));return;}if(APP.balance<b){showToast(T(‘insufficientBal’));return;}APP.balance-=b;APP.transactions.unshift({type:‘fuel’,icon:‘⛽’,bg:‘rgba(60,118,241,.1)’,name_th:‘เติม ‘+pumpName+’ (Digital Pump)’,name_en:‘Fill ‘+pumpName+’ (Digital Pump)’,meta_th:‘ตอนนี้ · หัว A3 · ≈’+(b/pumpPrice).toFixed(2)+‘L’,meta_en:‘Now · Nozzle A3 · ≈’+(b/pumpPrice).toFixed(2)+‘L’,amt:-b});updateBalDisplay();renderHomeHistory();showToast(T(‘pumpSuccess’));}
 
 // OTP
-let otpVal='',otpTarget='B2';
-function openOTP(slot){otpTarget=slot||'B2';otpVal='';renderOTP();document.getElementById('otp-slot-badge').textContent=otpTarget;document.getElementById('otp-slot-name').textContent=(LANG==='en'?'Slot ':'ช่อง ')+otpTarget+' — DC 50kW';document.getElementById('otp-overlay').classList.add('show');}
-function otpKey(k){if(k==='del')otpVal=otpVal.slice(0,-1);else if(otpVal.length<6)otpVal+=k;renderOTP();}
-function renderOTP(){for(let i=1;i<=6;i++){const el=document.getElementById('od'+i);if(otpVal[i-1]){el.textContent=otpVal[i-1];el.classList.add('filled');}else{el.textContent='_';el.classList.remove('filled');}}}
-function confirmOTP(){if(otpVal.length===6){closeOL('otp-overlay');showToast(Tf('otpUnlocked',{id:otpTarget}));}else showToast(T('otpFill'));}
+let otpVal=’’,otpTarget=‘B2’;
+function openOTP(slot){otpTarget=slot||‘B2’;otpVal=’’;renderOTP();document.getElementById(‘otp-slot-badge’).textContent=otpTarget;document.getElementById(‘otp-slot-name’).textContent=(LANG===‘en’?‘Slot ‘:‘ช่อง ‘)+otpTarget+’ — DC 50kW’;document.getElementById(‘otp-overlay’).classList.add(‘show’);}
+function otpKey(k){if(k===‘del’)otpVal=otpVal.slice(0,-1);else if(otpVal.length<6)otpVal+=k;renderOTP();}
+function renderOTP(){for(let i=1;i<=6;i++){const el=document.getElementById(‘od’+i);if(otpVal[i-1]){el.textContent=otpVal[i-1];el.classList.add(‘filled’);}else{el.textContent=’_’;el.classList.remove(‘filled’);}}}
+function confirmOTP(){if(otpVal.length===6){closeOL(‘otp-overlay’);showToast(Tf(‘otpUnlocked’,{id:otpTarget}));}else showToast(T(‘otpFill’));}
 
 // EV Slot Timers
 const slotTimers={W1:{min:29,sec:47},W2:{min:9,sec:12}};
 function updateSlotTimers(){
-  ['W1','W2'].forEach(id=>{
-    const t=slotTimers[id];
-    if(t.sec>0)t.sec--;else if(t.min>0){t.min--;t.sec=59;}else{const el=document.getElementById(`slot-${id.toLowerCase()}-timer`);if(el){el.textContent=LANG==='en'?'Free!':'ว่าง!';el.style.color='#A5D6A7';}return;}
-    const el=document.getElementById(`slot-${id.toLowerCase()}-timer`);if(el)el.textContent=String(t.min).padStart(2,'0')+':'+String(t.sec).padStart(2,'0');
-  });
+[‘W1’,‘W2’].forEach(id=>{
+const t=slotTimers[id];
+if(t.sec>0)t.sec–;else if(t.min>0){t.min–;t.sec=59;}else{const el=document.getElementById(`slot-${id.toLowerCase()}-timer`);if(el){el.textContent=LANG===‘en’?‘Free!’:‘ว่าง!’;el.style.color=’#A5D6A7’;}return;}
+const el=document.getElementById(`slot-${id.toLowerCase()}-timer`);if(el)el.textContent=String(t.min).padStart(2,‘0’)+’:’+String(t.sec).padStart(2,‘0’);
+});
 }
 setInterval(updateSlotTimers,1000);
 
 // Slot Detail + B3 Booking
 function slotDetail(id,type,status,mins){
-  let content='';
-  if(type==='walkin'&&status==='countdown'){
-    content=`<div class="m-title">${Tf('walkinTitle',{id})}</div>
-    <div class="m-sub">${T('walkinCharging')}</div>
-    <div style="text-align:center;padding:20px;background:var(--surface2);border-radius:var(--r);margin-bottom:12px;">
-      <div style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:var(--green);">${String(mins).padStart(2,'0')}:00</div>
-      <div style="font-size:11px;color:var(--text2);margin-top:4px;">${T('minLeft')}</div>
-    </div>
-    <div class="info-banner">${T('walkinNote')}</div>
-    <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
-  } else if(type==='reserved'&&status==='free'){
-    if(APP.b3Booked){
-      content=`<div class="m-title">${Tf('alreadyBooked',{id})}</div>
-      <div class="m-sub">${T('bookingConfirmed')}</div>
-      <div style="text-align:center;padding:16px;background:var(--green-light);border-radius:var(--r);margin-bottom:12px;">
-        <div style="font-size:36px;">✅</div>
-        <div style="font-family:'Prompt',sans-serif;font-size:15px;font-weight:800;color:var(--green);margin-top:6px;">${Tf('bookSuccessMsg',{id})}</div>
-        <div style="font-size:11px;color:var(--green);margin-top:4px;">${APP.b3BookingDate} · ${APP.b3BookingTime}</div>
-      </div>
-      <button class="confirm-btn" onclick="openOTP('B3');closeOL('slot-overlay')">${T('checkinOTPBtn')}</button>
-      <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
-    } else {
-      content=`<div class="m-title">${Tf('slotAvail',{id})}</div>
-      <div class="m-sub">DC Fast 50kW · CCS2/CHAdeMO/GB/T · 8.5฿/kWh</div>
-      <div style="text-align:center;padding:16px;background:rgba(60,118,241,.06);border-radius:var(--r);margin-bottom:12px;border:1.5px solid rgba(60,118,241,.2);">
-        <div style="font-size:36px;">⚡</div>
-        <div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--p500);margin-top:6px;">${T('slotReady')}</div>
-        <div style="font-size:11px;color:var(--text2);margin-top:3px;">Ground Lock · OTP Unlock</div>
-      </div>
-      <button class="confirm-btn" onclick="closeOL('slot-overlay');openB3Booking()">${Tf('bookNow',{id})}</button>
-      <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
-    }
-  }
-  document.getElementById('slot-detail-content').innerHTML=content;
-  document.getElementById('slot-overlay').classList.add('show');
+let content=’’;
+if(type===‘walkin’&&status===‘countdown’){
+content=`<div class="m-title">${Tf('walkinTitle',{id})}</div> <div class="m-sub">${T('walkinCharging')}</div> <div style="text-align:center;padding:20px;background:var(--surface2);border-radius:var(--r);margin-bottom:12px;"> <div style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:var(--green);">${String(mins).padStart(2,'0')}:00</div> <div style="font-size:11px;color:var(--text2);margin-top:4px;">${T('minLeft')}</div> </div> <div class="info-banner">${T('walkinNote')}</div> <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
+} else if(type===‘reserved’&&status===‘free’){
+if(APP.b3Booked){
+content=`<div class="m-title">${Tf('alreadyBooked',{id})}</div> <div class="m-sub">${T('bookingConfirmed')}</div> <div style="text-align:center;padding:16px;background:var(--green-light);border-radius:var(--r);margin-bottom:12px;"> <div style="font-size:36px;">✅</div> <div style="font-family:'Prompt',sans-serif;font-size:15px;font-weight:800;color:var(--green);margin-top:6px;">${Tf('bookSuccessMsg',{id})}</div> <div style="font-size:11px;color:var(--green);margin-top:4px;">${APP.b3BookingDate} · ${APP.b3BookingTime}</div> </div> <button class="confirm-btn" onclick="openOTP('B3');closeOL('slot-overlay')">${T('checkinOTPBtn')}</button> <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
+} else {
+content=`<div class="m-title">${Tf('slotAvail',{id})}</div> <div class="m-sub">DC Fast 50kW · CCS2/CHAdeMO/GB/T · 8.5฿/kWh</div> <div style="text-align:center;padding:16px;background:rgba(60,118,241,.06);border-radius:var(--r);margin-bottom:12px;border:1.5px solid rgba(60,118,241,.2);"> <div style="font-size:36px;">⚡</div> <div style="font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:var(--p500);margin-top:6px;">${T('slotReady')}</div> <div style="font-size:11px;color:var(--text2);margin-top:3px;">Ground Lock · OTP Unlock</div> </div> <button class="confirm-btn" onclick="closeOL('slot-overlay');openB3Booking()">${Tf('bookNow',{id})}</button> <button class="sec-btn" onclick="closeOL('slot-overlay')">${T('closeBtn')}</button>`;
+}
+}
+document.getElementById(‘slot-detail-content’).innerHTML=content;
+document.getElementById(‘slot-overlay’).classList.add(‘show’);
 }
 function openB3Booking(){
-  const dayNames=LANG==='en'?['Sun','Mon','Tue','Wed','Thu','Fri','Sat']:['อา','จ','อ','พ','พฤ','ศ','ส'];
-  const months=LANG==='en'?['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']:['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
-  const today=new Date();let dateHtml='';
-  for(let i=0;i<5;i++){
-    const d=new Date(today);d.setDate(today.getDate()+i);
-    const label=i===0?T('todayDate'):dayNames[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()];
-    const val=d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-    dateHtml+=`<div class="time-slot ${i===0?'on':''}" style="min-width:68px;white-space:nowrap;padding:7px 6px;" onclick="pickEvDate(this,'${val}')">${label}</div>`;
-  }
-  document.getElementById('ev-date-row').innerHTML=dateHtml;
-  APP.selEvDate=today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
-  const times=['07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'];
-  const taken=['09:00','12:00','15:00','16:00','19:00'];
-  const fullTxt=LANG==='en'?'Full':'เต็ม';
-  document.getElementById('ev-time-grid').innerHTML=times.map(t=>`<div class="time-slot ${taken.includes(t)?'taken':''}" ${!taken.includes(t)?`onclick="pickEvTime(this,'${t}')"`:''}>${t}${taken.includes(t)?'<br><span style="font-size:8px;">'+fullTxt+'</span>':''}</div>`).join('');
-  APP.selEvTime='';
-  document.getElementById('evbook-overlay').classList.add('show');
+const dayNames=LANG===‘en’?[‘Sun’,‘Mon’,‘Tue’,‘Wed’,‘Thu’,‘Fri’,‘Sat’]:[‘อา’,‘จ’,‘อ’,‘พ’,‘พฤ’,‘ศ’,‘ส’];
+const months=LANG===‘en’?[‘Jan’,‘Feb’,‘Mar’,‘Apr’,‘May’,‘Jun’,‘Jul’,‘Aug’,‘Sep’,‘Oct’,‘Nov’,‘Dec’]:[‘ม.ค.’,‘ก.พ.’,‘มี.ค.’,‘เม.ย.’,‘พ.ค.’,‘มิ.ย.’,‘ก.ค.’,‘ส.ค.’,‘ก.ย.’,‘ต.ค.’,‘พ.ย.’,‘ธ.ค.’];
+const today=new Date();let dateHtml=’’;
+for(let i=0;i<5;i++){
+const d=new Date(today);d.setDate(today.getDate()+i);
+const label=i===0?T(‘todayDate’):dayNames[d.getDay()]+’ ‘+d.getDate()+’ ‘+months[d.getMonth()];
+const val=d.getDate()+’/’+(d.getMonth()+1)+’/’+d.getFullYear();
+dateHtml+=`<div class="time-slot ${i===0?'on':''}" style="min-width:68px;white-space:nowrap;padding:7px 6px;" onclick="pickEvDate(this,'${val}')">${label}</div>`;
 }
-function pickEvDate(el,val){document.querySelectorAll('#ev-date-row .time-slot').forEach(d=>d.classList.remove('on'));el.classList.add('on');APP.selEvDate=val;}
-function pickEvTime(el,val){if(el.classList.contains('taken'))return;document.querySelectorAll('#ev-time-grid .time-slot:not(.taken)').forEach(t=>t.classList.remove('on'));el.classList.add('on');APP.selEvTime=val;}
-function pickEvPlug(el){document.querySelectorAll('#ev-plug-row .sos-fuel-chip').forEach(c=>c.classList.remove('on'));el.classList.add('on');}
+document.getElementById(‘ev-date-row’).innerHTML=dateHtml;
+APP.selEvDate=today.getDate()+’/’+(today.getMonth()+1)+’/’+today.getFullYear();
+const times=[‘07:00’,‘08:00’,‘09:00’,‘10:00’,‘11:00’,‘12:00’,‘13:00’,‘14:00’,‘15:00’,‘16:00’,‘17:00’,‘18:00’,‘19:00’,‘20:00’];
+const taken=[‘09:00’,‘12:00’,‘15:00’,‘16:00’,‘19:00’];
+const fullTxt=LANG===‘en’?‘Full’:‘เต็ม’;
+document.getElementById(‘ev-time-grid’).innerHTML=times.map(t=>`<div class="time-slot ${taken.includes(t)?'taken':''}" ${!taken.includes(t)?`onclick=“pickEvTime(this,’${t}’)”`:''}>${t}${taken.includes(t)?'<br><span style="font-size:8px;">'+fullTxt+'</span>':''}</div>`).join(’’);
+APP.selEvTime=’’;
+document.getElementById(‘evbook-overlay’).classList.add(‘show’);
+}
+function pickEvDate(el,val){document.querySelectorAll(’#ev-date-row .time-slot’).forEach(d=>d.classList.remove(‘on’));el.classList.add(‘on’);APP.selEvDate=val;}
+function pickEvTime(el,val){if(el.classList.contains(‘taken’))return;document.querySelectorAll(’#ev-time-grid .time-slot:not(.taken)’).forEach(t=>t.classList.remove(‘on’));el.classList.add(‘on’);APP.selEvTime=val;}
+function pickEvPlug(el){document.querySelectorAll(’#ev-plug-row .sos-fuel-chip’).forEach(c=>c.classList.remove(‘on’));el.classList.add(‘on’);}
 function confirmB3Booking(){
-  if(!APP.selEvTime){showToast(T('selectTime2'));return;}
-  APP.b3Booked=true;APP.b3BookingTime=APP.selEvTime;APP.b3BookingDate=APP.selEvDate;
-  closeOL('evbook-overlay');
-  const s=document.getElementById('slot-b3');
-  if(s){
-    s.className='p-slot reserved-mine';
-    s.onclick=()=>openOTP('B3');
-    s.innerHTML=`<div class="slot-num-lbl">B3</div><svg class="slot-car-svg" viewBox="0 0 60 26" fill="none"><rect x="2" y="10" width="56" height="12" rx="4" fill="rgba(60,118,241,.6)" stroke="#90B4FF" stroke-width="1.5"/><rect x="8" y="4" width="44" height="10" rx="4" fill="rgba(60,118,241,.6)" stroke="#90B4FF" stroke-width="1.5"/><circle cx="13" cy="22" r="3.5" fill="#1A237E"/><circle cx="13" cy="22" r="1.8" fill="#7986CB"/><circle cx="47" cy="22" r="3.5" fill="#1A237E"/><circle cx="47" cy="22" r="1.8" fill="#7986CB"/></svg><div class="slot-label-sm">⭐ ${T('mine')}</div><div class="slot-label-sm">${APP.b3BookingTime}</div><div class="slot-badge badge-reserved">${T('booked')}</div>`;
-  }
-  showToast(`${T('b3BookedMsg')} ${APP.b3BookingDate} ${APP.b3BookingTime}`);
+if(!APP.selEvTime){showToast(T(‘selectTime2’));return;}
+APP.b3Booked=true;APP.b3BookingTime=APP.selEvTime;APP.b3BookingDate=APP.selEvDate;
+closeOL(‘evbook-overlay’);
+const s=document.getElementById(‘slot-b3’);
+if(s){
+s.className=‘p-slot reserved-mine’;
+s.onclick=()=>openOTP(‘B3’);
+s.innerHTML=`<div class="slot-num-lbl">B3</div><svg class="slot-car-svg" viewBox="0 0 60 26" fill="none"><rect x="2" y="10" width="56" height="12" rx="4" fill="rgba(60,118,241,.6)" stroke="#90B4FF" stroke-width="1.5"/><rect x="8" y="4" width="44" height="10" rx="4" fill="rgba(60,118,241,.6)" stroke="#90B4FF" stroke-width="1.5"/><circle cx="13" cy="22" r="3.5" fill="#1A237E"/><circle cx="13" cy="22" r="1.8" fill="#7986CB"/><circle cx="47" cy="22" r="3.5" fill="#1A237E"/><circle cx="47" cy="22" r="1.8" fill="#7986CB"/></svg><div class="slot-label-sm">⭐ ${T('mine')}</div><div class="slot-label-sm">${APP.b3BookingTime}</div><div class="slot-badge badge-reserved">${T('booked')}</div>`;
+}
+showToast(`${T('b3BookedMsg')} ${APP.b3BookingDate} ${APP.b3BookingTime}`);
 }
 
 // Toast
-function showToast(msg){const d=document.createElement('div');d.style.cssText='position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#001B4B;color:#fff;padding:9px 18px;border-radius:12px;font-size:11px;font-weight:600;z-index:999;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.3);animation:fadeUp .25s ease;max-width:340px;text-align:center;';d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),3000);}
+function showToast(msg){const d=document.createElement(‘div’);d.style.cssText=‘position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#001B4B;color:#fff;padding:9px 18px;border-radius:12px;font-size:11px;font-weight:600;z-index:999;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.3);animation:fadeUp .25s ease;max-width:340px;text-align:center;’;d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),3000);}
 
 // ══════ STATION BOTTOM SHEET ══════
 function starsHTML(r){
-  let h='';const full=Math.floor(r),half=(r-full)>=0.5;
-  for(let i=0;i<5;i++){if(i<full)h+='<span class="star-filled">★</span>';else if(i===full&&half)h+='<span style="position:relative;display:inline-block;"><span class="star-filled" style="position:absolute;overflow:hidden;width:50%;">★</span><span class="star-empty">★</span></span>';else h+='<span class="star-empty">★</span>';}
-  return h;
+let h=’’;const full=Math.floor(r),half=(r-full)>=0.5;
+for(let i=0;i<5;i++){if(i<full)h+=’<span class="star-filled">★</span>’;else if(i===full&&half)h+=’<span style="position:relative;display:inline-block;"><span class="star-filled" style="position:absolute;overflow:hidden;width:50%;">★</span><span class="star-empty">★</span></span>’;else h+=’<span class="star-empty">★</span>’;}
+return h;
 }
 function openSBS(id){
-  const s=APP.stations.find(x=>x.id===id);if(!s)return;
-  const isOpen=s.status==='open';
-  const statusTxt=isOpen?(LANG==='th'?'เปิดอยู่':'Open'):(LANG==='th'?'คิวรอ':'Queue');
-  const queueTxt=LANG==='th'?'เวลารอคิว':'Queue Time';
-  const queueUnit=LANG==='th'?'นาที':'min';
-  const noQueueTxt=LANG==='th'?'ไม่มีคิว':'No Queue';
-  const evAvailTxt=LANG==='th'?'ว่าง':'Free';
-  const evFullTxt=LANG==='th'?'เต็ม':'Full';
-  const navTxt=LANG==='th'?'🗺️ นำทาง':'🗺️ Navigate';
-  const bookTxt=LANG==='th'?'📅 จองพลังงาน':'📅 Book Energy';
-  const fuelTypeTxt=LANG==='th'?'น้ำมันที่มีจำหน่าย':'Available Fuels';
-  const shopsTxt=LANG==='th'?'ร้านค้า / บริการ':'Shops & Services';
-  const hoursTxt=LANG==='th'?'เวลาทำการ':'Hours';
-  const evTxt=LANG==='th'?'EV ชาร์จเจอร์':'EV Chargers';
-  const distTxt=LANG==='th'?'ห่างจากคุณ':'From you';
+const s=APP.stations.find(x=>x.id===id);if(!s)return;
+APP._sbsStation=id;
+const isOpen=s.status===‘open’;
+const statusTxt=isOpen?(LANG===‘th’?‘เปิดอยู่’:‘Open’):(LANG===‘th’?‘คิวรอ’:‘Queue’);
+const queueTxt=LANG===‘th’?‘เวลารอคิว’:‘Queue Time’;
+const queueUnit=LANG===‘th’?‘นาที’:‘min’;
+const noQueueTxt=LANG===‘th’?‘ไม่มีคิว’:‘No Queue’;
+const evAvailTxt=LANG===‘th’?‘ว่าง’:‘Free’;
+const evFullTxt=LANG===‘th’?‘เต็ม’:‘Full’;
+const navTxt=LANG===‘th’?‘🗺️ นำทาง’:‘🗺️ Navigate’;
+const bookTxt=LANG===‘th’?‘📅 จองพลังงาน’:‘📅 Book Energy’;
+const fuelTypeTxt=LANG===‘th’?‘น้ำมัน’:‘Fuels’;
+const shopsTxt=LANG===‘th’?‘ร้านค้า’:‘Shops’;
+const hoursTxt=LANG===‘th’?‘เวลาทำการ’:‘Hours’;
+const evTxt=LANG===‘th’?‘EV ชาร์จเจอร์’:‘EV Chargers’;
+const distTxt=LANG===‘th’?‘ห่างจากคุณ’:‘from you’;
 
-  // Photos section (color blocks with emoji overlays simulating photos)
-  const photosHTML=s.photos.map((emoji,i)=>`
-    <div class="sbs-photo" style="background:linear-gradient(135deg,${s.colors[i]||'#1565C0'},${s.colors[(i+1)%3]||'#0D47A1'});">
-      <div style="font-size:40px;z-index:1;">${emoji}</div>
-      <div class="sbs-photo-overlay"></div>
-      ${i===0?`<div class="sbs-dist-badge">📍 ${s.dist} ${distTxt}</div>`:''}
-    </div>`).join('');
+// Photos
+const photosHTML=s.photos.map((emoji,i)=>` <div class="sbs-photo" style="background:linear-gradient(135deg,${s.colors[i]||'#1565C0'},${s.colors[(i+1)%3]||'#0D47A1'});"> <div style="font-size:36px;z-index:1;">${emoji}</div> <div class="sbs-photo-overlay"></div> ${i===0?`<div class="sbs-dist-badge">📍 ${s.dist} ${distTxt}</div>`:''} </div>`).join(’’);
+document.getElementById(‘isbs-photos’).innerHTML=photosHTML;
 
-  document.getElementById('sbs-photos').innerHTML=`
-    ${photosHTML}
-    <button class="sbs-close-btn" onclick="document.getElementById('sbs-overlay').classList.remove('show')">✕</button>`;
-
-  // Body content
-  let evSection='';
-  if(s.type!=='fuel'&&s.ev){
-    const free=s.evFree||0,total=s.evTotal||0;
-    const availColor=free>0?'var(--green)':'var(--orange)';
-    const availTxt=free>0?`${free}/${total} ${evAvailTxt}`:evFullTxt;
-    evSection=`
-      <div class="sbs-divider"></div>
-      <div class="sbs-section-title">${evTxt}</div>
-      <div class="sbs-ev-row">
-        <div class="sbs-ev-icon">⚡</div>
-        <div class="sbs-ev-info">
-          <div class="sbs-ev-name">${s.evPower||s.ev}</div>
-          <div class="sbs-ev-sub">${s.ev}</div>
-          <div class="sbs-ev-avail ${free===0?'full':''}" style="color:${availColor}">${availTxt}</div>
-        </div>
-        <div style="text-align:right;">
-          <div style="font-family:'Prompt',sans-serif;font-size:18px;font-weight:800;color:${availColor};">${free}</div>
-          <div style="font-size:8px;color:var(--text3);">/${total}</div>
-        </div>
-      </div>`;
-  }
-
-  let fuelSection='';
-  if(s.fuels&&s.fuels.length>0){
-    fuelSection=`
-      <div class="sbs-divider"></div>
-      <div class="sbs-section-title">${fuelTypeTxt}</div>
-      <div class="sbs-fuel-chips">${s.fuels.map(f=>`<div class="sbs-fuel-pill">⛽ ${f}</div>`).join('')}</div>`;
-  }
-
-  const queueVal=s.queueTime>0?`<span style="color:var(--text);">${s.queueTime}</span>`:
-    `<span style="color:var(--green);font-size:14px;">${noQueueTxt}</span>`;
-
-  document.getElementById('sbs-body').innerHTML=`
-    <div class="sbs-name">${sName(s)}</div>
-    <div class="sbs-addr">📍 ${sAddr(s)}</div>
-    <div class="sbs-meta-row">
-      <span class="sbs-rating-num">${s.rating}</span>
-      <span class="sbs-rating-stars">${starsHTML(s.rating)}</span>
-      <span class="sbs-review-cnt">(${s.reviews.toLocaleString()})</span>
-      <span class="${isOpen?'sbs-status-open':'sbs-status-busy'}">${statusTxt}</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
-      <span style="font-size:13px;">🕐</span>
-      <span class="sbs-hours">${LANG==='th'?s.hours:s.hours_en}</span>
-    </div>
-
-    <div class="sbs-queue-box">
-      <div>
-        <div class="sbs-queue-lbl">${queueTxt}</div>
-        <div style="display:flex;align-items:baseline;gap:4px;margin-top:3px;">
-          <div class="sbs-queue-val">${queueVal}</div>
-          ${s.queueTime>0?`<div class="sbs-queue-unit">${queueUnit}</div>`:''}
-        </div>
-      </div>
-      <div style="font-size:32px;">${s.queueTime===0?'✅':s.queueTime<=5?'🟢':s.queueTime<=15?'🟡':'🔴'}</div>
-    </div>
-
-    ${evSection}
-    ${fuelSection}
-
-    <div class="sbs-divider"></div>
-    <div class="sbs-section-title">${shopsTxt}</div>
-    <div class="sbs-shop-row">${s.shops.map(sh=>`<div class="sbs-shop-pill">${sh}</div>`).join('')}</div>
-
-    <div class="sbs-action-row">
-      <button class="sbs-nav-btn" onclick="navToStation('${s.id}');document.getElementById('sbs-overlay').classList.remove('show');">${navTxt}</button>
-      <button class="sbs-book-btn" onclick="goTo('v-energy');document.getElementById('sbs-overlay').classList.remove('show');">${bookTxt}</button>
-    </div>`;
-
-  document.getElementById('sbs-overlay').classList.add('show');
+// EV section
+let evSection=’’;
+if(s.type!==‘fuel’&&s.ev){
+const free=s.evFree||0,total=s.evTotal||0;
+const availColor=free>0?‘var(–green)’:‘var(–orange)’;
+const availTxt=free>0?`${free}/${total} ${evAvailTxt}`:evFullTxt;
+evSection=`<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);"> <div class="sbs-ev-icon">⚡</div> <div class="sbs-ev-info"><div class="sbs-ev-name">${s.evPower||s.ev}</div><div class="sbs-ev-sub">${s.ev}</div></div> <div style="text-align:right;font-family:'Prompt',sans-serif;font-size:16px;font-weight:800;color:${availColor};">${free}<span style="font-size:9px;color:var(--text3);">/${total}</span></div> </div>`;
 }
-function closeSBS(e){if(e.target===document.getElementById('sbs-overlay'))document.getElementById('sbs-overlay').classList.remove('show');}
 
-// Init
-renderFuelGrid('fg-main',0,'pickFuel');
-renderFuelGrid('pump-fg',0,'pumpFuel');
-updateBalDisplay();
-renderHomeHistory();
-renderStationList();
-renderCars();
-calcMain();
-calcPump();
-</script>
-</body>
-</html>
+// Fuel pills
+let fuelHtml=’’;
+if(s.fuels&&s.fuels.length>0){
+fuelHtml=`<div style="margin-top:8px;"><div class="sbs-section-title" style="margin-bottom:5px;">${fuelTypeTxt}</div><div class="sbs-fuel-chips">${s.fuels.map(f=>`<div class="sbs-fuel-pill">⛽ ${f}</div>`).join('')}</div></div>`;
+}
+
+// Shops
+const shopHtml=`<div style="margin-top:8px;"><div class="sbs-section-title" style="margin-bottom:5px;">${shopsTxt}</div><div class="sbs-shop-row">${s.shops.map(sh=>`<div class="sbs-shop-pill">${sh}</div>`).join('')}</div></div>`;
+
+const queueVal=s.queueTime>0?`${s.queueTime} ${queueUnit}`:`<span style="color:var(--green);">${noQueueTxt}</span>`;
+const queueEmoji=s.queueTime===0?‘✅’:s.queueTime<=5?‘🟢’:s.queueTime<=15?‘🟡’:‘🔴’;
+
+document.getElementById(‘isbs-body’).innerHTML=` <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;"> <div style="flex:1;"> <div class="sbs-name">${sName(s)}</div> <div class="sbs-addr">📍 ${sAddr(s)}</div> </div> <button onclick="closeInlineSBS()" style="background:var(--surface2);border:none;border-radius:50%;width:28px;height:28px;font-size:13px;cursor:pointer;color:var(--text2);flex-shrink:0;display:flex;align-items:center;justify-content:center;">✕</button> </div> <div class="sbs-meta-row"> <span class="sbs-rating-num">${s.rating}</span> <span class="sbs-rating-stars">${starsHTML(s.rating)}</span> <span class="sbs-review-cnt">(${s.reviews.toLocaleString()})</span> <span class="${isOpen?'sbs-status-open':'sbs-status-busy'}">${statusTxt}</span> <span style="font-size:10px;">${queueEmoji} ${queueVal}</span> </div> <div style="font-size:11px;color:var(--text2);margin-bottom:8px;">🕐 ${LANG==='th'?s.hours:s.hours_en}</div> ${evSection}${fuelHtml}${shopHtml}`;
+
+document.getElementById(‘isbs-actions’).innerHTML=` <button class="sbs-nav-btn" onclick="navToStation('${s.id}');closeInlineSBS();">${navTxt}</button> <button class="sbs-book-btn" onclick="goTo('v-energy');closeInlineSBS();">${bookTxt}</button>`;
+
+// Shrink map zone, expand sheet
+const sheet=document.getElementById(‘inline-sbs’);
+const listZone=document.getElementById(‘map-list-zone’);
+sheet.style.maxHeight=‘480px’;
+listZone.style.maxHeight=‘0’;
+listZone.style.overflow=‘hidden’;
+// Let map resize after transition
+setTimeout(()=>{if(APP.map)APP.map.invalidateSize();},380);
+}
+
+function closeInlineSBS(){
+const sheet=document.getElementById(‘inline-sbs’);
+const listZone=document.getElementById(‘map-list-zone’);
+if(!sheet)return;
+sheet.style.maxHeight=‘0’;
+listZone.style.maxHeight=‘200px’;
+listZone.style.overflow=‘auto’;
+APP._sbsStation=null;
+setTimeout(()=>{if(APP.map)APP.map.invalidateSize();},380);
+}o
