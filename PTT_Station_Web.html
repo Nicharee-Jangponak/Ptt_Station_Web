@@ -1408,8 +1408,29 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('resize', ()=>{
     document.getElementById('desktop-brand').style.display = window.innerWidth>=600 ? 'block':'none';
   });
+
+  // FIX: force home view visible immediately on first load
+  document.querySelectorAll('.view').forEach(v=>{
+    v.classList.remove('active');
+    v.style.display='none';
+  });
+  const home = document.getElementById('v-home');
+  home.classList.add('active');
+  home.style.display = 'block';
+  home.scrollTop = 0;
+
+  // Active nav highlight
   const homeNav = document.getElementById('nav-home');
   if(homeNav){ homeNav.classList.add('on'); const lbl=homeNav.querySelector('.nlbl'); if(lbl)lbl.style.color='var(--p500)'; }
+
+  // Init all data before setLang renders UI
+  renderFuelGrid('fg-main', 0, 'pickFuel');
+  renderFuelGrid('pump-fg', 0, 'pumpFuel');
+  calcMain();
+  calcPump();
+  updateBalDisplay();
+  renderHomeHistory();
+
   setLang('th');
 });
 
