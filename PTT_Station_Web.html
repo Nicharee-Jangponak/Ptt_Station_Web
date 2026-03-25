@@ -522,7 +522,14 @@ button:focus-visible{outline:2px solid var(--p500);outline-offset:2px;}
         <div class="map-search-bar" style="flex-shrink:0;">
           <span style="font-size:16px;">🔍</span>
           <input type="text" id="map-search-input" data-i18n-ph="searchStation">
-          <span style="font-size:16px;cursor:pointer;">📍</span>
+          <span style="font-size:16px;cursor:pointer;" onclick="locateUser()">📍</span>
+        </div>
+        <!-- Filter pills -->
+        <div style="display:flex;gap:6px;overflow-x:auto;padding:6px 10px 4px;flex-shrink:0;scrollbar-width:none;">
+          <div onclick="setMapFilter(this,'all')" style="background:#1B5DC9;color:#fff;border:1.5px solid #1B5DC9;border-radius:20px;padding:4px 11px;font-size:11px;font-weight:700;white-space:nowrap;cursor:pointer;transition:all .15s;" class="mf-pill">ทั้งหมด</div>
+          <div onclick="setMapFilter(this,'fuel')" style="background:var(--surface);color:var(--text2);border:1.5px solid var(--border);border-radius:20px;padding:4px 11px;font-size:11px;font-weight:700;white-space:nowrap;cursor:pointer;transition:all .15s;" class="mf-pill">⛽ น้ำมัน</div>
+          <div onclick="setMapFilter(this,'ev')" style="background:var(--surface);color:var(--text2);border:1.5px solid var(--border);border-radius:20px;padding:4px 11px;font-size:11px;font-weight:700;white-space:nowrap;cursor:pointer;transition:all .15s;" class="mf-pill">⚡ EV</div>
+          <div onclick="setMapFilter(this,'open')" style="background:var(--surface);color:var(--text2);border:1.5px solid var(--border);border-radius:20px;padding:4px 11px;font-size:11px;font-weight:700;white-space:nowrap;cursor:pointer;transition:all .15s;" class="mf-pill">● เปิดอยู่</div>
         </div>
         <div id="nav-toast-map" class="nav-toast-map" style="display:none;">
           <span style="font-size:18px;">✅</span>
@@ -1474,26 +1481,194 @@ function renderFuelGrid(cid,selIdx,fn){
   el.innerHTML=FUEL_TYPES.map((f,i)=>`<div class="fuel-chip ${i===selIdx?'on':''}" onclick="${fn}(this,'${f.price}','${f.name}',${f.km})"><div class="fn">${f.name}</div><div class="fp">${f.price} ฿/L</div><div class="fb">${f.badge}</div></div>`).join('');
 }
 
+// ── GPS animation style ──
+(function(){
+  if(!document.getElementById('gps-ring-style')){
+    const st=document.createElement('style');
+    st.id='gps-ring-style';
+    st.textContent='@keyframes gpsRing{0%{transform:scale(1);opacity:.7;}100%{transform:scale(3.5);opacity:0;}} @keyframes spin{to{transform:rotate(360deg)}}';
+    document.head.appendChild(st);
+  }
+})();
+
+// ── Locate user ──
+function locateUser(){
+  if(APP.userLat&&APP.map) APP.map.setView([APP.userLat,APP.userLng],14);
+}
+
+// ── Map filter ──
+APP._mapFilter='all';
+function setMapFilter(el,f){
+  APP._mapFilter=f;
+  document.querySelectorAll('.mf-pill').forEach(p=>{
+    p.style.background='var(--surface)';p.style.color='var(--text2)';p.style.borderColor='var(--border)';
+  });
+  el.style.background='#1B5DC9';el.style.color='#fff';el.style.borderColor='#1B5DC9';
+  placeMapMarkers();renderStationList();
+}
+
+// ── Haversine distance ──
+function calcDist(lat1,lng1,lat2,lng2){
+  const R=6371,dLat=(lat2-lat1)*Math.PI/180,dLng=(lng2-lng1)*Math.PI/180;
+  const a=Math.sin(dLat/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
+  return (R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))).toFixed(1);
+}
+
+// ── Load real PTT stations from Overpass API ──
+async function loadRealStations(userLat,userLng){
+  const query=`[out:json][timeout:25];(node["brand"="PTT"]["amenity"="fuel"](13.40,100.20,14.10,101.00);way["brand"="PTT"]["amenity"="fuel"](13.40,100.20,14.10,101.00););out center;`;
+  const url='https://overpass-api.de/api/interpreter?data='+encodeURIComponent(query);
+
+  let loadDiv=document.createElement('div');
+  loadDiv.id='osm-loading';
+  loadDiv.style.cssText='position:fixed;top:70px;left:50%;transform:translateX(-50%);background:rgba(7,26,62,.88);color:#E2ECFF;border:1px solid rgba(60,118,241,.35);border-radius:10px;padding:7px 16px;font-size:11px;font-weight:600;z-index:2000;backdrop-filter:blur(8px);display:flex;align-items:center;gap:7px;box-shadow:0 4px 16px rgba(0,0,0,.5);white-space:nowrap;';
+  loadDiv.innerHTML='<span style="animation:spin .8s linear infinite;display:inline-block;">⟳</span> โหลดสถานี PTT จริง...';
+  document.body.appendChild(loadDiv);
+
+  try{
+    const res=await fetch(url);
+    const data=await res.json();
+    const realStations=data.elements.map((el,i)=>{
+      const lat=el.lat??el.center?.lat;
+      const lng=el.lon??el.center?.lon;
+      if(!lat||!lng) return null;
+      const tags=el.tags||{};
+      const dist=userLat?calcDist(userLat,userLng,lat,lng):'?';
+      const hasEV=tags['socket:type2']||tags['socket:ccs2']||tags.ev==='yes';
+      return {
+        id:'OSM_'+i, lat, lng,
+        name:tags.name||tags['name:th']||'PTT Station',
+        name_en:tags['name:en']||tags.name||'PTT Station',
+        addr:tags['addr:street']||(tags['addr:city']||''),
+        addr_en:tags['addr:street']||(tags['addr:city']||''),
+        dist:dist+' กม.',
+        status:'open', type:hasEV?'both':'fuel',
+        shops:['☕ Café Amazon'],
+        ev:hasEV?'EV Available':'', evPower:hasEV?'EV Charger':'', evFree:hasEV?1:0, evTotal:hasEV?2:0,
+        rating:+(3.8+Math.random()*.8).toFixed(1),
+        reviews:Math.floor(50+Math.random()*500),
+        hours:tags.opening_hours||'เปิด 24 ชั่วโมง', hours_en:tags.opening_hours||'Open 24 hrs',
+        fuels:['Gasohol 91','Gasohol 95','Diesel B7'],
+        tagLabels:hasEV?['⚡ EV','⛽ Fuel']:['⛽ Fuel'],
+        photos:['⛽','☕','🏪'], colors:['#0D47A1','#1565C0','#388E3C'],
+        queueTime:0
+      };
+    }).filter(Boolean).sort((a,b)=>parseFloat(a.dist)-parseFloat(b.dist));
+
+    if(realStations.length>0){
+      APP.stations.length=0;
+      realStations.forEach(s=>APP.stations.push(s));
+      loadDiv.style.background='rgba(0,80,30,.85)';
+      loadDiv.innerHTML=`✅ พบ ${APP.stations.length} สาขา PTT จริง (OSM)`;
+      placeMapMarkers();
+      renderStationList();
+    } else throw new Error('no results');
+  } catch(err){
+    loadDiv.style.background='rgba(80,20,20,.85)';
+    loadDiv.innerHTML='⚠️ โหลดไม่ได้ — ใช้ข้อมูลตัวอย่าง';
+    placeMapMarkers();
+    renderStationList();
+  }
+  setTimeout(()=>loadDiv.remove(),3500);
+}
+
+// ── Place station pill markers ──
+function placeMapMarkers(){
+  if(!APP.map) return;
+  if(APP._stationLayers){APP._stationLayers.forEach(l=>l.remove());}
+  APP._stationLayers=[];
+
+  const filtered=APP.stations.filter(s=>{
+    const f=APP._mapFilter||'all';
+    if(f==='fuel') return s.type!=='ev';
+    if(f==='ev') return s.type==='ev'||s.type==='both';
+    if(f==='open') return s.status==='open';
+    return true;
+  });
+
+  filtered.forEach(s=>{
+    const isEV=s.type==='ev',isBoth=s.type==='both',isOpen=s.status==='open';
+    const borderColor=isOpen?'#00C97A':'#F59E0B';
+    const dotColor=isEV?'#00C97A':isBoth?'#4FC3F7':'#4A90D9';
+    const emoji=isEV?'⚡':isBoth?'🔋':'⛽';
+    const label=(s.name||'PTT').replace(/^PTT /,'');
+    const shortLabel=label.length>15?label.slice(0,15)+'…':label;
+
+    const html=`<div style="display:inline-flex;align-items:center;gap:5px;background:#0C1525;border:1.5px solid ${borderColor};border-radius:22px;padding:5px 10px 5px 6px;box-shadow:0 3px 14px rgba(0,0,0,.65),0 0 0 0.5px rgba(255,255,255,.05);white-space:nowrap;cursor:pointer;font-family:'Sarabun',sans-serif;transition:transform .15s;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+      <div style="width:23px;height:23px;border-radius:50%;background:${dotColor};display:flex;align-items:center;justify-content:center;font-size:12px;box-shadow:0 0 8px ${dotColor}99;flex-shrink:0;">${emoji}</div>
+      <span style="font-size:11px;font-weight:700;color:#E2ECFF;letter-spacing:.1px;">${shortLabel}</span>
+      <span style="width:7px;height:7px;border-radius:50%;background:${borderColor};flex-shrink:0;${isOpen?'box-shadow:0 0 6px '+borderColor+';':''}"></span>
+    </div>`;
+
+    const icon=L.divIcon({html,className:'',iconAnchor:[0,20],iconSize:null});
+    const m=L.marker([s.lat,s.lng],{icon}).addTo(APP.map);
+    m.on('click',()=>{APP.map.setView([s.lat,s.lng],15);openSBS(s.id);});
+    APP._stationLayers.push(m);
+  });
+}
+
+// ── Place user dot ──
+function placeUserDot(lat,lng){
+  APP.userLat=lat; APP.userLng=lng;
+  APP.map.setView([lat,lng],14);
+  if(APP._userMarker) APP._userMarker.remove();
+  if(APP._radiusCircle) APP._radiusCircle.remove();
+
+  APP._radiusCircle=L.circle([lat,lng],{
+    radius:2000,color:'#FF8C00',weight:2,opacity:.75,
+    fillColor:'#FF8C00',fillOpacity:.07,dashArray:'8,5'
+  }).addTo(APP.map);
+
+  const icon=L.divIcon({
+    html:`<div style="position:relative;width:22px;height:22px;">
+      <div style="position:absolute;inset:-8px;border-radius:50%;background:rgba(33,150,243,.18);animation:gpsRing 2s ease-out infinite;"></div>
+      <div style="width:22px;height:22px;background:#2196F3;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px rgba(33,150,243,.4),0 3px 12px rgba(0,0,0,.5);position:relative;z-index:2;"></div>
+    </div>`,
+    className:'',iconAnchor:[11,11]
+  });
+  APP._userMarker=L.marker([lat,lng],{icon,zIndexOffset:1000}).addTo(APP.map);
+}
+
 // Map
 function initMap(){
-  if(APP.mapInitialized){APP.map.invalidateSize();return;}
+  if(APP.mapInitialized){APP.map&&APP.map.invalidateSize();return;}
   APP.mapInitialized=true;
-  const myLat=13.7563,myLng=100.5018;
-  const map=L.map('leaflet-map',{zoomControl:true}).setView([myLat,myLng],12);
+  APP._stationLayers=APP._stationLayers||[];
+  APP.userLat=null; APP.userLng=null;
+
+  const defLat=13.7563,defLng=100.5018;
+  const map=L.map('leaflet-map',{zoomControl:true,attributionControl:true}).setView([defLat,defLng],13);
   APP.map=map;
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:19}).addTo(map);
-  const meIcon=L.divIcon({html:`<div style="width:18px;height:18px;background:#3C76F1;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 6px rgba(60,118,241,.25);"></div>`,className:'',iconAnchor:[9,9]});
-  L.marker([myLat,myLng],{icon:meIcon}).addTo(map).bindPopup(`<div style="padding:8px;font-size:12px;font-weight:700;color:#001B4B;">${T('myLocation')}</div>`);
-  APP.stations.forEach(s=>{
-    const color=s.type==='ev'?'#2E7D32':s.type==='both'?'#098ABE':'#001B4B';
-    const emoji=s.type==='ev'?'⚡':s.type==='both'?'🔋':'⛽';
-    const sc=s.status==='open'?'#2E7D32':'#E65100';
-    const icon=L.divIcon({html:`<div style="background:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 3px 10px rgba(0,0,0,.2);border:2.5px solid ${color};">${emoji}</div><div style="width:2px;height:6px;background:${color};margin:0 auto;"></div>`,className:'',iconAnchor:[18,42]});
-    const shopsHtml=s.shops.slice(0,4).map(sh=>`<span class="shop-tag">${sh}</span>`).join('');
-    const statusTxt=s.status==='open'?T('openStatus'):T('busyStatus');
-    const popup=L.popup({maxWidth:280}).setContent(`<div class="popup-inner"><div class="popup-header"><span style="font-size:20px;">${emoji}</span><div><div class="popup-name">${sName(s)}</div><div class="popup-dist">📍 ${sAddr(s)} · ${s.dist} · <span style="color:${sc};font-weight:700;">${statusTxt}</span></div></div></div><div class="shop-tags">${shopsHtml}${s.shops.length>4?`<span class="shop-tag">+${s.shops.length-4}</span>`:''}</div>${s.ev?`<div style="font-size:10px;padding:4px 0;color:#2E7D32;font-weight:700;margin-bottom:8px;">⚡ ${s.ev}</div>`:''}<button class="popup-nav-btn" onclick="navToStation('${s.id}');document.querySelectorAll('.leaflet-popup-close-button').forEach(b=>b.click())">${T('popupNav')}</button></div>`);
-    L.marker([s.lat,s.lng],{icon}).addTo(map).on('click',function(){map.setView([s.lat,s.lng],15);openSBS(s.id);});
-  });
+
+  // Dark tile
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'© <a href="https://osm.org">OSM</a> © <a href="https://carto.com">CARTO</a>',
+    subdomains:'abcd',maxZoom:19
+  }).addTo(map);
+
+  // GPS
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(
+      p=>{
+        placeUserDot(p.coords.latitude,p.coords.longitude);
+        loadRealStations(p.coords.latitude,p.coords.longitude);
+      },
+      ()=>{
+        placeUserDot(defLat,defLng);
+        loadRealStations(defLat,defLng);
+      },
+      {enableHighAccuracy:true,timeout:8000,maximumAge:0}
+    );
+    navigator.geolocation.watchPosition(p=>{
+      APP.userLat=p.coords.latitude; APP.userLng=p.coords.longitude;
+      if(APP._userMarker) APP._userMarker.setLatLng([APP.userLat,APP.userLng]);
+      if(APP._radiusCircle) APP._radiusCircle.setLatLng([APP.userLat,APP.userLng]);
+    },null,{enableHighAccuracy:true,maximumAge:5000});
+  } else {
+    placeUserDot(defLat,defLng);
+    loadRealStations(defLat,defLng);
+  }
+
   renderStationList();
 }
 function navToStation(id){
@@ -1506,17 +1681,25 @@ function navToStation(id){
 function cancelNav(){APP.navStation=null;document.getElementById('nav-toast-map').style.display='none';renderStationList();}
 function renderStationList(){
   const el=document.getElementById('station-list');if(!el)return;
-  el.innerHTML=APP.stations.map(s=>{
+  const f=APP._mapFilter||'all';
+  const visible=APP.stations.filter(s=>{
+    if(f==='fuel') return s.type!=='ev';
+    if(f==='ev') return s.type==='ev'||s.type==='both';
+    if(f==='open') return s.status==='open';
+    return true;
+  });
+  el.innerHTML=visible.map(s=>{
     const isNav=APP.navStation===s.id;
     const emoji=s.type==='ev'?'⚡':s.type==='both'?'🔋':'⛽';
     const statusTxt=s.status==='open'?T('openStatus'):T('busyStatus');
-    return `<div class="station-item ${isNav?'navigating':''}" onclick="navToStation('${s.id}');if(APP.map){APP.map.setView([${s.lat},${s.lng}],15);}">
+    const tags=(s.tagLabels||[s.type==='ev'?'⚡ EV':s.type==='both'?'🔋 EV+Fuel':'⛽ Fuel']);
+    return `<div class="station-item ${isNav?'navigating':''}" onclick="navToStation('${s.id}');if(APP.map){APP.map.setView([${s.lat},${s.lng}],15);openSBS('${s.id}');}">
       <div class="st-icon">${emoji}</div>
       <div class="st-info">
         <div class="st-name">${sName(s)}</div>
         <div class="st-dist">${sAddr(s)} · ${s.dist}</div>
         <div class="st-tags">
-          ${s.tagLabels.map(tg=>`<span class="st-tag ${(tg.includes('EV')||tg.includes('⚡')||tg.includes('🔋'))?'ev':'fuel'}">${tg}</span>`).join('')}
+          ${tags.map(tg=>`<span class="st-tag ${(tg.includes('EV')||tg.includes('⚡')||tg.includes('🔋'))?'ev':'fuel'}">${tg}</span>`).join('')}
           <span class="st-tag ${s.status==='open'?'open':'busy'}">${statusTxt}</span>
         </div>
         <div style="font-size:9px;color:var(--text3);margin-top:3px;">🏪 ${s.shops.slice(0,2).join(' · ')}${s.shops.length>2?` +${s.shops.length-2}`:''}</div>
